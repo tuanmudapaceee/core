@@ -37,7 +37,7 @@ require_once("filter.inc");
 require_once("rrd.inc");
 require_once("system.inc");
 
-use OPNsense\Backup\Local;
+use Bentara\Backup\Local;
 
 /**
  * restore config section

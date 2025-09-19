@@ -30,7 +30,7 @@
 require_once("guiconfig.inc");
 require_once("system.inc");
 
-use OPNsense\Core\AppConfig;
+use Bentara\Core\AppConfig;
 
 $contribDir = (new AppConfig())->application->contribDir;
 $serviceproviders_xml = $contribDir . '/mobile-broadband-provider-info/serviceproviders.xml';
