@@ -28,7 +28,7 @@
  */
 
 /* loader : add library path in this directory to our normal path */
-require_once('/usr/local/bentara/mvc/app/library/OPNsense/Autoload/Loader.php');
+require_once('/usr/local/bentara/mvc/app/library/Bentara/Autoload/Loader.php');
 $phalcon_config = include('/usr/local/bentara/mvc/app/config/config.php');
 
 (new Bentara\Autoload\Loader([

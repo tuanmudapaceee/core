@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-require_once(__DIR__ . '/../app/library/OPNsense/Autoload/Loader.php');
+require_once(__DIR__ . '/../app/library/Bentara/Autoload/Loader.php');
 
 use Bentara\Autoload\Loader;
 
