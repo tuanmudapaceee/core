@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-class PrivController extends \OPNsense\Base\IndexController
+class PrivController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

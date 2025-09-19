@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 class Loopback extends BaseModel
 {

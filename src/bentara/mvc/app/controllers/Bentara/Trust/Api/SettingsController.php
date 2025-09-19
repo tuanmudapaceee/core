@@ -26,19 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\Api;
+namespace Bentara\Trust\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class SettingsController
- * @package OPNsense\Trust\Api
+ * @package Bentara\Trust\Api
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'trust';
-    protected static $internalModelClass = 'OPNsense\Trust\General';
+    protected static $internalModelClass = 'Bentara\Trust\General';
 
     public function reconfigureAction()
     {

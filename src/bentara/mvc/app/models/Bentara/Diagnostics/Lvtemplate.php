@@ -27,9 +27,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics;
+namespace Bentara\Diagnostics;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 class Lvtemplate extends BaseModel
 {

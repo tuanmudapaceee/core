@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class LegacyLinkField field, read only referral to a config item in the legacy configuration.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class LegacyLinkField extends BaseField
 {

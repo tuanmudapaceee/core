@@ -1,6 +1,6 @@
 {#
 
-OPNsense® is Copyright © 2020 by Deciso B.V.
+Bentara® is Copyright © 2020 by Deciso B.V.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -25,7 +25,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 #}
-{% set theme_name = ui_theme|default('opnsense') %}
+{% set theme_name = ui_theme|default('bentara') %}
 <script src="{{ cache_safe('/ui/js/chart.umd.min.js') }}"></script>
 <script src="{{ cache_safe('/ui/js/chartjs-plugin-colorschemes.min.js') }}"></script>
 <script src="{{ cache_safe('/ui/js/moment-with-locales.min.js') }}"></script>

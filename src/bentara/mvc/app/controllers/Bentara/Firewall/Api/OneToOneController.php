@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
 class OneToOneController extends FilterBaseController
 {

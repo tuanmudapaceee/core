@@ -25,9 +25,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-class SourceNatController extends \OPNsense\Base\IndexController
+class SourceNatController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

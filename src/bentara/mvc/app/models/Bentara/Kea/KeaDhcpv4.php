@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea;
+namespace Bentara\Kea;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
-use OPNsense\Core\File;
-use OPNsense\Firewall\Util;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
+use Bentara\Core\File;
+use Bentara\Firewall\Util;
 
 class KeaDhcpv4 extends BaseModel
 {

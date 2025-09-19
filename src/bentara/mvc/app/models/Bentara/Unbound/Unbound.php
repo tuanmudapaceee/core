@@ -27,11 +27,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound;
+namespace Bentara\Unbound;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
-use OPNsense\Core\Backend;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Core\Backend;
 
 class Unbound extends BaseModel
 {

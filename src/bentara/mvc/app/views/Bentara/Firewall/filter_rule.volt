@@ -730,7 +730,7 @@
         });
 
         // Hook into add event
-        $('#{{formGridFilterRule["edit_dialog_id"]}}').on('opnsense_bootgrid_mapped', function(e, actionType) {
+        $('#{{formGridFilterRule["edit_dialog_id"]}}').on('bentara_bootgrid_mapped', function(e, actionType) {
             if (actionType === 'add') {
                 // and choose same interface in new rule as selected in #interface_select
                 const selectedInterface = $('#interface_select').val();

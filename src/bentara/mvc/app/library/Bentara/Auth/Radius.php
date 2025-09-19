@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
 /**
  * Class Radius connector
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class Radius extends Base implements IAuthConnector
 {

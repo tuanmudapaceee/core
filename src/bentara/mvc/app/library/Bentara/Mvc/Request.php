@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc;
+namespace Bentara\Mvc;
 
-use OPNsense\Core\SanitizeFilter;
+use Bentara\Core\SanitizeFilter;
 use stdClass;
 
 class Request

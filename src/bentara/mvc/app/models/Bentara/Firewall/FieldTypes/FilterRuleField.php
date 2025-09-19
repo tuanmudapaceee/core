@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Group;
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\ContainerField;
+use Bentara\Core\Config;
+use Bentara\Firewall\Group;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\ContainerField;
 
 /**
  * Class FilterRuleContainerField
- * @package OPNsense\Firewall\FieldTypes
+ * @package Bentara\Firewall\FieldTypes
  */
 class FilterRuleContainerField extends ContainerField
 {
@@ -58,9 +58,9 @@ class FilterRuleContainerField extends ContainerField
         // 1-on-1 map (with type conversion if needed)
         foreach ($this->iterateItems() as $key => $node) {
             if (!in_array($key, $map_manual)) {
-                if (is_a($node, "OPNsense\\Base\\FieldTypes\\BooleanField")) {
+                if (is_a($node, "Bentara\\Base\\FieldTypes\\BooleanField")) {
                     $result[$key] = !empty((string)$node);
-                } elseif (is_a($node, "OPNsense\\Base\\FieldTypes\\ProtocolField")) {
+                } elseif (is_a($node, "Bentara\\Base\\FieldTypes\\ProtocolField")) {
                     if ((string)$node != 'any') {
                         $result[$key] = (string)$node;
                     }
@@ -139,7 +139,7 @@ class FilterRuleContainerField extends ContainerField
 
 /**
  * Class FilterRuleField
- * @package OPNsense\Firewall\FieldTypes
+ * @package Bentara\Firewall\FieldTypes
  */
 class FilterRuleField extends ArrayField
 {

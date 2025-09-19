@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\IPsec\Swanctl;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\IPsec\Swanctl;
 
 /**
  * Class SpdController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class SpdController extends ApiControllerBase
 {

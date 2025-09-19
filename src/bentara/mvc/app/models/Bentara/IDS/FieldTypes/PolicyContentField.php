@@ -28,14 +28,14 @@
  *
  */
 
-namespace OPNsense\IDS\FieldTypes;
+namespace Bentara\IDS\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
-use OPNsense\Core\Backend;
+use Bentara\Base\FieldTypes\BaseListField;
+use Bentara\Core\Backend;
 
 /**
  * Class PolicyContentField
- * @package OPNsense\IDS\FieldTypes
+ * @package Bentara\IDS\FieldTypes
  */
 class PolicyContentField extends BaseListField
 {

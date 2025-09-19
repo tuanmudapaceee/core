@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Base\Validators\CallbackValidator;
+use Bentara\Base\Validators\CallbackValidator;
 
 /**
  * Class Base64Field

@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Base\Validators\Email;
+use Bentara\Base\Validators\Email;
 
 /**
  * Class EmailField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class EmailField extends BaseField
 {

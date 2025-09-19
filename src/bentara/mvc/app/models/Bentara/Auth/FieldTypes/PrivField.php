@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
+use Bentara\Base\FieldTypes\BaseListField;
 
 class PrivField extends BaseListField
 {
@@ -39,7 +39,7 @@ class PrivField extends BaseListField
     {
         if (self::$priv_list === null) {
             self::$priv_list = [];
-            foreach ((new \OPNsense\Core\ACL())->getPrivList() as $aclKey => $priv) {
+            foreach ((new \Bentara\Core\ACL())->getPrivList() as $aclKey => $priv) {
                 self::$priv_list[$aclKey] = $priv['name'];
             }
         }

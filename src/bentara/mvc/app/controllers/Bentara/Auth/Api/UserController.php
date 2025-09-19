@@ -26,24 +26,24 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Api;
+namespace Bentara\Auth\Api;
 
 require_once 'base32/Base32.php';
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Auth\Group;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Auth\Group;
+use Bentara\Core\ACL;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class UserController
- * @package OPNsense\Auth\Api
+ * @package Bentara\Auth\Api
  */
 class UserController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'user';
-    protected static $internalModelClass = 'OPNsense\Auth\User';
+    protected static $internalModelClass = 'Bentara\Auth\User';
 
     private $export_ignore = [
         'uid', 'comments', 'password', 'authorizedkeys', 'otp_seed', 'scope', 'scrambled_password', 'dashboard'
@@ -129,13 +129,13 @@ class UserController extends ApiMutableModelControllerBase
         $result['user']['otp_uri'] = '';
         if (!empty($result['user']['otp_seed'])) {
             $result['user']['otp_uri'] = sprintf(
-                "otpauth://totp/%s@%s?secret=%s&issuer=OPNsense&image=https://docs.opnsense.org/_static/favicon.png",
+                "otpauth://totp/%s@%s?secret=%s&issuer=OPNsense&image=https://docs.bentara.org/_static/favicon.png",
                 $result['user']['name'],
                 $this->getHostname(),
                 $result['user']['otp_seed']
             );
         }
-        if ((new \OPNsense\Core\ACL())->isPageAccessible($_SESSION['Username'], '/api/trust/cert')) {
+        if ((new \Bentara\Core\ACL())->isPageAccessible($_SESSION['Username'], '/api/trust/cert')) {
             $result['user']['certs'] = [];
         }
         return $result;
@@ -187,7 +187,7 @@ class UserController extends ApiMutableModelControllerBase
         return [
             'seed' => $seed,
             'otp_uri_template' => sprintf(
-                "otpauth://totp/%s@%s?secret=%s&issuer=OPNsense&image=https://docs.opnsense.org/_static/favicon.png",
+                "otpauth://totp/%s@%s?secret=%s&issuer=OPNsense&image=https://docs.bentara.org/_static/favicon.png",
                 '|USER|',
                 $this->getHostname(),
                 $seed

@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-class SettingsController extends \OPNsense\Base\IndexController
+class SettingsController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

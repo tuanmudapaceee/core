@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\TrafficShaper;
+namespace Bentara\TrafficShaper;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
 
 /**
  * Class TrafficShaper
- * @package OPNsense\TrafficShaper
+ * @package Bentara\TrafficShaper
  */
 class TrafficShaper extends BaseModel
 {

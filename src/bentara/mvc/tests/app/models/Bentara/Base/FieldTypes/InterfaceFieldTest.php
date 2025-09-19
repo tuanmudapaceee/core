@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\InterfaceField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\InterfaceField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class InterfaceFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class InterfaceFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\InterfaceField', new InterfaceField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\InterfaceField', new InterfaceField());
         // switch config to test set for this type
         (new AppConfig())->update('application.configDir', __DIR__ . '/InterfaceFieldTest');
         Config::getInstance()->forceReload();
@@ -70,7 +70,7 @@ class InterfaceFieldTest extends Field_Framework_TestCase
      */
     public function testSelectHasNoParents()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new InterfaceField();
@@ -111,7 +111,7 @@ class InterfaceFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetWithUnknownValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new InterfaceField();
@@ -140,7 +140,7 @@ class InterfaceFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetOnSingleValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new InterfaceField();

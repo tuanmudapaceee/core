@@ -28,9 +28,9 @@
 
 require_once 'AppConfig.php';
 
-return new OPNsense\Core\AppConfig([
+return new Bentara\Core\AppConfig([
     'application' => [
-        'baseUri'        => '/opnsense_gui/',
+        'baseUri'        => '/bentara_gui/',
         'controllersDir' => __DIR__ . '/../../app/controllers/',
         'modelsDir'      => __DIR__ . '/../../app/models/',
         'viewsDir'       => __DIR__ . '/../../app/views/',

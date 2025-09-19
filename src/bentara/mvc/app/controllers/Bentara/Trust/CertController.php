@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-class CertController extends \OPNsense\Base\IndexController
+class CertController extends \Bentara\Base\IndexController
 {
     protected function templateJSIncludes()
     {

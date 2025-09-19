@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\IDS;
+namespace Bentara\IDS;
 
 /**
  * Class PolicyController
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
-class PolicyController extends \OPNsense\Base\IndexController
+class PolicyController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

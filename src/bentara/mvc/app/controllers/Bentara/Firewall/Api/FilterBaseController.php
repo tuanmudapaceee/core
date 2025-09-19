@@ -25,22 +25,22 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Alias;
-use OPNsense\Firewall\Category;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Alias;
+use Bentara\Firewall\Category;
 
 /**
  * Class FilterBaseController implements actions for various types
- * @package OPNsense\Firewall\Api
+ * @package Bentara\Firewall\Api
  */
 abstract class FilterBaseController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'filter';
-    protected static $internalModelClass = 'OPNsense\Firewall\Filter';
+    protected static $internalModelClass = 'Bentara\Firewall\Filter';
     protected static $categorysource = null;
 
     /**

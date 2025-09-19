@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Syslog;
+namespace Bentara\Syslog;
 
 /**
  * Class IndexController
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * default syslog index page

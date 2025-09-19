@@ -26,19 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\Api;
+namespace Bentara\OpenVPN\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class InstancesController
- * @package OPNsense\OpenVPN\Api
+ * @package Bentara\OpenVPN\Api
  */
 class InstancesController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'instance';
-    protected static $internalModelClass = 'OPNsense\OpenVPN\OpenVPN';
+    protected static $internalModelClass = 'Bentara\OpenVPN\OpenVPN';
 
     public function searchAction()
     {

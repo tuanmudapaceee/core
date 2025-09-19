@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCRelay;
+namespace Bentara\DHCRelay;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
 
 class DHCRelay extends BaseModel
 {

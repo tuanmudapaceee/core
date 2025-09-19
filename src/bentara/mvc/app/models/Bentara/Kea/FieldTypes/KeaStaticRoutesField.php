@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\FieldTypes;
+namespace Bentara\Kea\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Firewall\Util;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Firewall\Util;
 
 class KeaStaticRoutesField extends BaseField
 {

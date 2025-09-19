@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 use Exception;
-use OPNsense\Base\FieldTypes\ContainerField;
-use OPNsense\Base\ModelException;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
-use OPNsense\Core\Syslog;
+use Bentara\Base\FieldTypes\ContainerField;
+use Bentara\Base\ModelException;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
+use Bentara\Core\Syslog;
 use ReflectionClass;
 use ReflectionException;
 use SimpleXMLElement;
@@ -45,9 +45,9 @@ use http\Message;
  * Every model definition should include a class (derived from BaseModel) and a xml model to define the data (model.xml)
  *
  * See the HelloWorld model for a full implementation.
- * (https://github.com/opnsense/plugins/tree/master/devel/helloworld/src/opnsense/mvc/app/models/OPNsense/HelloWorld)
+ * (https://github.com/bentara/plugins/tree/master/devel/helloworld/src/bentara/mvc/app/models/OPNsense/HelloWorld)
  *
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 abstract class BaseModel
 {
@@ -177,11 +177,11 @@ abstract class BaseModel
                     }
                 } else {
                     // standard field type
-                    $classname = "OPNsense\\Base\\FieldTypes\\" . $xmlNodeType;
+                    $classname = "Bentara\\Base\\FieldTypes\\" . $xmlNodeType;
                 }
             } else {
                 // no type defined, so this must be a standard container (without content)
-                $classname = 'OPNsense\Base\FieldTypes\ContainerField';
+                $classname = 'Bentara\Base\FieldTypes\ContainerField';
             }
 
             $is_derived_from_basefield = false;
@@ -189,7 +189,7 @@ abstract class BaseModel
                 $field_rfcls = new ReflectionClass($classname);
                 $check_derived = $field_rfcls->getParentClass();
                 while ($check_derived != false) {
-                    if ($check_derived->name == 'OPNsense\Base\FieldTypes\BaseField') {
+                    if ($check_derived->name == 'Bentara\Base\FieldTypes\BaseField') {
                         $is_derived_from_basefield = true;
                         break;
                     }
@@ -365,7 +365,7 @@ abstract class BaseModel
             } elseif (str_ends_with($model_xml->mount, '+') && strpos($model_xml->mount, "//") !== 0) {
                 return -1;
             } else {
-                $src_mountpoint = "/opnsense{$model_xml->mount}";
+                $src_mountpoint = "/bentara{$model_xml->mount}";
             }
 
             $tmp_config_data = Config::getInstance()->xpath($src_mountpoint);
@@ -404,7 +404,7 @@ abstract class BaseModel
             return $class_info->newInstance(true)->getNodeContent();
         }
         $cache_filename = self::getCacheFileName();
-        $fobj = new \OPNsense\Core\FileObject($cache_filename, 'a+', 0660, LOCK_EX, 'wwwonly:wheel');
+        $fobj = new \Bentara\Core\FileObject($cache_filename, 'a+', 0660, LOCK_EX, 'wwwonly:wheel');
         $cache_payload = $fobj->readJson() ?? [];
         if (!isset($cache_payload['persisted_at']) || $cache_payload['persisted_at'] != $persisted_at) {
             /**
@@ -458,10 +458,10 @@ abstract class BaseModel
         }
 
         $this->internal_mountpoint = $model_xml->mount;
-        $config_array = new SimpleXMLElement('<opnsense/>');
+        $config_array = new SimpleXMLElement('<bentara/>');
 
         if ($this->isLegacyMapper()) {
-            $xpath = "/opnsense" . rtrim($model_xml->mount, '+');
+            $xpath = "/bentara" . rtrim($model_xml->mount, '+');
             $to_dom = dom_import_simplexml($config_array);
             foreach ($internalConfigHandle->xpath($xpath) as $node) {
                 $to_dom->appendChild($to_dom->ownerDocument->importNode($node, true));
@@ -474,7 +474,7 @@ abstract class BaseModel
             if (strpos($model_xml->mount, "//") === 0) {
                 $src_mountpoint = $model_xml->mount;
             } else {
-                $src_mountpoint = "/opnsense{$model_xml->mount}";
+                $src_mountpoint = "/bentara{$model_xml->mount}";
             }
             // use an xpath expression to find the root of our model in the config.xml file
             // if found, convert the data to a simple structure (or create an empty array)
@@ -615,7 +615,7 @@ abstract class BaseModel
     public function performValidation($validateFullModel = false)
     {
         // create a wrapped validator and collect all model validations.
-        $validation = new \OPNsense\Base\Validation();
+        $validation = new \Bentara\Base\Validation();
         $validation_data = array();
         $all_nodes = $this->internalData->getFlatNodes();
 
@@ -625,7 +625,7 @@ abstract class BaseModel
             if ($validateFullModel || $node->isFieldChanged()) {
                 $node_validators = $node->getValidators();
                 foreach ($node_validators as $item_validator) {
-                    if (is_a($item_validator, "OPNsense\\Base\\Constraints\\BaseConstraint")) {
+                    if (is_a($item_validator, "Bentara\\Base\\Constraints\\BaseConstraint")) {
                         $target_key = $item_validator->getOption("node")->__reference;
                         $validation->add($target_key, $item_validator);
                     } else {
@@ -716,7 +716,7 @@ abstract class BaseModel
              *  First we collect all new nodes in an array, then seek the ones we know and replace, remove access
              *  (when we end up with less nodes). Finally append new nodes not merged yet.
              */
-            $xpath = "/opnsense" . rtrim($this->internal_mountpoint, '+');
+            $xpath = "/bentara" . rtrim($this->internal_mountpoint, '+');
             $toDom = dom_import_simplexml($target_node);
             $newNodes = [];
             foreach ($data_xml->children() as $node) {
@@ -899,7 +899,7 @@ abstract class BaseModel
                     require_once $filename;
                     $mig_class = new ReflectionClass($mig_classname);
                     $chk_class = empty($mig_class->getParentClass()) ? $mig_class :  $mig_class->getParentClass();
-                    if ($chk_class->name == 'OPNsense\Base\BaseModelMigration') {
+                    if ($chk_class->name == 'Bentara\Base\BaseModelMigration') {
                         $migobj = $mig_class->newInstance();
                         try {
                             $migobj->run($this);
@@ -954,7 +954,7 @@ abstract class BaseModel
     public function Default()
     {
         $this->internalData = new ContainerField();
-        $config_array = new SimpleXMLElement('<opnsense/>');
+        $config_array = new SimpleXMLElement('<bentara/>');
         $model_xml = $this->getModelXML();
         if (!empty($model_xml->version) && $this->internal_model_version != (string)$model_xml->version) {
             throw new ModelException('Unable to reset to defaults as model on disk is not the same as in memory');

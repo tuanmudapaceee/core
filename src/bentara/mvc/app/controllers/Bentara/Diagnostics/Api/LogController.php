@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\SanitizeFilter;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\SanitizeFilter;
 
 /**
  * @inherit

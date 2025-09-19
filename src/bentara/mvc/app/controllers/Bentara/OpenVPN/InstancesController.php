@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
-use OPNsense\Base\IndexController as BaseIndexController;
+use Bentara\Base\IndexController as BaseIndexController;
 
 /**
  * Class InstancesController
- * @package OPNsense\OpenVPN
+ * @package Bentara\OpenVPN
  */
 class InstancesController extends BaseIndexController
 {

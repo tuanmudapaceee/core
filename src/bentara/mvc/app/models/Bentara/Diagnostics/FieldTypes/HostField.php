@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Diagnostics\FieldTypes;
+namespace Bentara\Diagnostics\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Firewall\Util;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Firewall\Util;
 
 class HostField extends BaseField
 {

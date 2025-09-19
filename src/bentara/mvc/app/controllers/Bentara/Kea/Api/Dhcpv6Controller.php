@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\Api;
+namespace Bentara\Kea\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 class Dhcpv6Controller extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'dhcpv6';
-    protected static $internalModelClass = 'OPNsense\Kea\KeaDhcpv6';
+    protected static $internalModelClass = 'Bentara\Kea\KeaDhcpv6';
 
     /**
      * @inheritdoc

@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
-use OPNsense\Auth\AuthenticationFactory;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Mvc\Security;
+use Bentara\Auth\AuthenticationFactory;
+use Bentara\Core\ACL;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Mvc\Security;
 
 /**
  * Class ApiControllerBase, inherit this class to implement API calls
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class ApiControllerBase extends ControllerRoot
 {

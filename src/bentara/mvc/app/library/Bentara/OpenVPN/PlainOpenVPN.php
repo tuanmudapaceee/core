@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
 class PlainOpenVPN extends BaseExporter implements IExportProvider
 {

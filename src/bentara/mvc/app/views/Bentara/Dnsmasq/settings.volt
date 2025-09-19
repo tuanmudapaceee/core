@@ -246,7 +246,7 @@
             '#{{ formGridDHCPrange["edit_dialog_id"] }}, ' +
             '#{{ formGridDHCPoption["edit_dialog_id"] }}, ' +
             '#{{ formGridDHCPboot["edit_dialog_id"] }}'
-        ).on('opnsense_bootgrid_mapped', function(e, actionType) {
+        ).on('bentara_bootgrid_mapped', function(e, actionType) {
             if (actionType === 'add') {
                 const selectedTags = $('#tag_select').val();
 
@@ -272,7 +272,7 @@
                 // Wait for grid to be ready
                 $('#{{ formGridHostOverride["table_id"] }}').one('loaded.rs.jquery.bootgrid', function () {
                     // Wait for dialog to be ready
-                    $('#{{ formGridHostOverride["edit_dialog_id"] }}').one('opnsense_bootgrid_mapped', () => {
+                    $('#{{ formGridHostOverride["edit_dialog_id"] }}').one('bentara_bootgrid_mapped', () => {
                         if (params.has('host')) $('#host\\.host').val(params.get('host'));
                         if (params.has('ip')) $('#host\\.ip').trigger('tokenize:tokens:add', [params.get('ip'), params.get('ip')]);
                         if (params.has('client_id')) $('#host\\.client_id').val(params.get('client_id'));

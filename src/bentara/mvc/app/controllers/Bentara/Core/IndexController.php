@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class IndexController Index controller for core package
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * return to / for non existent actions

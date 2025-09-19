@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Firewall\Util;
+use Bentara\Core\AppConfig;
+use Bentara\Firewall\Util;
 
 /**
  * Class ACL, access control list management
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class ACL
 {
@@ -167,7 +167,7 @@ class ACL
         // crawl all vendors and modules and add acl definitions
         foreach (glob(__DIR__ . '/../../*') as $vendor) {
             foreach (glob($vendor . '/*') as $module) {
-                // probe for ACL implementation, which should derive from OPNsense\Core\ACL\ACL
+                // probe for ACL implementation, which should derive from Bentara\Core\ACL\ACL
                 $tmp = explode("/", $module);
                 $module_name = array_pop($tmp);
                 $vendor_name = array_pop($tmp);
@@ -176,7 +176,7 @@ class ACL
                     $acl_rfcls = new \ReflectionClass($classname);
                     $check_derived = $acl_rfcls;
                     while ($check_derived !== false) {
-                        if ($check_derived->name == 'OPNsense\Core\ACL\ACL') {
+                        if ($check_derived->name == 'Bentara\Core\ACL\ACL') {
                             break;
                         }
                         $check_derived = $check_derived->getParentClass();
@@ -185,7 +185,7 @@ class ACL
                         throw new \Exception('ACL class ' . $classname . ' seems to be of wrong type');
                     }
                 } else {
-                    $acl_rfcls = new \ReflectionClass('OPNsense\Core\ACL\ACL');
+                    $acl_rfcls = new \ReflectionClass('Bentara\Core\ACL\ACL');
                 }
                 // construct new ACL
                 $acl = $acl_rfcls->newInstance($module);
@@ -223,7 +223,7 @@ class ACL
     public function __construct()
     {
         // set cache location
-        $this->aclCacheFilename = (new AppConfig())->application->tempDir . '/opnsense_acl_cache.json';
+        $this->aclCacheFilename = (new AppConfig())->application->tempDir . '/bentara_acl_cache.json';
 
         // load module ACL's
         if (!$this->isExpired()) {

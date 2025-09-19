@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc\Exceptions;
+namespace Bentara\Mvc\Exceptions;
 
 use Exception;
 

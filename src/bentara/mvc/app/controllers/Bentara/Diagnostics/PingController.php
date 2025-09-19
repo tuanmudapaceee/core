@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics;
+namespace Bentara\Diagnostics;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
  * Class PingController
- * @package OPNsense\Diagnostics
+ * @package Bentara\Diagnostics
  */
 class PingController extends IndexController
 {

@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Core\Config;
 
 /**
  * Class GroupNameField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class GroupNameField extends BaseField
 {

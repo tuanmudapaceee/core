@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\DynamicAliases;
+namespace Bentara\Firewall\DynamicAliases;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 class InterfaceNetworkAliases
 {

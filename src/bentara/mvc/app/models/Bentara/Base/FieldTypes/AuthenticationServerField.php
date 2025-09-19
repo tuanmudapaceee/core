@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
 /**
  * Class AuthenticationServerField field type to select usable authentication servers,
  * currently this is kind of a backward compatibility package to glue legacy authentication servers into the model.
  * The concept of authentication servers is not likely to change in the near future.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class AuthenticationServerField extends BaseListField
 {
@@ -64,7 +64,7 @@ class AuthenticationServerField extends BaseListField
         if (!isset(self::$internalStaticOptionList[$this->internalCacheKey])) {
             self::$internalStaticOptionList[$this->internalCacheKey] = [];
 
-            $authFactory = new \OPNsense\Auth\AuthenticationFactory();
+            $authFactory = new \Bentara\Auth\AuthenticationFactory();
             $allAuthServers = $authFactory->listServers($this->internalService);
 
             foreach ($allAuthServers as $key => $value) {

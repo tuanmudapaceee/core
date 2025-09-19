@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2016-2021 Franco Fichtner <franco@opnsense.org>
+ * Copyright (C) 2016-2021 Franco Fichtner <franco@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 use Phalcon\Translate\Adapter\Gettext;
 
 /**
  * Class ViewTranslator XSS-safe Gettext wrapper
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class ViewTranslator extends Gettext
 {

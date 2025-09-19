@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
-use OPNsense\Firewall\Alias;
-use OPNsense\Base\Validators\CallbackValidator;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
+use Bentara\Firewall\Alias;
+use Bentara\Base\Validators\CallbackValidator;
 
 /**
  * Network field type supporting aliases and special nets
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class NetworkAliasField extends BaseListField
 {

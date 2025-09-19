@@ -28,15 +28,15 @@
  *
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Base\Menu;
-use OPNsense\Core\ACL;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Base\Menu;
+use Bentara\Core\ACL;
 
 /**
  * Class MenuController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class MenuController extends ApiControllerBase
 {

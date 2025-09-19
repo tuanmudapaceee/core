@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Syslog;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Syslog;
 
 /**
  * Class Backend
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class Backend
 {

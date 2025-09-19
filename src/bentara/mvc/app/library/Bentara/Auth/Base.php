@@ -28,14 +28,14 @@
  *
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
 
 /**
  * Authenticator stub, implements local methods
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 abstract class Base
 {

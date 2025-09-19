@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-class NeighborController extends \OPNsense\Base\IndexController
+class NeighborController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

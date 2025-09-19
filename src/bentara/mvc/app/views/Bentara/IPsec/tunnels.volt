@@ -230,7 +230,7 @@
 
 <div class="alert alert-warning" role="alert">
     <strong>
-        <?php $eol_this_month = explode('.', shell_exec('opnsense-version -nv') ?? '')[1] ?? '1';?>
+        <?php $eol_this_month = explode('.', shell_exec('bentara-version -nv') ?? '')[1] ?? '1';?>
         <?=sprintf(
             gettext("This component is reaching the end of the line, official maintenance will end as of version %s"),
             in_array($eol_this_month, ['1', '7']) ? '26.1' : '26.4');?>

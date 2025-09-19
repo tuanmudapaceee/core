@@ -28,9 +28,9 @@
 
 require_once(__DIR__ . '/../app/library/OPNsense/Autoload/Loader.php');
 
-use OPNsense\Autoload\Loader;
+use Bentara\Autoload\Loader;
 
-$phalcon_config = include('/usr/local/opnsense/mvc/app/config/config.php');
+$phalcon_config = include('/usr/local/bentara/mvc/app/config/config.php');
 
 (new Loader([
     $phalcon_config->application->controllersDir,

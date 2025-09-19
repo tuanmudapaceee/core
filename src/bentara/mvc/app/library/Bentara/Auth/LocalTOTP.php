@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
 /**
  * RFC 6238 TOTP: Time-Based One-Time Password Authenticator
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class LocalTOTP extends Local
 {

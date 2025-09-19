@@ -26,19 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class HasyncController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class HasyncController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'hasync';
-    protected static $internalModelClass = 'OPNsense\Core\Hasync';
+    protected static $internalModelClass = 'Bentara\Core\Hasync';
 
     public function reconfigureAction()
     {

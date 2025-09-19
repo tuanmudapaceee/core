@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Base\Menu;
+namespace Bentara\Base\Menu;
 
 /**
  * Class MenuInitException
- * @package OPNsense\Base\Menu
+ * @package Bentara\Base\Menu
  */
 class MenuInitException extends \Exception
 {

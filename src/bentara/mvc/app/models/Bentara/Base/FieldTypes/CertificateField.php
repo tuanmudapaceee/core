@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class CertificateField field type to select certificates from the internal cert manager
  * package to glue legacy certificates into the model.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class CertificateField extends BaseListField
 {

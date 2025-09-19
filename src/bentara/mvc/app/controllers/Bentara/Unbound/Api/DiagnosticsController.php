@@ -28,14 +28,14 @@
  *
  */
 
-namespace OPNsense\Unbound\Api;
+namespace Bentara\Unbound\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class DiagnosticsextensionController
- * @package OPNsense\Unbound\Api
+ * @package Bentara\Unbound\Api
  */
 class DiagnosticsController extends ApiControllerBase
 {

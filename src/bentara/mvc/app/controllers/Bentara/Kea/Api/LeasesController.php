@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\Api;
+namespace Bentara\Kea\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 abstract class LeasesController extends ApiControllerBase
 {

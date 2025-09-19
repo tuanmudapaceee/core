@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class CpuUsage
- * @package OPNsense\Diagnostics
+ * @package Bentara\Diagnostics
  */
 class CpuUsageController extends ApiControllerBase
 {

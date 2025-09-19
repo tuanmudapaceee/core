@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Stats;
+namespace Bentara\RRD\Stats;
 
 class OpenVPN extends Base
 {
     public function run()
     {
         $result = [];
-        $data = $this->jsonShellCmd('/usr/local/opnsense/scripts/openvpn/ovpn_status.py --options server');
+        $data = $this->jsonShellCmd('/usr/local/bentara/scripts/openvpn/ovpn_status.py --options server');
         if (!empty($data) && !empty($data['server'])) {
             $data = $data['server'];
             foreach (self::$metadata['interfaces'] as $ifname => $ifdata) {

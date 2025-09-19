@@ -28,15 +28,15 @@
  *
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class DnsDiagnosticsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'dns';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\DnsDiagnostics';
+    protected static $internalModelClass = 'Bentara\Diagnostics\DnsDiagnostics';
 
     public function setAction()
     {

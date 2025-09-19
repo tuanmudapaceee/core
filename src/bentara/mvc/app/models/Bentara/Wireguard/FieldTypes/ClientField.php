@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard\FieldTypes;
+namespace Bentara\Wireguard\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Wireguard\Server;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Wireguard\Server;
 
 class ClientField extends ArrayField
 {

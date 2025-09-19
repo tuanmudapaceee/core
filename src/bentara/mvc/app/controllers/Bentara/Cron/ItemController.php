@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Cron;
+namespace Bentara\Cron;
 
 /**
  * Class ItemController
- * @package OPNsense\Cron
+ * @package Bentara\Cron
  */
-class ItemController extends \OPNsense\Base\IndexController
+class ItemController extends \Bentara\Base\IndexController
 {
     /**
      * open cron form with selected item

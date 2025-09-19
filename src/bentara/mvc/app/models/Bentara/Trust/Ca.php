@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Ca
- * @package OPNsense\Trust
+ * @package Bentara\Trust
  */
 class Ca extends BaseModel
 {

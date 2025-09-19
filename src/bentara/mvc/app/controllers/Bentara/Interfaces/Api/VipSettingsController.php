@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 class VipSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'vip';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Vip';
+    protected static $internalModelClass = 'Bentara\Interfaces\Vip';
 
     /**
      * extract network field into subnet + bits for model

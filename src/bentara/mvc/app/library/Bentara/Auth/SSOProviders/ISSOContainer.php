@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\SSOProviders;
+namespace Bentara\Auth\SSOProviders;
 
 /**
  * Interface ISSOContainer defines required methods to support SSO types, a container may yield multiple providers
  * which are usually defined in models.
- * @package OPNsense\Auth\SSOProviders
+ * @package Bentara\Auth\SSOProviders
  */
 interface ISSOContainer
 {

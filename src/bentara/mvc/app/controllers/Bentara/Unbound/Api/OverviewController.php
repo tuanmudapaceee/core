@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound\Api;
+namespace Bentara\Unbound\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 class OverviewController extends ApiControllerBase
 {
@@ -39,14 +39,14 @@ class OverviewController extends ApiControllerBase
     {
         $config = Config::getInstance()->object();
         return [
-            'enabled' => (new \OPNsense\Unbound\Unbound())->getNodes()['general']['stats']
+            'enabled' => (new \Bentara\Unbound\Unbound())->getNodes()['general']['stats']
         ];
     }
 
     public function isBlockListEnabledAction()
     {
         return [
-            'enabled' => (new \OPNsense\Unbound\Unbound())->getNodes()['dnsbl']['enabled']
+            'enabled' => (new \Bentara\Unbound\Unbound())->getNodes()['dnsbl']['enabled']
         ];
     }
 
@@ -66,7 +66,7 @@ class OverviewController extends ApiControllerBase
             return [];
         }
 
-        $nodes = (new \OPNsense\Unbound\Unbound())->getNodes();
+        $nodes = (new \Bentara\Unbound\Unbound())->getNodes();
         /* Map the blocklist type keys to their corresponding description */
         $types = $nodes['dnsbl']['type'];
         foreach ($parsed['top_blocked'] as $domain => $props) {
@@ -100,7 +100,7 @@ class OverviewController extends ApiControllerBase
         $parsed = json_decode($response, true) ?? [];
 
         /* Map the blocklist type keys to their corresponding description */
-        $nodes = (new \OPNsense\Unbound\Unbound())->getNodes();
+        $nodes = (new \Bentara\Unbound\Unbound())->getNodes();
         $types = $nodes['dnsbl']['type'];
         foreach ($parsed as $idx => $query) {
             if (array_key_exists($query['blocklist'], $types)) {

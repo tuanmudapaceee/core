@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-class BridgeController extends \OPNsense\Base\IndexController
+class BridgeController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

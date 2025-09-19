@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 /**
  * Class Voucher user database connector
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class Voucher extends Base implements IAuthConnector
 {

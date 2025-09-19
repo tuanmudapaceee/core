@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routing\Api;
+namespace Bentara\Routing\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 class SettingsController extends ApiMutableModelControllerBase
 {
-    protected static $internalModelClass = '\OPNsense\Routing\Gateways';
+    protected static $internalModelClass = '\Bentara\Routing\Gateways';
     protected static $internalModelName = 'gateways';
 
     public function reconfigureAction()

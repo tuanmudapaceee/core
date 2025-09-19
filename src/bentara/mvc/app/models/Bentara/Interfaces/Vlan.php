@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
 
 class Vlan extends BaseModel
 {

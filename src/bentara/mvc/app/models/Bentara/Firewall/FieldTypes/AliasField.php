@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
 use ReflectionClass;
 use ReflectionException;
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Core\Backend;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Core\Backend;
 
 class AliasField extends ArrayField
 {
@@ -50,7 +50,7 @@ class AliasField extends ArrayField
         $result = [];
         foreach (glob(__DIR__ . "/../DynamicAliases/*.php") as $filename) {
             $origin = explode('.', basename($filename))[0];
-            $classname = 'OPNsense\\Firewall\\DynamicAliases\\' . $origin;
+            $classname = 'Bentara\\Firewall\\DynamicAliases\\' . $origin;
             try {
                 $obj = (new ReflectionClass($classname))->newInstance();
                 $payload = $obj->collect();

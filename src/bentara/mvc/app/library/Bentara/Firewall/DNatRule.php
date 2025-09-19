@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
 /**
  * Class DNatRule, (pf nat type rule, optionally combined with rdr+nat rules for reflection)
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class DNatRule extends Rule
 {
@@ -90,7 +90,7 @@ class DNatRule extends Rule
      * preprocess internal rule data to detail level of actual ruleset
      * handles shortcuts, like inet46 and multiple interfaces
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function parseNatRules()
     {
@@ -154,7 +154,7 @@ class DNatRule extends Rule
     /**
      * output rule as string
      * @return string ruleset
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     public function __toString()
     {

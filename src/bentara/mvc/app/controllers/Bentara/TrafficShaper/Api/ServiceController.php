@@ -28,15 +28,15 @@
  *
  */
 
-namespace OPNsense\TrafficShaper\Api;
+namespace Bentara\TrafficShaper\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\TrafficShaper\TrafficShaper;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\TrafficShaper\TrafficShaper;
 
 /**
  * Class ServiceController
- * @package OPNsense\TrafficShaper
+ * @package Bentara\TrafficShaper
  */
 class ServiceController extends ApiControllerBase
 {

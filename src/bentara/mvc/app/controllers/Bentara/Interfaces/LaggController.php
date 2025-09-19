@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
- * @package OPNsense\Interfaces
+ * @package Bentara\Interfaces
  */
 class LaggController extends IndexController
 {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2015 Jos Schellevis <jos@opnsense.org>
+ * Copyright (C) 2015 Jos Schellevis <jos@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics;
+namespace Bentara\Diagnostics;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
  * Class SystemhealthController
- * @package OPNsense\Diagnostics
+ * @package Bentara\Diagnostics
  */
 class SystemhealthController extends IndexController
 {
@@ -46,7 +46,7 @@ class SystemhealthController extends IndexController
             '/ui/js/chartjs-plugin-zoom.min.js',
             '/ui/js/luxon.min.js',
             '/ui/js/chartjs-scale-timestack.min.js',
-            '/ui/js/opnsense_health.js'
+            '/ui/js/bentara_health.js'
         ]);
     }
 

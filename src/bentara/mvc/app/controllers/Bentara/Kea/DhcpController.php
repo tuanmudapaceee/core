@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea;
+namespace Bentara\Kea;
 
-class DhcpController extends \OPNsense\Base\IndexController
+class DhcpController extends \Bentara\Base\IndexController
 {
     /**
      * {@inheritdoc}

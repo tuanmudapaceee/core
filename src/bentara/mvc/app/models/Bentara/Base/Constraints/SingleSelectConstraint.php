@@ -28,12 +28,12 @@
  *
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
 /**
  * Class SingleSelectConstraint Only one option might be selected
  * (when option isRequired is set, exactly one item needs to be set)
- * @package OPNsense\Base\Constraints
+ * @package Bentara\Base\Constraints
  */
 class SingleSelectConstraint extends BaseConstraint
 {

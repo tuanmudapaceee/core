@@ -52,7 +52,7 @@ if (file_exists($vfilename) && filesize($vfilename) > 0) {
 
 /* collect changed gifs to reconfigure */
 $gif_configure = [];
-foreach ((new OPNsense\Interfaces\Gif())->gif->iterateItems() as $item) {
+foreach ((new Bentara\Interfaces\Gif())->gif->iterateItems() as $item) {
     $gif = [];
     foreach ($item->iterateItems() as $node) {
         $gif[$node->getInternalXMLTagName()] = (string)$node;

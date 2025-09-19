@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\Api;
+namespace Bentara\OpenVPN\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
-use OPNsense\OpenVPN\OpenVPN;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
+use Bentara\OpenVPN\OpenVPN;
 
 /**
  * Class ServiceController
- * @package OPNsense\OpenVPN
+ * @package Bentara\OpenVPN
  */
 class ServiceController extends ApiControllerBase
 {

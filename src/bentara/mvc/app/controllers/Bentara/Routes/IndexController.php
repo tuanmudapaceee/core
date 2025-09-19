@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Routes;
+namespace Bentara\Routes;
 
 /**
  * Class IndexController Index controller for core package
- * @package OPNsense\Routes
+ * @package Bentara\Routes
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

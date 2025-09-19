@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
 
 /**
  * Class User
- * @package OPNsense\System
+ * @package Bentara\System
  */
 class User extends BaseModel
 {

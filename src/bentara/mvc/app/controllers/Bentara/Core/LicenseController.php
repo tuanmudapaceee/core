@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class LicenseController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class LicenseController extends \OPNsense\Base\IndexController
+class LicenseController extends \Bentara\Base\IndexController
 {
     /**
      * return to / for non existent actions

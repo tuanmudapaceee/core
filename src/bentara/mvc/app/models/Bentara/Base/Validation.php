@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 class Validation extends \ArrayObject
 {

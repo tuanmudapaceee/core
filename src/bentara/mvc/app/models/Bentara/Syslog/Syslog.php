@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Syslog;
+namespace Bentara\Syslog;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Firewall\Util;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Firewall\Util;
 
 /**
  * Class Syslog
- * @package OPNsense\Routes
+ * @package Bentara\Routes
  */
 class Syslog extends BaseModel
 {

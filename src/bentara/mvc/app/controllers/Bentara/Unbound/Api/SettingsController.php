@@ -27,15 +27,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound\Api;
+namespace Bentara\Unbound\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class SettingsController extends ApiMutableModelControllerBase
 {
-    protected static $internalModelClass = '\OPNsense\Unbound\Unbound';
+    protected static $internalModelClass = '\Bentara\Unbound\Unbound';
     protected static $internalModelName = 'unbound';
 
     private $type = 'forward';
@@ -85,7 +85,7 @@ class SettingsController extends ApiMutableModelControllerBase
                 $mdl->serializeToConfig();
                 Config::getInstance()->save();
 
-                $service = new \OPNsense\Unbound\Api\ServiceController();
+                $service = new \Bentara\Unbound\Api\ServiceController();
                 $result = $service->dnsblAction();
             }
         }

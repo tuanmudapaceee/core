@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound\FieldTypes;
+namespace Bentara\Unbound\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\BaseListField;
+use Bentara\Core\Config;
 
 /**
  * Class UnboundDomainField
- * @package OPNsense\Unbound\FieldTypes
+ * @package Bentara\Unbound\FieldTypes
  */
 class UnboundInterfaceField extends BaseListField
 {

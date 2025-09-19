@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq;
+namespace Bentara\Dnsmasq;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
-use OPNsense\Core\Backend;
-use OPNsense\Firewall\Util;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Core\Backend;
+use Bentara\Firewall\Util;
 
 /**
  * Class Dnsmasq
- * @package OPNsense\Dnsmasq
+ * @package Bentara\Dnsmasq
  */
 class Dnsmasq extends BaseModel
 {

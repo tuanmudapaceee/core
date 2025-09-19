@@ -26,21 +26,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\IntegerField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\IntegerField;
 
 /**
  * Class ComparedToFieldConstraintTest test code for the ComparedToFieldConstraint
- * @package OPNsense\Base\Constraints
+ * @package Bentara\Base\Constraints
  */
 class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
 {
     // lesser then
     public function test_if_it_validates_number_ranges_correctly_with_lt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(2, 3, 'test', 'lt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -50,7 +50,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
 
     public function test_if_it_validates_number_ranges_correctly_with_lt_and_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(3, 3, 'test', 'lt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -60,7 +60,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     // greater then
     public function test_if_it_validates_number_ranges_correctly_with_gt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(5, 3, 'test', 'gt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -70,7 +70,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
 
     public function test_if_it_validates_number_ranges_correctly_with_gt_and_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(2, 3, 'test', 'gt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -81,7 +81,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     // zero values
     public function test_if_it_validates_zero_number_ranges_correctly_with_lt_and_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(2, 0, 'test', 'lt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -90,7 +90,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_zero_number_ranges_correctly_with_gt_and_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(0, 2, 'test', 'gt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -99,7 +99,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_zero_number_ranges_correctly_with_lt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(0, 2, 'test', 'lt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -108,7 +108,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_zero_number_ranges_correctly_with_gt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(2, 0, 'test', 'gt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -119,7 +119,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     // Empty values
     public function test_if_it_validates_node_empty_values_correctly_with_gt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator('', 5, 'test', 'lt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -128,7 +128,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_other_node_empty_values_correctly_with_gt_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(5, '', 'test', 'gt');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -139,7 +139,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     // Null nodes
     public function test_if_it_validates_constraint_if_node_is_null_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(null, 2, 'test', 'eq');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -148,7 +148,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_constraint_if_other_is_null_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(2, null, 'test', 'eq');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();
@@ -157,7 +157,7 @@ class ComparedToFieldConstraintTest extends \PHPUnit\Framework\TestCase
     }
     public function test_if_it_validates_constraint_if_both_are_null_and_no_error()
     {
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         $validate = $this->make_validator(null, null, 'test', 'eq');
         $ret = $validate->validate($validator, '');
         $messages = $validator->getMessages();

@@ -25,14 +25,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\UserException;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
-use OPNsense\Firewall\Category;
-use OPNsense\Firewall\Group;
-use OPNsense\Firewall\Util;
+use Bentara\Base\UserException;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
+use Bentara\Firewall\Category;
+use Bentara\Firewall\Group;
+use Bentara\Firewall\Util;
 
 class FilterController extends FilterBaseController
 {
@@ -403,7 +403,7 @@ class FilterController extends FilterBaseController
 
         // Count rules per interface
         $ruleCounts = [];
-        foreach ((new \OPNsense\Firewall\Filter())->rules->rule->iterateItems() as $rule) {
+        foreach ((new \Bentara\Firewall\Filter())->rules->rule->iterateItems() as $rule) {
             $interfaces = array_filter(explode(',', (string)$rule->interface));
 
             if (count($interfaces) !== 1) {
@@ -427,14 +427,14 @@ class FilterController extends FilterBaseController
         $result['floating']['items'][] = $makeItem('', gettext('Any'), $ruleCounts['floating'] ?? 0, 'floating');
 
         // Groups
-        foreach ((new \OPNsense\Firewall\Group())->ifgroupentry->iterateItems() as $groupItem) {
+        foreach ((new \Bentara\Firewall\Group())->ifgroupentry->iterateItems() as $groupItem) {
             $name = (string)$groupItem->ifname;
             $result['groups']['items'][] = $makeItem($name, $name, $ruleCounts[$name] ?? 0, 'group');
         }
 
         // Interfaces
         $groupKeys = array_column($result['groups']['items'], 'value');
-        foreach (\OPNsense\Core\Config::getInstance()->object()->interfaces->children() as $key => $intf) {
+        foreach (\Bentara\Core\Config::getInstance()->object()->interfaces->children() as $key => $intf) {
             if (!in_array($key, $groupKeys)) {
                 $descr = !empty($intf->descr) ? (string)$intf->descr : strtoupper($key);
                 $result['interfaces']['items'][] = $makeItem($key, $descr, $ruleCounts[$key] ?? 0, 'interface');

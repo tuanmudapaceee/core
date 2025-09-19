@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\IDS\FieldTypes;
+namespace Bentara\IDS\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
-use OPNsense\Core\Backend;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
+use Bentara\Core\Backend;
 
 class PolicyRulesField extends ArrayField
 {

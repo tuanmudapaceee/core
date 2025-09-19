@@ -52,7 +52,7 @@ if (file_exists($vfilename) && filesize($vfilename) > 0) {
 
 /* collect changed gres to reconfigure */
 $gre_configure = [];
-foreach ((new OPNsense\Interfaces\Gre())->gre->iterateItems() as $item) {
+foreach ((new Bentara\Interfaces\Gre())->gre->iterateItems() as $item) {
     $gre = [];
     foreach ($item->iterateItems() as $node) {
         $gre[$node->getInternalXMLTagName()] = (string)$node;

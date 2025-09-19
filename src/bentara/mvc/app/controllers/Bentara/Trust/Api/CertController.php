@@ -26,22 +26,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\Api;
+namespace Bentara\Trust\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
-use OPNsense\Trust\Store as CertStore;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
+use Bentara\Trust\Store as CertStore;
 
 /**
  * Class CertController
- * @package OPNsense\Trust\Api
+ * @package Bentara\Trust\Api
  */
 class CertController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'cert';
-    protected static $internalModelClass = 'OPNsense\Trust\Cert';
+    protected static $internalModelClass = 'Bentara\Trust\Cert';
 
     /**
      * @var private key data when not stored locally

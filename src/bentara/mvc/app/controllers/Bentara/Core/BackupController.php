@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class BackupController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class BackupController extends \OPNsense\Base\IndexController
+class BackupController extends \Bentara\Base\IndexController
 {
     public function historyAction($selected_host = null)
     {

@@ -28,17 +28,17 @@
  *
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class LvtemplateController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'lvtemplate';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\Lvtemplate';
+    protected static $internalModelClass = 'Bentara\Diagnostics\Lvtemplate';
 
     public function searchItemAction()
     {

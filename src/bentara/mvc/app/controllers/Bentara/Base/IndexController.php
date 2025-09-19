@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 /**
  * Class IndexController
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class IndexController extends ControllerBase
 {

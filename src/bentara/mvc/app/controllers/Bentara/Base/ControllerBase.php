@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
-use OPNsense\Mvc\Dispatcher;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
+use Bentara\Mvc\Dispatcher;
 
 /**
  * Class ControllerBase implements core controller for OPNsense framework
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class ControllerBase extends ControllerRoot
 {
@@ -68,14 +68,14 @@ class ControllerBase extends ControllerRoot
           '/ui/js/tokenize2.js',
           // Tabulator and related grid integration (https://tabulator.info/)
           '/ui/js/tabulator.min.js',
-          '/ui/js/opnsense_bootgrid.js',
+          '/ui/js/bentara_bootgrid.js',
           // Bootstrap type ahead
           '/ui/js/bootstrap3-typeahead.min.js',
           // OPNsense standard toolkit
-          '/ui/js/opnsense.js',
-          '/ui/js/opnsense_theme.js',
-          '/ui/js/opnsense_ui.js',
-          '/ui/js/opnsense_status.js',
+          '/ui/js/bentara.js',
+          '/ui/js/bentara_theme.js',
+          '/ui/js/bentara_ui.js',
+          '/ui/js/bentara_status.js',
           // bootstrap script
           '/ui/js/bootstrap.min.js',
           '/ui/js/bootstrap-select.min.js',
@@ -97,7 +97,7 @@ class ControllerBase extends ControllerRoot
             // bootstrap dialog
             '/css/bootstrap-dialog.css',
             '/css/tabulator.min.css',
-            '/css/opnsense-bootgrid.css',
+            '/css/bentara-bootgrid.css',
             // Font awesome
             '/ui/assets/fontawesome/css/all.min.css',
             '/ui/assets/fontawesome/css/v4-shims.min.css',
@@ -377,8 +377,8 @@ class ControllerBase extends ControllerRoot
         if (
             $cnf->object()->theme->count() > 0 && !empty($cnf->object()->theme) &&
             (
-                is_dir('/usr/local/opnsense/www/themes/' . (string)$cnf->object()->theme) ||
-                !is_dir('/usr/local/opnsense/www/themes')
+                is_dir('/usr/local/bentara/www/themes/' . (string)$cnf->object()->theme) ||
+                !is_dir('/usr/local/bentara/www/themes')
             )
         ) {
             $this->view->ui_theme = $cnf->object()->theme;
@@ -411,7 +411,7 @@ class ControllerBase extends ControllerRoot
         }
 
         // append ACL object to view
-        $this->view->acl = new \OPNsense\Core\ACL();
+        $this->view->acl = new \Bentara\Core\ACL();
 
         // Javascript includes
         $this->view->javascript_files = $this->templateJSIncludes();

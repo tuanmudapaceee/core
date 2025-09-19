@@ -24,14 +24,14 @@
  # POSSIBILITY OF SUCH DAMAGE.
  #}
 
-{% set theme_name = ui_theme|default('opnsense') %}
+{% set theme_name = ui_theme|default('bentara') %}
 <!-- required for gridstack calculations -->
 <link href="{{ cache_safe('/ui/css/gridstack.min.css') }}" rel="stylesheet">
 <!-- required for any amount of columns < 12 -->
 <link href="{{ cache_safe('/ui/css/gridstack-extra.min.css') }}" rel="stylesheet">
 <!-- gridstack core -->
 <script src="{{ cache_safe('/ui/js/gridstack-all.min.js') }}"></script>
-<script src="{{ cache_safe('/ui/js/opnsense_widget_manager.js') }}"></script>
+<script src="{{ cache_safe('/ui/js/bentara_widget_manager.js') }}"></script>
 <script src="{{ cache_safe('/ui/js/moment-with-locales.min.js') }}"></script>
 <script src="{{ cache_safe('/ui/js/chart.umd.min.js') }}"></script>
 <script src="{{ cache_safe('/ui/js/chartjs-plugin-colorschemes.min.js') }}"></script>

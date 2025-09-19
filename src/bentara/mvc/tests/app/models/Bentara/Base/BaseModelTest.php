@@ -26,9 +26,9 @@
  *    POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace tests\OPNsense\Base;
+namespace tests\Bentara\Base;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 require_once 'BaseModel/TestModel.php';
 
@@ -57,7 +57,7 @@ class BaseModelTest extends \PHPUnit\Framework\TestCase
     public function testCanBeCreated()
     {
         BaseModelTest::$model = new BaseModel\TestModel();
-        $this->assertInstanceOf('tests\OPNsense\Base\BaseModel\TestModel', BaseModelTest::$model);
+        $this->assertInstanceOf('tests\Bentara\Base\BaseModel\TestModel', BaseModelTest::$model);
     }
 
     /**
@@ -162,7 +162,7 @@ class BaseModelTest extends \PHPUnit\Framework\TestCase
     {
         // nothing changed, valid config
         BaseModelTest::$model->serializeToConfig();
-        $this->assertInstanceOf('tests\OPNsense\Base\BaseModel\TestModel', BaseModelTest::$model);
+        $this->assertInstanceOf('tests\Bentara\Base\BaseModel\TestModel', BaseModelTest::$model);
     }
 
     /**
@@ -170,7 +170,7 @@ class BaseModelTest extends \PHPUnit\Framework\TestCase
      */
     public function testValidationNOK()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("not a valid number");
         // replace all numbers
         foreach (BaseModelTest::$model->arraytypes->item->iterateItems() as $nodeid => $node) {
@@ -244,7 +244,7 @@ class BaseModelTest extends \PHPUnit\Framework\TestCase
      */
     public function testConstraintsNok()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("number should be unique");
         $count = 2;
         foreach (BaseModelTest::$model->arraytypes->item->iterateItems() as $nodeid => $node) {
@@ -267,7 +267,7 @@ class BaseModelTest extends \PHPUnit\Framework\TestCase
             $node->number = $count;
         }
         BaseModelTest::$model->serializeToConfig();
-        $this->assertInstanceOf('tests\OPNsense\Base\BaseModel\TestModel', BaseModelTest::$model);
+        $this->assertInstanceOf('tests\Bentara\Base\BaseModel\TestModel', BaseModelTest::$model);
     }
 
     /**

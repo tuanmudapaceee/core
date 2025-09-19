@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\Api;
+namespace Bentara\OpenVPN\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 /**
  * Class ClientOverwritesController
- * @package OPNsense\OpenVPN\Api
+ * @package Bentara\OpenVPN\Api
  */
 class ClientOverwritesController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'cso';
-    protected static $internalModelClass = 'OPNsense\OpenVPN\OpenVPN';
+    protected static $internalModelClass = 'Bentara\OpenVPN\OpenVPN';
 
     public function searchAction()
     {

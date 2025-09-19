@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Firewall\Util;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Firewall\Util;
 
 /**
  * Class AliasNameField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class AliasNameField extends BaseField
 {
@@ -51,7 +51,7 @@ class AliasNameField extends BaseField
     {
         $validators = parent::getValidators();
         // Internally reserved keywords
-        //  ref https://github.com/opnsense/src/blob/41ba6e29a8d3f862f95f9ab0a1482ef58c4a7cdb/sbin/pfctl/parse.y#L5482
+        //  ref https://github.com/bentara/src/blob/41ba6e29a8d3f862f95f9ab0a1482ef58c4a7cdb/sbin/pfctl/parse.y#L5482
         $reservedwords = array(
             'all', 'allow-opts', 'altq', 'anchor', 'antispoof', 'any', 'bandwidth', 'binat', 'binat-anchor', 'bitmask',
             'block', 'block-policy', 'buckets', 'cbq', 'code', 'codelq', 'crop', 'debug', 'divert-reply', 'divert-to',

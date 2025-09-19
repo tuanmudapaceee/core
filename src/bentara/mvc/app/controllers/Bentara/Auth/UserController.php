@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-class UserController extends \OPNsense\Base\IndexController
+class UserController extends \Bentara\Base\IndexController
 {
     protected function templateJSIncludes()
     {

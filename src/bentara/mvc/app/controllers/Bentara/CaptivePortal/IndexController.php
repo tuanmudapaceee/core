@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\CaptivePortal;
+namespace Bentara\CaptivePortal;
 
 /**
  * Class IndexController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

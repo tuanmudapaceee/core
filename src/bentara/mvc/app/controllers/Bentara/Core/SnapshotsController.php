@@ -26,9 +26,9 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-class SnapshotsController extends \OPNsense\Base\IndexController
+class SnapshotsController extends \Bentara\Base\IndexController
 {
     /**
      * {@inheritdoc}

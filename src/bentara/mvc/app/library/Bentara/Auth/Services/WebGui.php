@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Services;
+namespace Bentara\Auth\Services;
 
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
-use OPNsense\Auth\IService;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
+use Bentara\Auth\IService;
 
 /**
  * WebGui service
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class WebGui implements IService
 {

@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System;
+namespace Bentara\System;
 
 /**
- * SystemStatus: Crawl through the \OPNsense\System\Status namespace and
+ * SystemStatus: Crawl through the \Bentara\System\Status namespace and
  * instantiate every class that correctly extends AbstractStatus. Every created
  * object is responsible for detecting problems in its own defined category.
  */
@@ -44,12 +44,12 @@ class SystemStatus
         $all = glob(__DIR__ . '/Status/*.php');
         $classes = array_map(function ($file) {
             if (strpos($file, 'Status') !== false) {
-                return '\\OPNsense\\System\\Status\\' . basename($file, '.php');
+                return '\\Bentara\\System\\Status\\' . basename($file, '.php');
             }
         }, $all);
 
         $statuses = array_filter($classes, function ($class) {
-            return class_exists($class) && is_subclass_of($class, '\\OPNsense\\System\\AbstractStatus');
+            return class_exists($class) && is_subclass_of($class, '\\Bentara\\System\\AbstractStatus');
         });
 
         foreach ($statuses as $statusClass) {

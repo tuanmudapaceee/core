@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\CSVListField;
+use Bentara\Base\FieldTypes\CSVListField;
 
 class CSVListFieldTest extends Field_Framework_TestCase
 {
@@ -41,7 +41,7 @@ class CSVListFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\CSVListField', new CSVListField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\CSVListField', new CSVListField());
     }
 
     /**

@@ -46,7 +46,7 @@ function setup_interface($instance)
         if (!does_interface_exist($instance->__devname)) {
             /**
              * XXX: DCO uses non standard matching, normally create should use "ifconfig ovpnX create"
-             * ref: https://github.com/opnsense/src/blob/b0130349e8/sys/net/if_ovpn.c#L2392-L2400
+             * ref: https://github.com/bentara/src/blob/b0130349e8/sys/net/if_ovpn.c#L2392-L2400
              */
             mwexecf('/sbin/ifconfig %s create', [$instance->__devname]);
             mwexecf('/sbin/ifconfig %s group openvpn', [$instance->__devname]);
@@ -112,7 +112,7 @@ function get_vhid_status()
 {
     $vhids = [];
     $uuids = [];
-    foreach ((new OPNsense\Interfaces\Vip())->vip->iterateItems() as $id => $item) {
+    foreach ((new Bentara\Interfaces\Vip())->vip->iterateItems() as $id => $item) {
         if ($item->mode == 'carp') {
             $uuids[(string)$item->vhid] =  $id;
             $vhids[$id] = 'DISABLED';
@@ -140,7 +140,7 @@ if (isset($opts['h']) || empty($args) || !in_array($args[0], ['start', 'stop', '
     echo "Usage: ovpn_service_control.php [-a] [-h] [stop|start|restart|configure] [uuid]\n\n";
     echo "\t-a all instances\n";
 } elseif (isset($opts['a']) || !empty($args[1])) {
-    $mdl = new OPNsense\OpenVPN\OpenVPN();
+    $mdl = new Bentara\OpenVPN\OpenVPN();
     $instance_id = $args[1] ?? null;
     $action = $args[0];
 

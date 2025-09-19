@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Cron;
+namespace Bentara\Cron;
 
 /**
  * Class IndexController
- * @package OPNsense\Cron
+ * @package Bentara\Cron
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * cron index page

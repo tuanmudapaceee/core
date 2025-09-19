@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
+use Bentara\Base\FieldTypes\BaseField;
 
 class ApiKeyField extends BaseField
 {

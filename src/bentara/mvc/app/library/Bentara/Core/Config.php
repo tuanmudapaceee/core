@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Syslog;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Syslog;
 
 /**
  * Class Config provides access to systems config xml
@@ -445,8 +445,8 @@ class Config extends Singleton
         // reformat XML (pretty print)
         $dom = new \DOMDocument('1.0');
 
-        // make sure our root element is always called "opnsense"
-        $root = $dom->createElement('opnsense');
+        // make sure our root element is always called "bentara"
+        $root = $dom->createElement('bentara');
         $dom->appendChild($root);
 
         foreach ($this->simplexml as $node) {

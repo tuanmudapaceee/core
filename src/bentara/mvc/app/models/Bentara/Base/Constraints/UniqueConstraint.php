@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
 /**
  * Class UniqueConstraint, add a unique constraint to this field and optional additional fields.
- * @package OPNsense\Base\Constraints
+ * @package Bentara\Base\Constraints
  */
 class UniqueConstraint extends BaseConstraint
 {

@@ -28,15 +28,15 @@
  *
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\CaptivePortal\CaptivePortal;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\CaptivePortal\CaptivePortal;
 
 /**
  * Class SessionController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 class SessionController extends ApiControllerBase
 {

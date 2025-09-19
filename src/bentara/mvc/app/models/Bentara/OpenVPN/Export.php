@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Export
- * @package OPNsense\OpenVPN
+ * @package Bentara\OpenVPN
  */
 class Export extends BaseModel
 {

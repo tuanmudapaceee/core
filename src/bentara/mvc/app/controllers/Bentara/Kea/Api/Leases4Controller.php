@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\Api;
+namespace Bentara\Kea\Api;
 
 class Leases4Controller extends LeasesController
 {

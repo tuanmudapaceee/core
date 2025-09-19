@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class IDSOverrideStatus extends AbstractStatus
 {
@@ -47,8 +47,8 @@ class IDSOverrideStatus extends AbstractStatus
 
     public function collectStatus()
     {
-        $fileHash = @hash_file('sha256', '/usr/local/opnsense/service/templates/OPNsense/IDS/custom.yaml');
-        $sampleHash = @hash_file('sha256', '/usr/local/opnsense/service/templates/OPNsense/IDS/custom.yaml.sample');
+        $fileHash = @hash_file('sha256', '/usr/local/bentara/service/templates/OPNsense/IDS/custom.yaml');
+        $sampleHash = @hash_file('sha256', '/usr/local/bentara/service/templates/OPNsense/IDS/custom.yaml.sample');
 
         if ($fileHash && $sampleHash && $fileHash !== $sampleHash) {
             $this->internalMessage = gettext(

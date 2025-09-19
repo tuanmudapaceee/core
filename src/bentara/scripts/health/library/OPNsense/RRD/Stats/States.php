@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Stats;
+namespace Bentara\RRD\Stats;
 
 class States extends Base
 {
     public function run()
     {
-        $data = $this->shellCmd('/usr/local/opnsense/scripts/system/rrd_pfstate_info.py');
+        $data = $this->shellCmd('/usr/local/bentara/scripts/system/rrd_pfstate_info.py');
         if (!empty($data)) {
             return explode(':', $data[0]);
         }

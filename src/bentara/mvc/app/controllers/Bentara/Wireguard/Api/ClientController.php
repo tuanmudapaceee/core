@@ -27,18 +27,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard\Api;
+namespace Bentara\Wireguard\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Wireguard\Server;
-use OPNsense\Core\Backend;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Config;
+use Bentara\Wireguard\Server;
+use Bentara\Core\Backend;
+use Bentara\Firewall\Util;
 
 class ClientController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'client';
-    protected static $internalModelClass = '\OPNsense\Wireguard\Client';
+    protected static $internalModelClass = '\Bentara\Wireguard\Client';
 
     public function pskAction()
     {

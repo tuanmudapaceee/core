@@ -27,14 +27,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Monit;
+namespace Bentara\Monit;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
 
 /**
  * Class Monit
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
 class Monit extends BaseModel
 {

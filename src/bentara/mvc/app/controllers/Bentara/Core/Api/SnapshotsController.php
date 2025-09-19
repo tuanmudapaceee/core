@@ -26,11 +26,11 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Base\UserException;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Base\UserException;
 
 class SnapshotsController extends ApiControllerBase
 {

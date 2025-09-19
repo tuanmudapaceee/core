@@ -28,17 +28,17 @@
  *
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Diagnostics\Netflow;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
-use OPNsense\Core\SanitizeFilter;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Diagnostics\Netflow;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
+use Bentara\Core\SanitizeFilter;
 
 /**
  * Class NetworkinsightController
- * @package OPNsense\Netflow
+ * @package Bentara\Netflow
  */
 class NetworkinsightController extends ApiControllerBase
 {

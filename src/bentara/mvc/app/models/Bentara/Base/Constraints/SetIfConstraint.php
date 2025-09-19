@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
 /**
  * validate if a field is set depending on the setting of another field
  * containing a specific value
  * Class SetIfConstraint
- * @package OPNsense\Base\Constraints
+ * @package Bentara\Base\Constraints
  */
 class SetIfConstraint extends BaseConstraint
 {

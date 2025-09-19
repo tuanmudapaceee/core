@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
 /**
  * Class ArrayField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class ArrayField extends BaseField
 {
@@ -131,7 +131,7 @@ class ArrayField extends BaseField
 
             if ($node->isContainer()) {
                 foreach ($node->iterateRecursiveItems() as $subnode) {
-                    if (is_a($subnode, "OPNsense\\Base\\FieldTypes\\ArrayField")) {
+                    if (is_a($subnode, "Bentara\\Base\\FieldTypes\\ArrayField")) {
                         // validate child nodes, nesting not supported in this version.
                         throw new \Exception("Unsupported copy, Array doesn't support nesting.");
                     }

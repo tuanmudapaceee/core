@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
 /**
  * Class KeyPairsController
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
-class KeyPairsController extends \OPNsense\Base\IndexController
+class KeyPairsController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

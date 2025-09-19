@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\AuthenticationServerField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\AuthenticationServerField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class AuthenticationServerFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class AuthenticationServerFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\AuthenticationServerField', new AuthenticationServerField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\AuthenticationServerField', new AuthenticationServerField());
         // switch config to test set for this type
         (new AppConfig())->update('application.configDir', __DIR__ . '/AuthenticationServerFieldTest');
         Config::getInstance()->forceReload();
@@ -83,7 +83,7 @@ class AuthenticationServerFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetWithUnknownValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new AuthenticationServerField();
@@ -112,7 +112,7 @@ class AuthenticationServerFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetOnSingleValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new AuthenticationServerField();

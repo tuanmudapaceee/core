@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Firewall\Alias;
+use Bentara\Firewall\Alias;
 
 /**
  * Class PortField field type for ports, includes validation for services in /etc/services or valid number ranges.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class PortField extends BaseListField
 {

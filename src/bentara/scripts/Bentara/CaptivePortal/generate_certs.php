@@ -32,9 +32,9 @@
 require_once("config.inc");
 require_once("certs.inc");
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
-$store = new OPNsense\Trust\Store();
+$store = new Bentara\Trust\Store();
 // traverse captive portal zones
 $configObj = Config::getInstance()->object();
 if (isset($configObj->OPNsense->captiveportal->zones)) {

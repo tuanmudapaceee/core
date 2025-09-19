@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
 /**
  * Interface IAuthConnector for authenticator connectors
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 interface IAuthConnector
 {

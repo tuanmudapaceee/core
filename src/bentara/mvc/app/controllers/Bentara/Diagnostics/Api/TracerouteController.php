@@ -26,15 +26,15 @@
  *    POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class TracerouteController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'traceroute';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\Traceroute';
+    protected static $internalModelClass = 'Bentara\Diagnostics\Traceroute';
 
     public function setAction()
     {

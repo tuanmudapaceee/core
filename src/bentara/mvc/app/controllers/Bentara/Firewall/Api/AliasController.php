@@ -26,22 +26,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Category;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Category;
 
 /**
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class AliasController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'alias';
-    protected static $internalModelClass = 'OPNsense\Firewall\Alias';
+    protected static $internalModelClass = 'Bentara\Firewall\Alias';
 
     /**
      * search aliases
@@ -127,7 +127,7 @@ class AliasController extends ApiMutableModelControllerBase
      * Update alias with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setItemAction($uuid)
@@ -150,8 +150,8 @@ class AliasController extends ApiMutableModelControllerBase
     /**
      * Add new alias and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addItemAction()
@@ -202,9 +202,9 @@ class AliasController extends ApiMutableModelControllerBase
      * Delete alias by uuid, save contents to tmp for removal on apply
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
-     * @throws \OPNsense\Base\UserException when unable to delete
+     * @throws \Bentara\Base\UserException when unable to delete
      */
     public function delItemAction($uuid)
     {
@@ -218,7 +218,7 @@ class AliasController extends ApiMutableModelControllerBase
                     $message .= htmlspecialchars(sprintf("\n[%s] %s", $key, $value), ENT_NOQUOTES | ENT_HTML401);
                 }
                 $message = sprintf(gettext("Cannot delete alias. Currently in use by %s"), $message);
-                throw new \OPNsense\Base\UserException($message, gettext("Alias in use"));
+                throw new \Bentara\Base\UserException($message, gettext("Alias in use"));
             }
         }
         return $this->delBase("aliases.alias", $uuid);
@@ -229,7 +229,7 @@ class AliasController extends ApiMutableModelControllerBase
      * @param string $uuid id to toggled
      * @param string|null $enabled set enabled by default
      * @return array status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleItemAction($uuid, $enabled = null)
@@ -429,7 +429,7 @@ class AliasController extends ApiMutableModelControllerBase
                     }
                 }
                 // attach this alias to util class, to avoid recursion issues (aliases used in aliases).
-                \OPNsense\Firewall\Util::attachAliasObject($this->getModel());
+                \Bentara\Firewall\Util::attachAliasObject($this->getModel());
 
                 // perform validation, record details.
                 foreach ($this->getModel()->performValidation() as $msg) {
@@ -481,7 +481,7 @@ class AliasController extends ApiMutableModelControllerBase
             if (isset($cnf->system->firmware) && !empty($cnf->system->firmware->mirror)) {
                 // XXX: we might add some attribute in firmware to store subscription status, since we now only store uri
                 $result[static::$internalModelName]['geoip']['subscription'] =
-                    strpos($cnf->system->firmware->mirror, 'opnsense-update.deciso.com') !== false;
+                    strpos($cnf->system->firmware->mirror, 'bentara-update.deciso.com') !== false;
             }
 
             $result[static::$internalModelName]['geoip']['address_count'] = 0;

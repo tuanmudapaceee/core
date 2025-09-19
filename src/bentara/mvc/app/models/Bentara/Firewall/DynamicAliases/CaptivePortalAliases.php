@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\DynamicAliases;
+namespace Bentara\Firewall\DynamicAliases;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 class CaptivePortalAliases
 {
     public function collect()
     {
         $result = [];
-        $cp = new \OPNsense\CaptivePortal\CaptivePortal();
+        $cp = new \Bentara\CaptivePortal\CaptivePortal();
         if ($cp->isEnabled()) {
             foreach ($cp->zones->zone->iterateItems() as $zone) {
                 if (empty((string)$zone->enabled)) {

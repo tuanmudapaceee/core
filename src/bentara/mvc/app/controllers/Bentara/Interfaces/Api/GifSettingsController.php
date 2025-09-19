@@ -26,20 +26,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Interfaces
+ * @package Bentara\Interfaces
  */
 class GifSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'gif';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Gif';
+    protected static $internalModelClass = 'Bentara\Interfaces\Gif';
 
 
     /**
@@ -130,7 +130,7 @@ class GifSettingsController extends ApiMutableModelControllerBase
             $cfg = Config::getInstance()->object();
             foreach ($cfg->interfaces->children() as $key => $value) {
                 if ((string)$value->if == (string)$node->gifif) {
-                    throw new \OPNsense\Base\UserException(
+                    throw new \Bentara\Base\UserException(
                         sprintf(gettext("Cannot delete gif. Currently in use by [%s] %s"), $key, $value),
                         gettext("gif in use")
                     );

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Monit\Api;
+namespace Bentara\Monit\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Monit\Monit;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Monit\Monit;
 
 /**
  * Class StatusController
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
 class StatusController extends ApiControllerBase
 {

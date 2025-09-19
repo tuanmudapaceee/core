@@ -38,7 +38,7 @@ function view_file_exists($filename)
  */
 function view_cache_safe($url)
 {
-    $info = stat('/usr/local/opnsense/www/index.php');
+    $info = stat('/usr/local/bentara/www/index.php');
     if (!empty($info['mtime'])) {
         return "{$url}?v=" . substr(md5($info['mtime']), 0, 16);
     }
@@ -61,13 +61,13 @@ try {
     $config = include __DIR__ . "/../mvc/app/config/config.php";
     include __DIR__ . "/../mvc/app/config/loader.php";
 
-    $router = new OPNsense\Mvc\Router('/ui/');
+    $router = new Bentara\Mvc\Router('/ui/');
     try {
         $response = $router->routeRequest($_SERVER['REQUEST_URI'], [
             'controller' => 'IndexController',
             'action' => 'indexAction',
         ]);
-    } catch (\OPNsense\Mvc\Exceptions\DispatchException) {
+    } catch (\Bentara\Mvc\Exceptions\DispatchException) {
         if ($_SERVER['REQUEST_URI'] === '/ui/user_portal') {
             /* legacy user password manager requested, non BE install */
             header('Location: /system_usermanager_passwordmg.php');

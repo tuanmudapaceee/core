@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
-use OPNsense\Auth\User;
+use Bentara\Core\Config;
+use Bentara\Auth\User;
 
 /**
  * Class API key/secret database connector (connect to legacy xml structure).
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class API extends Base implements IAuthConnector
 {
@@ -113,7 +113,7 @@ class API extends Base implements IAuthConnector
     public function createKey($username)
     {
         Config::getInstance()->lock();
-        $mdl = new \OPNsense\Auth\User();
+        $mdl = new \Bentara\Auth\User();
         $user = $mdl->getUserByName($username);
         if ($user) {
             $tmp = $user->apikeys->add();
@@ -136,7 +136,7 @@ class API extends Base implements IAuthConnector
     public function dropKey($username, $apikey)
     {
         Config::getInstance()->lock();
-        $mdl = new \OPNsense\Auth\User();
+        $mdl = new \Bentara\Auth\User();
         $user = $mdl->getUserByName($username);
         if ($user) {
             if ($user->apikeys->del($apikey)) {

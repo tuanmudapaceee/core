@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class GroupController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'group';
-    protected static $internalModelClass = 'OPNsense\Firewall\Group';
+    protected static $internalModelClass = 'Bentara\Firewall\Group';
 
     /**
      * search groups
@@ -57,7 +57,7 @@ class GroupController extends ApiMutableModelControllerBase
      * Update group with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setItemAction($uuid)
@@ -84,8 +84,8 @@ class GroupController extends ApiMutableModelControllerBase
     /**
      * Add new group and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addItemAction()
@@ -108,9 +108,9 @@ class GroupController extends ApiMutableModelControllerBase
      * Delete alias by uuid, save contents to tmp for removal on apply
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
-     * @throws \OPNsense\Base\UserException when unable to delete
+     * @throws \Bentara\Base\UserException when unable to delete
      */
     public function delItemAction($uuid)
     {
@@ -124,7 +124,7 @@ class GroupController extends ApiMutableModelControllerBase
                 $message .= htmlspecialchars(sprintf("\n[%s] %s", $key, $value), ENT_NOQUOTES | ENT_HTML401);
             }
             $message = sprintf(gettext("Cannot delete group. Currently in use by %s"), $message);
-            throw new \OPNsense\Base\UserException($message, gettext("Group in use"));
+            throw new \Bentara\Base\UserException($message, gettext("Group in use"));
         }
         return $this->delBase("ifgroupentry", $uuid);
     }

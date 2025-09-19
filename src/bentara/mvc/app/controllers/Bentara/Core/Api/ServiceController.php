@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class SessionsController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class ServiceController extends ApiControllerBase
 {

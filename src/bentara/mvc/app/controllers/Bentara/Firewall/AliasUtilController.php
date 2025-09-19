@@ -28,12 +28,12 @@
  *
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class AliasUtilController extends IndexController
 {

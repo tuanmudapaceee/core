@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Core\Backend;
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 class NeighborSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'neighbor';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Neighbor';
+    protected static $internalModelClass = 'Bentara\Interfaces\Neighbor';
 
     public function searchItemAction()
     {

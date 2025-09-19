@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
-use OPNsense\Base\BaseValidator;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseValidator;
+use Bentara\Base\Messages\Message;
 
 abstract class BaseConstraint extends BaseValidator
 {

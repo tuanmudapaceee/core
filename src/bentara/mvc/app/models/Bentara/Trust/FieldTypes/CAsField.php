@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\FieldTypes;
+namespace Bentara\Trust\FieldTypes;
 
-use OPNsense\Core\Config;
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\ContainerField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Core\Config;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\ContainerField;
+use Bentara\Base\FieldTypes\TextField;
 
 /**
  * Class CaContainerField
- * @package OPNsense\Trust\FieldTypes
+ * @package Bentara\Trust\FieldTypes
  */
 class CaContainerField extends ContainerField
 {
@@ -67,7 +67,7 @@ class CaContainerField extends ContainerField
 
 /**
  * Class CAsField
- * @package OPNsense\Trust\FieldTypes
+ * @package Bentara\Trust\FieldTypes
  */
 class CAsField extends ArrayField
 {
@@ -88,7 +88,7 @@ class CAsField extends ArrayField
             $node->crt_payload = !empty((string)$node->crt) ? (string)base64_decode($node->crt) : '';
             $payload = false;
             if (!empty((string)$node->crt_payload)) {
-                $payload = \OPNsense\Trust\Store::parseX509($node->crt_payload);
+                $payload = \Bentara\Trust\Store::parseX509($node->crt_payload);
             }
             if ($payload !== false) {
                 $countries = [];

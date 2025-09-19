@@ -27,15 +27,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard\Api;
+namespace Bentara\Wireguard\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class ServerController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'server';
-    protected static $internalModelClass = '\OPNsense\Wireguard\Server';
+    protected static $internalModelClass = '\Bentara\Wireguard\Server';
 
     public function keyPairAction()
     {

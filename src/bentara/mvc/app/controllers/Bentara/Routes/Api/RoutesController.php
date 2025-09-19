@@ -27,20 +27,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routes\Api;
+namespace Bentara\Routes\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Routes\Route;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Routes\Route;
 
 /**
- * @package OPNsense\Routes
+ * @package Bentara\Routes
  */
 class RoutesController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'route';
-    protected static $internalModelClass = '\OPNsense\Routes\Route';
+    protected static $internalModelClass = '\Bentara\Routes\Route';
 
     /**
      * search routes
@@ -56,7 +56,7 @@ class RoutesController extends ApiMutableModelControllerBase
      * Update route with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setrouteAction($uuid)
@@ -75,8 +75,8 @@ class RoutesController extends ApiMutableModelControllerBase
     /**
      * Add new route and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException
      */
     public function addrouteAction()
@@ -99,9 +99,9 @@ class RoutesController extends ApiMutableModelControllerBase
      * Delete route by uuid, save contents to tmp for removal on apply
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
-     * @throws \OPNsense\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ModelException when not bound to model
      */
     public function delrouteAction($uuid)
     {
@@ -119,9 +119,9 @@ class RoutesController extends ApiMutableModelControllerBase
      * @param string $uuid id to toggled
      * @param string|null $disabled set disabled by default
      * @return array status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
-     * @throws \OPNsense\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ModelException when not bound to model
      */
     public function togglerouteAction($uuid, $disabled = null)
     {

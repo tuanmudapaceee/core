@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class HasyncStatusController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class HasyncStatusController extends ApiControllerBase
 {

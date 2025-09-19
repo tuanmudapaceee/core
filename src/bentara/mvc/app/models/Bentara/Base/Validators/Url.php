@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Validators;
+namespace Bentara\Base\Validators;
 
-use OPNsense\Base\BaseValidator;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseValidator;
+use Bentara\Base\Messages\Message;
 
 /**
- * @package OPNsense\Base\Validators
+ * @package Bentara\Base\Validators
  */
 class Url extends BaseValidator
 {

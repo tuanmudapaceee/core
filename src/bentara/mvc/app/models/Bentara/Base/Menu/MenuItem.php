@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Menu;
+namespace Bentara\Base\Menu;
 
 /**
  * Class MenuItem
- * @package OPNsense\Core\Menu
+ * @package Bentara\Core\Menu
  */
 class MenuItem
 {

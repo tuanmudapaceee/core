@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\TrafficShaper;
+namespace Bentara\TrafficShaper;
 
 /**
  * Class IndexController
- * @package OPNsense\TrafficShaper
+ * @package Bentara\TrafficShaper
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * traffic shaper index

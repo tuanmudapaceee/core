@@ -28,10 +28,10 @@
  *
  */
 
-namespace OPNsense\IPsec\FieldTypes;
+namespace Bentara\IPsec\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
 
 class ConnnectionField extends ArrayField
 {

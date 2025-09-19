@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Stats;
+namespace Bentara\RRD\Stats;
 
 class Memory extends Base
 {

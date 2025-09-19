@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routing;
+namespace Bentara\Routing;
 
-class ConfigurationController extends \OPNsense\Base\IndexController
+class ConfigurationController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

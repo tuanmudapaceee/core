@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Services;
+namespace Bentara\Auth\Services;
 
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
-use OPNsense\Auth\IService;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
+use Bentara\Auth\IService;
 
 /**
  * IPsec service
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class IPsec implements IService
 {
@@ -57,7 +57,7 @@ class IPsec implements IService
     public function supportedAuthenticators()
     {
         $result = [];
-        $mdl = new \OPNsense\IPsec\IPsec();
+        $mdl = new \Bentara\IPsec\IPsec();
         if (!empty((string)$mdl->general->user_source)) {
             $result = explode(',', (string)$mdl->general->user_source);
         } else {
@@ -87,7 +87,7 @@ class IPsec implements IService
       */
     public function checkConstraints()
     {
-        $mdl = new \OPNsense\IPsec\IPsec();
+        $mdl = new \Bentara\IPsec\IPsec();
         if (!empty((string)$mdl->general->local_group)) {
             // Enforce group constraint when set
             $local_group = (string)$mdl->general->local_group;

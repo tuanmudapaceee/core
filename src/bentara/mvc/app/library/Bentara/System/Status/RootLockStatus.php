@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
-use OPNsense\Core\Config;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
+use Bentara\Core\Config;
 
 class RootLockStatus extends AbstractStatus
 {

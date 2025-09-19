@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\Migrations;
+namespace Bentara\Firewall\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Category;
-use OPNsense\Firewall\Filter;
-use OPNsense\Firewall\Util;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Config;
+use Bentara\Firewall\Category;
+use Bentara\Firewall\Filter;
+use Bentara\Firewall\Util;
 
 // <!--  external, category, descr, interface, type, source, destination, natreflection, disabled -->
 

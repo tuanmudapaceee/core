@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 /**
  * Class UIModelGrid Grid control support functions
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class UIModelGrid
 {

@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-class DashboardController extends \OPNsense\Base\IndexController
+class DashboardController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

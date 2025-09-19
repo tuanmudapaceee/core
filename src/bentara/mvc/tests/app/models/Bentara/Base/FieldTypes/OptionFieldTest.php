@@ -28,13 +28,13 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\OptionField;
+use Bentara\Base\FieldTypes\OptionField;
 
 class OptionFieldTest extends Field_Framework_TestCase
 {
@@ -43,14 +43,14 @@ class OptionFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\OptionField', new OptionField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\OptionField', new OptionField());
     }
 
     /**
      */
     public function testRequiredEmpty()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("PresenceOf");
         $field = new OptionField();
         $field->setRequired("Y");

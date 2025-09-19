@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
 /**
  * Export stub file, contains shared logic for all types
- * @package OPNsense\Backup
+ * @package Bentara\Backup
  */
 abstract class BaseExporter
 {

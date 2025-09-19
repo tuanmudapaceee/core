@@ -28,10 +28,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
 
 /**
  * Class ApiMutableModelControllerBase, inherit this class to implement
@@ -39,7 +39,7 @@ use OPNsense\Core\Config;
  * You need to implement a method to create new blank model
  * objecs (newModelObject) as well as a method to return
  * the name of the model.
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 abstract class ApiMutableModelControllerBase extends ApiControllerBase
 {
@@ -239,7 +239,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param string $node reference node, to use as relative offset
      * @param string $prefix prefix to use when $node is provided (defaults to static::$internalModelName)
      * @return array result / validation output
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -309,9 +309,9 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param bool $validateFullModel by default we only validate the fields we have changed
      * @param bool $disable_validation skip validation, be careful to use this!
      * @return array result / validation output
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
-     * @throws \OPNsense\Base\UserException when denied write access
+     * @throws \Bentara\Base\UserException when denied write access
      */
     protected function save($validateFullModel = false, $disable_validation = false)
     {
@@ -358,7 +358,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
     /**
      * Update model settings
      * @return array status / validation errors
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -407,8 +407,8 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
 
         if (
             empty($fields) && (
-            is_a($element, "OPNsense\\Base\\FieldTypes\\ArrayField") ||
-            is_subclass_of($element, "OPNsense\\Base\\FieldTypes\\ArrayField")
+            is_a($element, "Bentara\\Base\\FieldTypes\\ArrayField") ||
+            is_subclass_of($element, "Bentara\\Base\\FieldTypes\\ArrayField")
             )
         ) {
             $fields = [];
@@ -463,7 +463,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param string $path relative model path
      * @param array|null $overlay properties to overlay when available (call setNodes)
      * @return array
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -504,7 +504,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param string $path relative model path
      * @param null|string $uuid node key
      * @return array
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -539,7 +539,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param string $uuid node key
      * @param array|null $overlay properties to overlay when available (call setNodes)
      * @return array
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -589,7 +589,7 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
      * @param string $uuid node key
      * @param string $enabled desired state enabled(1)/disabled(0), leave empty for toggle
      * @return array
-     * @throws \OPNsense\Base\ValidationException on validation issues
+     * @throws \Bentara\Base\ValidationException on validation issues
      * @throws \ReflectionException when binding to the model class fails
      * @throws UserException when denied write access
      */
@@ -669,8 +669,8 @@ abstract class ApiMutableModelControllerBase extends ApiControllerBase
             $mdl = $this->getModel();
             $node = $mdl->getNodeByReference($path);
             if (
-                is_a($node, "OPNsense\\Base\\FieldTypes\\ArrayField") ||
-                is_subclass_of($node, "OPNsense\\Base\\FieldTypes\\ArrayField")
+                is_a($node, "Bentara\\Base\\FieldTypes\\ArrayField") ||
+                is_subclass_of($node, "Bentara\\Base\\FieldTypes\\ArrayField")
             ) {
                 $result = $node->importRecordSet($data, $keyfields, $data_callback, $node_callback);
                 $valmsgfields = [];

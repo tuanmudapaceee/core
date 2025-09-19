@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
-use OPNsense\Core\Config;
-use OPNsense\Auth\User;
-use OPNsense\Firewall\Util;
-use OPNsense\Dnsmasq\Dnsmasq;
-use OPNsense\Routing\Gateways;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Core\Config;
+use Bentara\Auth\User;
+use Bentara\Firewall\Util;
+use Bentara\Dnsmasq\Dnsmasq;
+use Bentara\Routing\Gateways;
 
 /**
  * wrapper model class to update various configuration parts in a controlled way for the setup wizard

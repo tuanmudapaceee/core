@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\TrafficShaper\Api;
+namespace Bentara\TrafficShaper\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\TrafficShaper\TrafficShaper;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\TrafficShaper\TrafficShaper;
+use Bentara\Core\Config;
 
 /**
  * Class SettingsController Handles settings related API actions for the Traffic Shaper
- * @package OPNsense\TrafficShaper
+ * @package Bentara\TrafficShaper
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ts';
-    protected static $internalModelClass = '\OPNsense\TrafficShaper\TrafficShaper';
+    protected static $internalModelClass = '\Bentara\TrafficShaper\TrafficShaper';
     protected static $internalModelUseSafeDelete = true;
 
     /**
@@ -59,7 +59,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update  pipe with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setPipeAction($uuid)
@@ -70,8 +70,8 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add new pipe and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      */
     public function addPipeAction()
     {
@@ -85,7 +85,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete pipe by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delPipeAction($uuid)
@@ -99,7 +99,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid user defined rule internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function togglePipeAction($uuid, $enabled = null)
@@ -143,7 +143,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update queue with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setQueueAction($uuid)
@@ -154,7 +154,7 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add new queue and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ModelException when not bound to model
      */
     public function addQueueAction()
     {
@@ -167,7 +167,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete queue by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delQueueAction($uuid)
@@ -180,7 +180,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid user defined rule internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleQueueAction($uuid, $enabled = null)
@@ -219,7 +219,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update rule with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setRuleAction($uuid)
@@ -230,8 +230,8 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add new rule and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      */
     public function addRuleAction()
     {
@@ -241,7 +241,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete rule by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delRuleAction($uuid)
@@ -254,7 +254,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid user defined rule internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleRuleAction($uuid, $enabled = null)

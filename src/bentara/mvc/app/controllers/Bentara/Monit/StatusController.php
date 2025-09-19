@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Monit;
+namespace Bentara\Monit;
 
 /**
  * Class StatusController
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
-class StatusController extends \OPNsense\Base\IndexController
+class StatusController extends \Bentara\Base\IndexController
 {
     /**
      * monit status page

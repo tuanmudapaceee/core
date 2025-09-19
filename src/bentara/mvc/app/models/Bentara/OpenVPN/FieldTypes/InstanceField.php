@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\FieldTypes;
+namespace Bentara\OpenVPN\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
 
 class InstanceField extends ArrayField
 {

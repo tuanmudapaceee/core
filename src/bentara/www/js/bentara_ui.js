@@ -213,9 +213,9 @@ function updateServiceControlUI(serviceName)
         const commands = ["start", "restart", "stop"];
         commands.forEach(function(command) {
             $("#" + command + "Service").click(function(){
-                $('#OPNsenseStdWaitDialog').modal('show');
+                $('#BentaraStdWaitDialog').modal('show');
                 ajaxCall("/api/" + serviceName + "/service/" + command, {},function() {
-                    $('#OPNsenseStdWaitDialog').modal('hide');
+                    $('#BentaraStdWaitDialog').modal('hide');
                     ajaxCall("/api/" + serviceName + "/service/status", {}, function() {
                         updateServiceControlUI(serviceName);
                     });

@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
 use SimpleXMLElement;
 
 class DashboardController extends ApiControllerBase
 {
-    private $metadataFileLocation = "/usr/local/opnsense/www/js/widgets/Metadata";
+    private $metadataFileLocation = "/usr/local/bentara/www/js/widgets/Metadata";
     private $acl = null;
 
     public function __construct()
@@ -134,7 +134,7 @@ class DashboardController extends ApiControllerBase
                     continue;
                 }
 
-                if (!file_exists('/usr/local/opnsense/www/js/widgets/' . $fname)) {
+                if (!file_exists('/usr/local/bentara/www/js/widgets/' . $fname)) {
                     continue;
                 }
 
@@ -215,7 +215,7 @@ class DashboardController extends ApiControllerBase
     {
         $result = ['items' => []];
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://forum.opnsense.org/index.php?board=11.0&action=.xml;limit=5;type=rss2');
+        curl_setopt($ch, CURLOPT_URL, 'https://forum.bentara.org/index.php?board=11.0&action=.xml;limit=5;type=rss2');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec($ch);
         curl_close($ch);

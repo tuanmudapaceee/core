@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\IDS;
+namespace Bentara\IDS;
 
 /**
  * Class IndexController
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * default ids index page

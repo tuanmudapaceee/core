@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class UnboundOverrideStatus extends AbstractStatus
 {
@@ -46,13 +46,13 @@ class UnboundOverrideStatus extends AbstractStatus
     {
         /* XXX: custom overwrites don't live in their own path, which makes detection less practical */
         $managed_files = [];
-        $tmp = @file_get_contents('/usr/local/opnsense/service/templates/OPNsense/Unbound/core/+TARGETS') ?? '';
+        $tmp = @file_get_contents('/usr/local/bentara/service/templates/OPNsense/Unbound/core/+TARGETS') ?? '';
         foreach (explode("\n", $tmp) as $line) {
-            if (strpos($line, 'unbound.opnsense.d') > 1) {
+            if (strpos($line, 'unbound.bentara.d') > 1) {
                 $managed_files[] = trim(explode(":", $line)[1]);
             }
         }
-        foreach (glob('/usr/local/etc/unbound.opnsense.d/*.conf') as $filename) {
+        foreach (glob('/usr/local/etc/unbound.bentara.d/*.conf') as $filename) {
             if (!in_array($filename, $managed_files)) {
                 $this->internalMessage = gettext(
                     'The configuration contains manual overwrites, these may interfere with the settings configured here.'

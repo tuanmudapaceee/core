@@ -28,14 +28,14 @@
  *
  */
 
-namespace OPNsense\Cron\Api;
+namespace Bentara\Cron\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class ServiceController
- * @package OPNsense\Cron
+ * @package Bentara\Cron
  */
 class ServiceController extends ApiControllerBase
 {

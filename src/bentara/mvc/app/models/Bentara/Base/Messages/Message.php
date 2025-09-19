@@ -28,7 +28,7 @@
  *
  */
 
-namespace OPNsense\Base\Messages;
+namespace Bentara\Base\Messages;
 
 class Message
 {
@@ -49,7 +49,7 @@ class Message
 
 
     /**
-     * OPNsense\Base\Messages\Message constructor
+     * Bentara\Base\Messages\Message constructor
      */
     public function __construct($message, $field = "", $type = "")
     {

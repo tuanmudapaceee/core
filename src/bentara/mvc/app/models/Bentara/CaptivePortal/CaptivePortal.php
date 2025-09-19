@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\CaptivePortal;
+namespace Bentara\CaptivePortal;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class CaptivePortal
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 class CaptivePortal extends BaseModel
 {

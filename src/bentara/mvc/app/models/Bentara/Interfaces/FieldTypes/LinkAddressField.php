@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\FieldTypes;
+namespace Bentara\Interfaces\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 class LinkAddressField extends BaseField
 {

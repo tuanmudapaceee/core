@@ -29,8 +29,8 @@
 
 require_once('script/load_phalcon.php');
 require_once('legacy_bindings.inc');
-use OPNsense\Core\Config;
-use OPNsense\Auth\User;
+use Bentara\Core\Config;
+use Bentara\Auth\User;
 
 $opts = getopt('hu:o', array(), $optind);
 $args = array_slice($argv, $optind);

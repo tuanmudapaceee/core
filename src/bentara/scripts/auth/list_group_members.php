@@ -29,7 +29,7 @@
 
 require_once("script/load_phalcon.php");
 
-$cnf = OPNsense\Core\Config::getInstance()->object();
+$cnf = Bentara\Core\Config::getInstance()->object();
 
 $uid_map = [];
 $result = [];

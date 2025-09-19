@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Core\Backend;
-use OPNsense\Auth\AuthenticationFactory;
-use OPNsense\CaptivePortal\CaptivePortal;
+use Bentara\Core\Backend;
+use Bentara\Auth\AuthenticationFactory;
+use Bentara\CaptivePortal\CaptivePortal;
 
 /**
  * Class AccessController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 class AccessController extends AbstractAccessController
 {
@@ -55,7 +55,7 @@ class AccessController extends AbstractAccessController
      * logon client to zone, must use post type of request
      * @param int|string $zoneid zone id number, provided for backwards compatibility
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     public function logonAction($zoneid = 0)
     {
@@ -164,7 +164,7 @@ class AccessController extends AbstractAccessController
      * logoff client
      * @param int|string $zoneid zone id number, provided for backwards compatibility
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      *
      */
     public function logoffAction($zoneid = 0)

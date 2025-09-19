@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class IPsecOverrideStatus extends AbstractStatus
 {
@@ -47,7 +47,7 @@ class IPsecOverrideStatus extends AbstractStatus
     {
         if (
             count(glob('/usr/local/etc/swanctl/conf.d/*.conf')) ||
-            count(glob('/usr/local/etc/strongswan.opnsense.d/*.conf'))
+            count(glob('/usr/local/etc/strongswan.bentara.d/*.conf'))
         ) {
             $this->internalMessage = gettext(
                 'The configuration contains manual overwrites, these may interfere with the settings configured here.'

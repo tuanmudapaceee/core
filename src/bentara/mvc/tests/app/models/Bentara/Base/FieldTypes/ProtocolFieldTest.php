@@ -28,13 +28,13 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\ProtocolField;
+use Bentara\Base\FieldTypes\ProtocolField;
 
 class ProtocolFieldTest extends Field_Framework_TestCase
 {
@@ -43,14 +43,14 @@ class ProtocolFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\ProtocolField', new ProtocolField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\ProtocolField', new ProtocolField());
     }
 
     /**
      */
     public function testRequiredEmpty()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("PresenceOf");
         $field = new ProtocolField();
         $field->eventPostLoading();

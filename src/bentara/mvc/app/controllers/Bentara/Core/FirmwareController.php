@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class FirmwareController controller for firmware core actions
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class FirmwareController extends \OPNsense\Base\IndexController
+class FirmwareController extends \Bentara\Base\IndexController
 {
     /**
      * return to / for non existent actions

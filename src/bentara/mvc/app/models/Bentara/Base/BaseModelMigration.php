@@ -28,12 +28,12 @@
 *
 */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class BaseModelMigration
 {

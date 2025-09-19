@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class LDAP connector
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class LDAP extends Base implements IAuthConnector
 {
@@ -548,7 +548,7 @@ class LDAP extends Base implements IAuthConnector
                     // Filter "memberOf" results to those recorded in ldapAuthcontainers, where
                     // the first part of the member is considered the group name, the rest should be an exact
                     // (case insensitive) match.
-                    // (e.g. : cn=mygroup,cn=users,dc=opnsense,dc=local matches cn=users,dc=opnsense,dc=local)
+                    // (e.g. : cn=mygroup,cn=users,dc=bentara,dc=local matches cn=users,dc=bentara,dc=local)
                     $membersOf = [];
                     $tmp_containers = explode(";", strtolower($this->ldapAuthcontainers));
                     foreach (explode("\n", $this->lastAuthProperties['memberof']) as $member) {

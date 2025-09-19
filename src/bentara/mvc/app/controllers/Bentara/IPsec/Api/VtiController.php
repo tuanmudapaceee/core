@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 /**
  * Class VtiController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class VtiController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'swanctl';
-    protected static $internalModelClass = 'OPNsense\IPsec\Swanctl';
+    protected static $internalModelClass = 'Bentara\IPsec\Swanctl';
 
     public function searchAction()
     {

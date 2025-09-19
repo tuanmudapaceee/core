@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Stats;
+namespace Bentara\RRD\Stats;
 
 class Interfaces extends Base
 {
     public function run()
     {
         $result = [];
-        $data = $this->jsonShellCmd('/usr/local/opnsense/scripts/filter/pfstatistics.py interfaces');
+        $data = $this->jsonShellCmd('/usr/local/bentara/scripts/filter/pfstatistics.py interfaces');
         if (!empty($data) && !empty($data['interfaces'])) {
             $data = $data['interfaces'];
             foreach (self::$metadata['interfaces'] as $ifname => $ifdata) {

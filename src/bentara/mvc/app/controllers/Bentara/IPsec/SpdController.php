@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
 /**
  * Class SpdController
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
-class SpdController extends \OPNsense\Base\IndexController
+class SpdController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

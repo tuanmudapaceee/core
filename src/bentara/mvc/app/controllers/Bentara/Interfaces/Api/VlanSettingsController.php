@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Base\UserException;
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Base\UserException;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 class VlanSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'vlan';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Vlan';
+    protected static $internalModelClass = 'Bentara\Interfaces\Vlan';
 
     private function generateVlanIfName($current = null)
     {

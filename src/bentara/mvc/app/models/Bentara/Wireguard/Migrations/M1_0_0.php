@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard\Migrations;
+namespace Bentara\Wireguard\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Wireguard\Client;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Wireguard\Client;
 
 class M1_0_0 extends BaseModelMigration
 {

@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\FieldTypes;
+namespace Bentara\OpenVPN\FieldTypes;
 
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Base\FieldTypes\IntegerField;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Base\FieldTypes\IntegerField;
 
 /**
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class VPNIdField extends IntegerField
 {

@@ -36,9 +36,9 @@ openlog("openvpn", LOG_ODELAY, LOG_AUTH);
 $common_name = getenv("common_name");
 $vpnid = getenv("auth_server");
 $config_file = getenv("config_file");
-$server = (new OPNsense\OpenVPN\OpenVPN())->getInstanceById($vpnid, 'server');
+$server = (new Bentara\OpenVPN\OpenVPN())->getInstanceById($vpnid, 'server');
 if ($server) {
-    $cso = (new OPNsense\OpenVPN\OpenVPN())->getOverwrite($vpnid, $common_name);
+    $cso = (new Bentara\OpenVPN\OpenVPN())->getOverwrite($vpnid, $common_name);
     if (empty($cso)) {
         syslog(LOG_NOTICE, "authentication failed for user '{$common_name}'. No tunnel network provisioned, but required.");
         exit(1);

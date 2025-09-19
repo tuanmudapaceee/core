@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD;
+namespace Bentara\RRD;
 
 use ReflectionClass;
 
@@ -47,14 +47,14 @@ class Factory
     /**
      * @param string $type type of rrd graph to get
      * @param string $target filename to store data in
-     * @return \OPNsense\RRD\Types\Base
+     * @return \Bentara\RRD\Types\Base
      * @throws TypeNotFound if the class is not found or has an improper type
      */
     public function get(string $type, string $target)
     {
         try {
-            $cls = new ReflectionClass('\\OPNsense\\RRD\\Types\\' . $type);
-            if (!$cls->isInstantiable() || !$cls->isSubclassOf('OPNsense\\RRD\\Types\\Base')) {
+            $cls = new ReflectionClass('\\Bentara\\RRD\\Types\\' . $type);
+            if (!$cls->isInstantiable() || !$cls->isSubclassOf('Bentara\\RRD\\Types\\Base')) {
                 throw new TypeNotFound(sprintf("%s not found", $type));
             }
         } catch (ReflectionException) {
@@ -73,8 +73,8 @@ class Factory
         $this->stats = [];
         foreach (glob(sprintf("%s/Stats/*.php", __DIR__)) as $filename) {
             $classname = substr(basename($filename), 0, -4);
-            $cls = new ReflectionClass('\\OPNsense\\RRD\\Stats\\' . $classname);
-            if ($cls->isInstantiable() &&  $cls->isSubclassOf('OPNsense\\RRD\\Stats\\Base')) {
+            $cls = new ReflectionClass('\\Bentara\\RRD\\Stats\\' . $classname);
+            if ($cls->isInstantiable() &&  $cls->isSubclassOf('Bentara\\RRD\\Stats\\Base')) {
                 try {
                     $start_time = microtime(true);
                     $obj = $cls->newInstance();
@@ -118,10 +118,10 @@ class Factory
     {
         foreach (glob(sprintf("%s/Types/*.php", __DIR__)) as $filename) {
             $classname = substr(basename($filename), 0, -4);
-            $fclassname = '\\OPNsense\\RRD\\Types\\' . $classname;
+            $fclassname = '\\Bentara\\RRD\\Types\\' . $classname;
             try {
                 $cls = new ReflectionClass($fclassname);
-                if ($cls->isInstantiable() && $cls->isSubclassOf('OPNsense\\RRD\\Types\\Base')) {
+                if ($cls->isInstantiable() && $cls->isSubclassOf('Bentara\\RRD\\Types\\Base')) {
                     $wants = call_user_func([$fclassname, 'wantsStats']);
                     $the_data = $this->getData($wants);
                     if (empty($the_data)) {

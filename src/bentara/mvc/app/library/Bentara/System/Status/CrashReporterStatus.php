@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\Core\Config;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\Core\Config;
+use Bentara\System\SystemStatusCode;
 
 class CrashReporterStatus extends AbstractStatus
 {

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc;
+namespace Bentara\Mvc;
 
 use DirectoryIterator;
-use OPNsense\Core\AppConfig;
-use OPNsense\Mvc\Exceptions\ClassNotFoundException;
-use OPNsense\Mvc\Exceptions\InvalidUriException;
-use OPNsense\Mvc\Exceptions\MethodNotFoundException;
-use OPNsense\Mvc\Exceptions\ParameterMismatchException;
+use Bentara\Core\AppConfig;
+use Bentara\Mvc\Exceptions\ClassNotFoundException;
+use Bentara\Mvc\Exceptions\InvalidUriException;
+use Bentara\Mvc\Exceptions\MethodNotFoundException;
+use Bentara\Mvc\Exceptions\ParameterMismatchException;
 use ReflectionException;
 
 class Router

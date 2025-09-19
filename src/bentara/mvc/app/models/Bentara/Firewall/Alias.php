@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
+use Bentara\Base\Messages\Message;
 
 /**
  * Class Alias
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class Alias extends BaseModel
 {

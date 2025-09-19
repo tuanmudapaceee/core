@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound;
+namespace Bentara\Unbound;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 class AdvancedController extends IndexController
 {

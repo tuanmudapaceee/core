@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Neighbor;
+namespace Bentara\Interfaces\Neighbor;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 class dhcpd
 {

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
 
 /**
  * Class Group
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class Group extends BaseModel
 {

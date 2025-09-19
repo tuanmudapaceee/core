@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Monit\Migrations;
+namespace Bentara\Monit\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Base\BaseModelMigration;
 
 class M1_0_7 extends BaseModelMigration
 {
@@ -65,7 +65,7 @@ class M1_0_7 extends BaseModelMigration
                 'enabled' => '0',
                 'type' => 'custom',
                 'name' => 'gateway_alert',
-                'path' => '/usr/local/opnsense/scripts/OPNsense/Monit/gateway_alert',
+                'path' => '/usr/local/bentara/scripts/OPNsense/Monit/gateway_alert',
                 'tests' => $defaultTests['NonZeroStatus']['uuid']
             ]
         ];

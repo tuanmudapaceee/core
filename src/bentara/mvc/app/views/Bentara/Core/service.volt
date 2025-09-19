@@ -46,9 +46,9 @@
                     },
                     status: function (column, row) {
                         if (row['running']) {
-                            return '<span class="label label-opnsense label-opnsense-xs label-success" data-toggle="tooltip" title="{{ lang._('Running') }}"><i class="fa fa-play fa-fw"></i></span>';
+                            return '<span class="label label-bentara label-bentara-xs label-success" data-toggle="tooltip" title="{{ lang._('Running') }}"><i class="fa fa-play fa-fw"></i></span>';
                         } else {
-                            return '<span class="label label-opnsense label-opnsense-xs label-danger" data-toggle="tooltip" title="{{ lang._('Stopped') }}"><i class="fa fa-stop fa-fw"></i></span>';
+                            return '<span class="label label-bentara label-bentara-xs label-danger" data-toggle="tooltip" title="{{ lang._('Stopped') }}"><i class="fa fa-stop fa-fw"></i></span>';
                         }
                     }
                 }

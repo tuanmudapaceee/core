@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq;
+namespace Bentara\Dnsmasq;
 
-class LeasesController extends \OPNsense\Base\IndexController
+class LeasesController extends \Bentara\Base\IndexController
 {
     /**
      * {@inheritdoc}

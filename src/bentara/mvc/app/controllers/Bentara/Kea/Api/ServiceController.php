@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\Api;
+namespace Bentara\Kea\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Kea\KeaDhcpv4;
-use OPNsense\Kea\KeaDhcpv6;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Kea\KeaDhcpv4;
+use Bentara\Kea\KeaDhcpv6;
 
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Kea\KeaDhcpv4';
+    protected static $internalServiceClass = '\Bentara\Kea\KeaDhcpv4';
     protected static $internalServiceTemplate = 'OPNsense/Kea';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceName = 'kea';

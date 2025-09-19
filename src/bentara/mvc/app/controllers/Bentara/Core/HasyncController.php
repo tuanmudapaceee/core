@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class FirmwareController controller for firmware core actions
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class HasyncController extends \OPNsense\Base\IndexController
+class HasyncController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound\Migrations;
+namespace Bentara\Unbound\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Base\FieldTypes\BooleanField;
-use OPNsense\Base\FieldTypes\NetworkField;
-use OPNsense\Base\FieldTypes\PortField;
-use OPNsense\Core\Config;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Base\FieldTypes\BooleanField;
+use Bentara\Base\FieldTypes\NetworkField;
+use Bentara\Base\FieldTypes\PortField;
+use Bentara\Core\Config;
 
 class M1_0_2 extends BaseModelMigration
 {

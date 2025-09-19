@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Trust\Store;
-use OPNsense\Core\Config;
-use OPNsense\Core\File;
-use OPNsense\Firewall\Util;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Trust\Store;
+use Bentara\Core\Config;
+use Bentara\Core\File;
+use Bentara\Firewall\Util;
 
 /**
  * Class OpenVPN
- * @package OPNsense\OpenVPN
+ * @package Bentara\OpenVPN
  */
 class OpenVPN extends BaseModel
 {
@@ -569,7 +569,7 @@ class OpenVPN extends BaseModel
                     //$options['group'] = 'openvpn';
                 } else {
                     // server only settings
-                    $event_script = '/usr/local/opnsense/scripts/openvpn/ovpn_event.py';
+                    $event_script = '/usr/local/bentara/scripts/openvpn/ovpn_event.py';
                     $options['dev'] = "ovpns{$node->vpnid}";
                     $options['ping-timer-rem'] = null;
                     $options['topology'] = (string)$node->topology;

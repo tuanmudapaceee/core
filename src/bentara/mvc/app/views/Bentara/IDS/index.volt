@@ -1,6 +1,6 @@
 {#
 
-OPNsense® is Copyright © 2014 – 2015 by Deciso B.V.
+Bentara® is Copyright © 2014 – 2015 by Deciso B.V.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

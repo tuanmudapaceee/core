@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\TextField;
-use OPNsense\Base\Validators\CallbackValidator;
+use Bentara\Base\FieldTypes\TextField;
+use Bentara\Base\Validators\CallbackValidator;
 
 class ExpiresField extends TextField
 {

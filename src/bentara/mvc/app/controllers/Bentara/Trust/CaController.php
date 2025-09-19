@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-class CaController extends \OPNsense\Base\IndexController
+class CaController extends \Bentara\Base\IndexController
 {
     protected function templateJSIncludes()
     {

@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc;
+namespace Bentara\Mvc;
 
 class Security
 {

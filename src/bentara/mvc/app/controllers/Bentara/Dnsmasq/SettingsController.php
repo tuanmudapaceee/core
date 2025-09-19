@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq;
+namespace Bentara\Dnsmasq;
 
-class SettingsController extends \OPNsense\Base\IndexController
+class SettingsController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
 use ReflectionClass;
 
 /**
  * Class ModelRelationField defines a relation to another entity within the model, acts like a select item.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class ModelRelationField extends BaseListField
 {

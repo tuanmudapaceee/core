@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * RFC 6238 TOTP: Time-Based One-Time Password Authenticator + LDAP
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class LDAPTOTP extends LDAP
 {

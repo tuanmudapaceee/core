@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2015-2025 Franco Fichtner <franco@opnsense.org>
+ * Copyright (c) 2015-2025 Franco Fichtner <franco@bentara.org>
  * Copyright (c) 2015-2018 Deciso B.V.
  * All rights reserved.
  *
@@ -27,22 +27,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Core\Firmware;
-use OPNsense\Core\SanitizeFilter;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Core\Firmware;
+use Bentara\Core\SanitizeFilter;
 
 /**
  * Class FirmwareController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class FirmwareController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'firmware';
-    protected static $internalModelClass = 'OPNsense\Core\Firmware';
+    protected static $internalModelClass = 'Bentara\Core\Firmware';
 
     /**
      * return bytes in human-readable form
@@ -807,7 +807,7 @@ class FirmwareController extends ApiMutableModelControllerBase
         $backend = new Backend();
         $response = [];
 
-        $version = explode(' ', trim(shell_exec('opnsense-version -nv') ?? ''));
+        $version = explode(' ', trim(shell_exec('bentara-version -nv') ?? ''));
         foreach (['product_id' => 0, 'product_version' => 1] as $result => $index) {
             $response[$result] = !empty($version[$index]) ? $version[$index] : 'unknown';
         }

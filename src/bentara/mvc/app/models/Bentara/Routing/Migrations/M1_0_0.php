@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routing\Migrations;
+namespace Bentara\Routing\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Config;
-use OPNsense\Core\Syslog;
-use OPNsense\Routing\Gateways;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Config;
+use Bentara\Core\Syslog;
+use Bentara\Routing\Gateways;
 
 class M1_0_0 extends BaseModelMigration
 {

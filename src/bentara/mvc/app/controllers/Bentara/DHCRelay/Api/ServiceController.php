@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCRelay\Api;
+namespace Bentara\DHCRelay\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 class ServiceController extends ApiControllerBase
 {

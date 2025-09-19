@@ -26,21 +26,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Syslog\Api;
+namespace Bentara\Syslog\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Base\UIModelGrid;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Base\UIModelGrid;
 
 /**
  * Class SettingsController Handles settings related API actions for the Syslog module
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'syslog';
-    protected static $internalModelClass = '\OPNsense\Syslog\Syslog';
+    protected static $internalModelClass = '\Bentara\Syslog\Syslog';
 
     /**
      * Search syslog destinations
@@ -71,7 +71,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update destination with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setDestinationAction($uuid)
@@ -82,8 +82,8 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add new destination and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      */
     public function addDestinationAction()
     {
@@ -93,7 +93,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete destination by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delDestinationAction($uuid)
@@ -106,7 +106,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid user defined rule internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleDestinationAction($uuid, $enabled = null)

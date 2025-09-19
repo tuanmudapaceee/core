@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
+use Bentara\Base\ApiMutableServiceControllerBase;
 
 /**
  * {@inheritdoc}
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\IPsec\IPsec';
+    protected static $internalServiceClass = '\Bentara\IPsec\IPsec';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceTemplate = 'OPNsense/IPsec';
     protected static $internalServiceName = 'ipsec';

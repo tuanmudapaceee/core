@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\AppConfig;
+use Bentara\Core\AppConfig;
 
 /**
  * Class CountryField field type to select iso3166 countries
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class CountryField extends BaseListField
 {

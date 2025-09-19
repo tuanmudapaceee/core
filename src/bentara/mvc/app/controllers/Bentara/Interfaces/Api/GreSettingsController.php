@@ -26,20 +26,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Interfaces
+ * @package Bentara\Interfaces
  */
 class GreSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'gre';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Gre';
+    protected static $internalModelClass = 'Bentara\Interfaces\Gre';
 
 
     /**
@@ -130,7 +130,7 @@ class GreSettingsController extends ApiMutableModelControllerBase
             $cfg = Config::getInstance()->object();
             foreach ($cfg->interfaces->children() as $key => $value) {
                 if ((string)$value->if == (string)$node->greif) {
-                    throw new \OPNsense\Base\UserException(
+                    throw new \Bentara\Base\UserException(
                         sprintf(gettext("Cannot delete gre. Currently in use by [%s] %s"), $key, $value),
                         gettext("gre in use")
                     );

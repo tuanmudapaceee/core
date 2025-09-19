@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\FieldTypes;
+namespace Bentara\Interfaces\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\BaseListField;
+use Bentara\Core\Config;
 
 class VipInterfaceField extends BaseListField
 {

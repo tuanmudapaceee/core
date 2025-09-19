@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
-class ConnectionsController extends \OPNsense\Base\IndexController
+class ConnectionsController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

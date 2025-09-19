@@ -13,8 +13,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>{{headTitle|default("OPNsense") }} | {{system_hostname}}.{{system_domain}}</title>
-    {% set theme_name = ui_theme|default('opnsense') %}
+    <title>{{headTitle|default("Bentara") }} | {{system_hostname}}.{{system_domain}}</title>
+    {% set theme_name = ui_theme|default('bentara') %}
 
     <!-- Favicon -->
     <link href="{{ cache_safe('/ui/themes/%s/build/images/favicon.png' | format(theme_name)) }}" rel="shortcut icon">
@@ -213,12 +213,12 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">
-            {% if file_exists(["/usr/local/opnsense/www/themes/",theme_name,"/build/images/default-logo.svg"]|join("")) %}
+            {% if file_exists(["/usr/local/bentara/www/themes/",theme_name,"/build/images/default-logo.svg"]|join("")) %}
                 <img class="brand-logo" src="{{ cache_safe('/ui/themes/%s/build/images/default-logo.svg' | format(theme_name)) }}" height="30" alt="logo"/>
             {% else %}
                 <img class="brand-logo" src="{{ cache_safe('/ui/themes/%s/build/images/default-logo.png' | format(theme_name)) }}" height="30" alt="logo"/>
             {% endif %}
-            {% if file_exists(["/usr/local/opnsense/www/themes/",theme_name,"/build/images/icon-logo.svg"]|join("")) %}
+            {% if file_exists(["/usr/local/bentara/www/themes/",theme_name,"/build/images/icon-logo.svg"]|join("")) %}
                 <img class="brand-icon" src="{{ cache_safe('/ui/themes/%s/build/images/icon-logo.svg' | format(theme_name)) }}" height="30" alt="icon"/>
             {% else %}
                 <img class="brand-icon" src="{{ cache_safe('/ui/themes/%s/build/images/icon-logo.png' | format(theme_name)) }}" height="30" alt="icon"/>
@@ -274,7 +274,7 @@
         <section class="page-content-main">
           <div class="container-fluid">
             <div class="row">
-                <!-- notification banner dynamically inserted here (opnsense_status.js) -->
+                <!-- notification banner dynamically inserted here (bentara_status.js) -->
 
                 <section class="col-xs-12">
                     <div id="messageregion"></div>
@@ -294,7 +294,7 @@
     </main>
 
     <!-- dialog "wait for (service) action" -->
-    <div class="modal fade" id="OPNsenseStdWaitDialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade" id="BentaraStdWaitDialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
       <div class="modal-backdrop fade in"></div>
       <div class="modal-dialog">
         <div class="modal-content">

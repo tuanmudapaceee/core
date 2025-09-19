@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Core\ACL;
+namespace Bentara\Core\ACL;
 
 /**
  * Class ACL, access control list wrapper
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class ACL
 {

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class InterfaceField field type to select usable interfaces, currently this is kind of a backward compatibility
  * package to glue legacy interfaces into the model.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class InterfaceField extends BaseListField
 {

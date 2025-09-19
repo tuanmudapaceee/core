@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class PingController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ping';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\Ping';
+    protected static $internalModelClass = 'Bentara\Diagnostics\Ping';
     private static $ping_dir = '/tmp/ping';
 
     /**

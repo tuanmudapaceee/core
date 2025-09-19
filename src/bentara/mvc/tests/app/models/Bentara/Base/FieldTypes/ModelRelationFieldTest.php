@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 require_once __DIR__ . '/../BaseModel/TestModel.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\ModelRelationField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\ModelRelationField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class ModelRelationFieldTest extends Field_Framework_TestCase
 {
@@ -50,7 +50,7 @@ class ModelRelationFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\ModelRelationField', new ModelRelationField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\ModelRelationField', new ModelRelationField());
     }
 
     /**

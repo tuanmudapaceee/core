@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-class VlanController extends \OPNsense\Base\IndexController
+class VlanController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

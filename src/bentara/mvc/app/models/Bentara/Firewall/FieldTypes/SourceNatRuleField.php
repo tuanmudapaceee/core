@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\ContainerField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\ContainerField;
 
 /**
  * Class SourceNatRuleContainerField
- * @package OPNsense\Firewall\FieldTypes
+ * @package Bentara\Firewall\FieldTypes
  */
 class SourceNatRuleContainerField extends ContainerField
 {
@@ -59,9 +59,9 @@ class SourceNatRuleContainerField extends ContainerField
         foreach ($this->iterateItems() as $key => $node) {
             $target_fieldname = isset($source_mapper[$key]) ? $source_mapper[$key] : $key;
             if ($target_fieldname) {
-                if (is_a($node, "OPNsense\\Base\\FieldTypes\\BooleanField")) {
+                if (is_a($node, "Bentara\\Base\\FieldTypes\\BooleanField")) {
                     $result[$target_fieldname] = !empty((string)$node);
-                } elseif (is_a($node, "OPNsense\\Base\\FieldTypes\\ProtocolField")) {
+                } elseif (is_a($node, "Bentara\\Base\\FieldTypes\\ProtocolField")) {
                     if ((string)$node != 'any') {
                         $result[$target_fieldname] = (string)$node;
                     }
@@ -99,7 +99,7 @@ class SourceNatRuleContainerField extends ContainerField
 
 /**
  * Class SourceNatRuleField
- * @package OPNsense\Firewall\FieldTypes
+ * @package Bentara\Firewall\FieldTypes
  */
 class SourceNatRuleField extends ArrayField
 {

@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Firewall\Migrations;
+namespace Bentara\Firewall\Migrations;
 
-use OPNsense\Core\Config;
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Firewall\Alias;
-use OPNsense\Firewall\Category;
-use OPNsense\Firewall\Group;
+use Bentara\Core\Config;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Firewall\Alias;
+use Bentara\Firewall\Category;
+use Bentara\Firewall\Group;
 
 class M1_0_0 extends BaseModelMigration
 {
@@ -92,7 +92,7 @@ class M1_0_0 extends BaseModelMigration
                     }
                 }
             }
-            \OPNsense\Firewall\Util::attachAliasObject($model);
+            \Bentara\Firewall\Util::attachAliasObject($model);
         } elseif ($model instanceof Category) {
             $model->sync();
         } elseif ($model instanceof Group) {

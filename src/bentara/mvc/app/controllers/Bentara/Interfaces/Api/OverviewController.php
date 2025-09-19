@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
-use OPNsense\Routing\Gateways;
-use OPNsense\Interface\Autoconf;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
+use Bentara\Routing\Gateways;
+use Bentara\Interface\Autoconf;
 
 class OverviewController extends ApiControllerBase
 {

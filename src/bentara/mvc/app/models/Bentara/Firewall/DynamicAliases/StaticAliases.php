@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\DynamicAliases;
+namespace Bentara\Firewall\DynamicAliases;
 
 class StaticAliases
 {

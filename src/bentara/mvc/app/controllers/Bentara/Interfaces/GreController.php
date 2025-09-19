@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-class GreController extends \OPNsense\Base\IndexController
+class GreController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class DnsmasqOverrideStatus extends AbstractStatus
 {

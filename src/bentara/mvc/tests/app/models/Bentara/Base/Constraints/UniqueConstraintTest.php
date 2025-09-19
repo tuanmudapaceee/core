@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\ContainerField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\ContainerField;
+use Bentara\Base\FieldTypes\TextField;
 
 class UniqueTestContainer extends ArrayField
 {
@@ -73,7 +73,7 @@ class UniqueTestContainer extends ArrayField
     public function validate()
     {
         $uniqueConstraints = [];
-        $validator = new \OPNsense\Base\Validation();
+        $validator = new \Bentara\Base\Validation();
         foreach ($this->internalNodes as $idx => $nodes) {
             $addFields = [];
             $constraint = new UniqueConstraint();

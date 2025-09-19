@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard;
+namespace Bentara\Wireguard;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 class Client extends BaseModel
 {

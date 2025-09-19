@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Monit\Migrations;
+namespace Bentara\Monit\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Config;
-use OPNsense\Core\Shell;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Config;
+use Bentara\Core\Shell;
 
 class M1_0_0 extends BaseModelMigration
 {

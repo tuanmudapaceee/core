@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq\FieldTypes;
+namespace Bentara\Dnsmasq\FieldTypes;
 
-use OPNsense\Base\FieldTypes\NetworkField;
+use Bentara\Base\FieldTypes\NetworkField;
 
 class DomainIPField extends NetworkField
 {

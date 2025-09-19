@@ -26,23 +26,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Api;
+namespace Bentara\Auth\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Auth\User;
-use OPNsense\Auth\Group;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Auth\User;
+use Bentara\Auth\Group;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
 
 /**
  * Class PrivController
- * @package OPNsense\Auth\Api
+ * @package Bentara\Auth\Api
  */
 class PrivController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'priv';
-    protected static $internalModelClass = 'OPNsense\Auth\Priv';
+    protected static $internalModelClass = 'Bentara\Auth\Priv';
 
 
     public function searchAction()

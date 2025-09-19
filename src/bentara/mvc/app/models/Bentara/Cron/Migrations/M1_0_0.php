@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Cron\Migrations;
+namespace Bentara\Cron\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Base\BaseModelMigration;
 
 class M1_0_0 extends BaseModelMigration
 {

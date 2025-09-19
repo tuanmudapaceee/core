@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-class GifController extends \OPNsense\Base\IndexController
+class GifController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

@@ -27,14 +27,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Unbound\Api;
+namespace Bentara\Unbound\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
 
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Unbound\Unbound';
+    protected static $internalServiceClass = '\Bentara\Unbound\Unbound';
     protected static $internalServiceTemplate = 'OPNsense/Unbound/*';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceName = 'unbound';

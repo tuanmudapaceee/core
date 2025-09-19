@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
 /**
  * Class NptRule (IPv6)
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class NptRule extends Rule
 {

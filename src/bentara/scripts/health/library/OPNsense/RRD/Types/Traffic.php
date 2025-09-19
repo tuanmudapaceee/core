@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Types;
+namespace Bentara\RRD\Types;
 
 class Traffic extends Base
 {

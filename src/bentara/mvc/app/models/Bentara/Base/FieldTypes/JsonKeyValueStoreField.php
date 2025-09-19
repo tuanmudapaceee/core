@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Backend;
+use Bentara\Core\Backend;
 
 /**
  * Class JsonKeyValueStoreField, use a json encoded file as selection list
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class JsonKeyValueStoreField extends BaseListField
 {

@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Base\Validators\MinMaxValidator;
-use OPNsense\Base\Validators\IntegerValidator;
+use Bentara\Base\Validators\MinMaxValidator;
+use Bentara\Base\Validators\IntegerValidator;
 
 /**
  * Class AutoNumberField auto numbering integer type field, using its direct neighbors to determine the already used
  * numbers.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class AutoNumberField extends BaseField
 {

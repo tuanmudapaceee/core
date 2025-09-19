@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Interfaces\FieldTypes;
+namespace Bentara\Interfaces\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\BaseListField;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class VlanInterfaceField extends BaseListField
 {

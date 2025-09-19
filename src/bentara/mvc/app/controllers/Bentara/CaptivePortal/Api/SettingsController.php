@@ -28,18 +28,18 @@
  *
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 /**
  * Class SettingsController Handles settings related API actions for Captive Portal
- * @package OPNsense\TrafficShaper
+ * @package Bentara\TrafficShaper
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'zone';
-    protected static $internalModelClass = '\OPNsense\CaptivePortal\CaptivePortal';
+    protected static $internalModelClass = '\Bentara\CaptivePortal\CaptivePortal';
 
     /**
      * retrieve zone settings or return defaults

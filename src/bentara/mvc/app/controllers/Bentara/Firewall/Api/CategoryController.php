@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class CategoryController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'category';
-    protected static $internalModelClass = 'OPNsense\Firewall\Category';
+    protected static $internalModelClass = 'Bentara\Firewall\Category';
 
     /**
      * search categories
@@ -64,7 +64,7 @@ class CategoryController extends ApiMutableModelControllerBase
      * Update category with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setItemAction($uuid)
@@ -84,8 +84,8 @@ class CategoryController extends ApiMutableModelControllerBase
     /**
      * Add new category and set with attributes from post
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ModelException when not bound to model
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ModelException when not bound to model
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addItemAction()
@@ -108,9 +108,9 @@ class CategoryController extends ApiMutableModelControllerBase
      * Delete alias by uuid, save contents to tmp for removal on apply
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
-     * @throws \OPNsense\Base\UserException when unable to delete
+     * @throws \Bentara\Base\UserException when unable to delete
      */
     public function delItemAction($uuid)
     {
@@ -119,7 +119,7 @@ class CategoryController extends ApiMutableModelControllerBase
         $node_name = $node != null ? (string)$node->name : null;
         if ($node_name != null && $this->getModel()->isUsed($node_name)) {
             $message = gettext("Cannot delete a category which is still in use.");
-            throw new \OPNsense\Base\UserException($message, gettext("Category in use"));
+            throw new \Bentara\Base\UserException($message, gettext("Category in use"));
         }
         return $this->delBase("categories.category", $uuid);
     }

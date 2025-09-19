@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq\FieldTypes;
+namespace Bentara\Dnsmasq\FieldTypes;
 
-use OPNsense\Base\FieldTypes\HostnameField;
+use Bentara\Base\FieldTypes\HostnameField;
 
 class AliasesField extends HostnameField
 {

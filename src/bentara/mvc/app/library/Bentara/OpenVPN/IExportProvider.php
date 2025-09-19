@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
 /**
  * Interface for OpenVPN export connectors
- * @package OPNsense\Backup
+ * @package Bentara\Backup
  */
 interface IExportProvider
 {

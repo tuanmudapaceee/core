@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Tunables
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class Tunables extends BaseModel
 {

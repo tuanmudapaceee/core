@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea;
+namespace Bentara\Kea;
 
-use OPNsense\Core\File;
-use OPNsense\Base\BaseModel;
+use Bentara\Core\File;
+use Bentara\Base\BaseModel;
 
 class KeaCtrlAgent extends BaseModel
 {

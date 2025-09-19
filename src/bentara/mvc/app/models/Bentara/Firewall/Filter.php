@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Core\Config;
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Firewall\Util;
-use OPNsense\TrafficShaper\TrafficShaper;
+use Bentara\Core\Config;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Firewall\Util;
+use Bentara\TrafficShaper\TrafficShaper;
 
 class Filter extends BaseModel
 {

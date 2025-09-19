@@ -27,13 +27,13 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routes\Api;
+namespace Bentara\Routes\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
- * @package OPNsense\Routes
+ * @package Bentara\Routes
  */
 class GatewayController extends ApiControllerBase
 {

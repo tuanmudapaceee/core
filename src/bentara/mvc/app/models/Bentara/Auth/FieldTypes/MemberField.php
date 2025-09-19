@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
-use OPNsense\Auth\User;
+use Bentara\Base\FieldTypes\BaseListField;
+use Bentara\Auth\User;
 
 class MemberField extends BaseListField
 {

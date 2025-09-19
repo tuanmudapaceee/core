@@ -26,22 +26,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Api;
+namespace Bentara\Auth\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\ACL;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class GroupController
- * @package OPNsense\Auth\Api
+ * @package Bentara\Auth\Api
  */
 class GroupController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'group';
-    protected static $internalModelClass = 'OPNsense\Auth\Group';
+    protected static $internalModelClass = 'Bentara\Auth\Group';
 
     protected function setBaseHook($node)
     {

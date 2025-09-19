@@ -28,7 +28,7 @@
  *
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class ConfigException

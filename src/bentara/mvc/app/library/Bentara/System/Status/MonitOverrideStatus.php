@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class MonitOverrideStatus extends AbstractStatus
 {
@@ -44,7 +44,7 @@ class MonitOverrideStatus extends AbstractStatus
 
     public function collectStatus()
     {
-        if (count(glob('/usr/local/etc/monit.opnsense.d/*.conf'))) {
+        if (count(glob('/usr/local/etc/monit.bentara.d/*.conf'))) {
             $this->internalMessage = gettext(
                 'The configuration contains manual overwrites, these may interfere with the settings configured here.'
             );

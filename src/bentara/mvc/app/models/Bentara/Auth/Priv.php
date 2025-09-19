@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Priv
- * @package OPNsense\System
+ * @package Bentara\System
  */
 class Priv extends BaseModel
 {

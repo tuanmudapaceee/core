@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\Validators\CallbackValidator;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\Validators\CallbackValidator;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 /**
  * Class AliasContentField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class AliasContentField extends BaseField
 {
@@ -138,7 +138,7 @@ class AliasContentField extends BaseField
      * Validate port alias options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validatePort($data)
     {
@@ -158,7 +158,7 @@ class AliasContentField extends BaseField
      * Validate asn alias options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validateASN($data)
     {
@@ -176,7 +176,7 @@ class AliasContentField extends BaseField
      * Validate host options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validateHost($data)
     {
@@ -210,7 +210,7 @@ class AliasContentField extends BaseField
      * Validate host options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validateNestedAlias($data)
     {
@@ -230,7 +230,7 @@ class AliasContentField extends BaseField
      * Validate network options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validateNetwork($data)
     {
@@ -275,7 +275,7 @@ class AliasContentField extends BaseField
      * Validate partial ipv6 network definition
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validatePartialIPv6Network($data)
     {
@@ -312,7 +312,7 @@ class AliasContentField extends BaseField
      * Validate (partial) mac address options
      * @param array $data to validate
      * @return bool|Callback
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validatePartialMacAddr($data)
     {
@@ -332,7 +332,7 @@ class AliasContentField extends BaseField
      * Validate (partial) mac address options
      * @param array $data to validate
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     private function validateGroups($data)
     {

@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Backend;
-use OPNsense\Core\File;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Backend;
+use Bentara\Core\File;
 
 /**
  * Class ConfigdActionsField list configurable configd actions
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class ConfigdActionsField extends BaseListField
 {

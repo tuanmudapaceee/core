@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Autoload;
+namespace Bentara\Autoload;
 
 class Loader
 {

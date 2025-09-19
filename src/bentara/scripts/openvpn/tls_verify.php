@@ -36,7 +36,7 @@ require_once("util.inc");
  */
 function do_verify($serverid)
 {
-    $a_server = (new OPNsense\OpenVPN\OpenVPN())->getInstanceById($serverid, 'server');
+    $a_server = (new Bentara\OpenVPN\OpenVPN())->getInstanceById($serverid, 'server');
     if ($a_server === null) {
         return "OpenVPN '$serverid' was not found. Denying authentication for user {$username}";
     }
@@ -46,7 +46,7 @@ function do_verify($serverid)
         return "Certificate depth {$certificate_depth} exceeded max allowed depth of {$allowed_depth}.";
     } elseif ($a_server['use_ocsp'] && $certificate_depth == 0) {
         $serial = getenv('tls_serial_' . $certificate_depth);
-        $ocsp_response = OPNsense\Trust\Store::ocsp_validate("/var/etc/openvpn/instance-" . $serverid . ".ca", $serial);
+        $ocsp_response = Bentara\Trust\Store::ocsp_validate("/var/etc/openvpn/instance-" . $serverid . ".ca", $serial);
         if (!$ocsp_response['pass']) {
             return sprintf(
                 "[serial : %s] @ %s - %s (%s)",

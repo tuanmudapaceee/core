@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Firewall\Migrations;
+namespace Bentara\Firewall\Migrations;
 
-use OPNsense\Core\Config;
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Firewall\Filter;
-use OPNsense\Firewall\Category;
-use OPNsense\Firewall\Util;
+use Bentara\Core\Config;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Firewall\Filter;
+use Bentara\Firewall\Category;
+use Bentara\Firewall\Util;
 
 class MFP1_0_3 extends BaseModelMigration
 {

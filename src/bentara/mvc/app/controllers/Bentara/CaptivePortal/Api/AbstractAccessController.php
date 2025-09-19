@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\CaptivePortal\CaptivePortal;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\CaptivePortal\CaptivePortal;
 
 /**
  * Class AbstractAccessController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 abstract class AbstractAccessController extends ApiControllerBase
 {
@@ -44,7 +44,7 @@ abstract class AbstractAccessController extends ApiControllerBase
      * request client session data
      * @param string $zoneid captive portal zone
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     protected function clientSession(string $zoneid)
     {
@@ -113,7 +113,7 @@ abstract class AbstractAccessController extends ApiControllerBase
      * retrieve session info
      * @param int|string $zoneid zone id number, provided for backwards compatibility
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      *
      */
     public function statusAction($zoneid = 0)
@@ -161,7 +161,7 @@ abstract class AbstractAccessController extends ApiControllerBase
             $captive = $clientSession["clientState"] != "AUTHORIZED";
             $host = $this->request->getHeader('X-Forwarded-Host');
 
-            $zone = (new \OPNsense\CaptivePortal\CaptivePortal())->getByZoneId($zoneId);
+            $zone = (new \Bentara\CaptivePortal\CaptivePortal())->getByZoneId($zoneId);
 
             if ($zone != null && !empty($clientSession['startTime'])) {
                 $startTime = (int)$clientSession['startTime'];

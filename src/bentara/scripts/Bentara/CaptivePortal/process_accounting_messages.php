@@ -29,7 +29,7 @@
 
 require_once('script/load_phalcon.php');
 
-use OPNsense\Auth\AuthenticationFactory;
+use Bentara\Auth\AuthenticationFactory;
 
 // open database
 $database_filename = '/var/captiveportal/captiveportal.sqlite';
@@ -59,7 +59,7 @@ $result = $db->query('
 // process all sessions
 if ($result !== false) {
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-        $authFactory = new OPNsense\Auth\AuthenticationFactory();
+        $authFactory = new Bentara\Auth\AuthenticationFactory();
         $authenticator = $authFactory->get($row['authenticated_via']);
         if ($authenticator != null) {
             if ($row['state'] == null) {

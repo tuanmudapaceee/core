@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\TextField;
 
 class StoreB64Field extends TextField
 {

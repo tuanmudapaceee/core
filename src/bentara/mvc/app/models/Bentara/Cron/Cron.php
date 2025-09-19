@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Cron;
+namespace Bentara\Cron;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Cron
- * @package OPNsense\Cron
+ * @package Bentara\Cron
  */
 class Cron extends BaseModel
 {

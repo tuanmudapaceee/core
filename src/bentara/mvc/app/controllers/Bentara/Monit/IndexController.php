@@ -28,13 +28,13 @@
  *
  */
 
-namespace OPNsense\Monit;
+namespace Bentara\Monit;
 
 /**
  * Class IndexController
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
-class IndexController extends \OPNsense\Base\IndexController
+class IndexController extends \Bentara\Base\IndexController
 {
     /**
      * monit index page

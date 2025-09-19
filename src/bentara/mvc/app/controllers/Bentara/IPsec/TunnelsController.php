@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
 /**
  * Class TunnelsController
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
-class TunnelsController extends \OPNsense\Base\IndexController
+class TunnelsController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

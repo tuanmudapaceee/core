@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Interfaces
+ * @package Bentara\Interfaces
  */
 class LaggSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'lagg';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Lagg';
+    protected static $internalModelClass = 'Bentara\Interfaces\Lagg';
 
 
     /**
@@ -149,7 +149,7 @@ class LaggSettingsController extends ApiMutableModelControllerBase
                 $message .= htmlspecialchars(sprintf("\n[%s] %s", $key, $value), ENT_NOQUOTES | ENT_HTML401);
             }
             $message = sprintf(gettext("Cannot delete lagg. Currently in use by %s"), $message);
-            throw new \OPNsense\Base\UserException($message, gettext("Lagg in use"));
+            throw new \Bentara\Base\UserException($message, gettext("Lagg in use"));
         }
         $result = $this->delBase("lagg", $uuid);
         if ($result['result'] != 'failed' && !empty($laggif)) {

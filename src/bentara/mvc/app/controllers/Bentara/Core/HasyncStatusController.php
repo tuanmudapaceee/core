@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-class HasyncStatusController extends \OPNsense\Base\IndexController
+class HasyncStatusController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

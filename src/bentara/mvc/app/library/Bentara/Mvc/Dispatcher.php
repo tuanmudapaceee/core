@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc;
+namespace Bentara\Mvc;
 
 use Exception;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionException;
-use OPNsense\Mvc\Exceptions\ClassNotFoundException;
-use OPNsense\Mvc\Exceptions\MethodNotFoundException;
-use OPNsense\Mvc\Exceptions\ParameterMismatchException;
+use Bentara\Mvc\Exceptions\ClassNotFoundException;
+use Bentara\Mvc\Exceptions\MethodNotFoundException;
+use Bentara\Mvc\Exceptions\ParameterMismatchException;
 
 class Dispatcher
 {

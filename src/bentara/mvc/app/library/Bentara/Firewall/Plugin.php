@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class Plugin
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class Plugin
 {
@@ -96,9 +96,9 @@ class Plugin
 
     /**
      * set defined gateways (route-to)
-     * @param  \OPNsense\Routing\Gateways $gateways object
+     * @param  \Bentara\Routing\Gateways $gateways object
      */
-    public function setGateways(\OPNsense\Routing\Gateways $gateways)
+    public function setGateways(\Bentara\Routing\Gateways $gateways)
     {
         $this->gateways = $gateways;
         foreach ($gateways->gatewaysIndexedByName(false, true) as $key => $gw) {
@@ -119,9 +119,9 @@ class Plugin
     }
 
     /**
-     * @return \OPNsense\Routing\Gateways gateway object
+     * @return \Bentara\Routing\Gateways gateway object
      */
-    public function getGateways(): ?\OPNsense\Routing\Gateways
+    public function getGateways(): ?\Bentara\Routing\Gateways
     {
         return $this->gateways;
     }

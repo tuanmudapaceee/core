@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCPv6;
+namespace Bentara\DHCPv6;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 class LeasesController extends IndexController
 {

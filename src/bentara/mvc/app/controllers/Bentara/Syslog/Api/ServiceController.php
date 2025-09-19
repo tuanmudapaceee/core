@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Syslog\Api;
+namespace Bentara\Syslog\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * {@inheritdoc}
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Syslog\Syslog';
+    protected static $internalServiceClass = '\Bentara\Syslog\Syslog';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceTemplate = 'OPNsense/Syslog';
     protected static $internalServiceName = 'syslog';

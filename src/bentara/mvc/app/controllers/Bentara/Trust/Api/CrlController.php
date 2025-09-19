@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\Api;
+namespace Bentara\Trust\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Trust\Store as CertStore;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Trust\Store as CertStore;
 
 /**
  * Class CrlController
- * @package OPNsense\Trust\Api
+ * @package Bentara\Trust\Api
  */
 class CrlController extends ApiControllerBase
 {
@@ -288,7 +288,7 @@ class CrlController extends ApiControllerBase
 
                 $last_crl = null;
                 if ($crl === null) {
-                    $last_crl = current($config->xpath('//opnsense/crl[last()]'));
+                    $last_crl = current($config->xpath('//bentara/crl[last()]'));
                     if ($last_crl) {
                         $crl = simplexml_load_string('<crl/>');
                     } else {

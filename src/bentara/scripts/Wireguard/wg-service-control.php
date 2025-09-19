@@ -39,7 +39,7 @@ require_once('system.inc');
 function get_vhid_status()
 {
     $vhids = [];
-    foreach ((new OPNsense\Interfaces\Vip())->vip->iterateItems() as $id => $item) {
+    foreach ((new Bentara\Interfaces\Vip())->vip->iterateItems() as $id => $item) {
         if ($item->mode == 'carp') {
             $vhids[$id] = ['status' => 'DISABLED', 'vhid' => (string)$item->vhid];
         }
@@ -102,7 +102,7 @@ function wg_start($server, $fhandle, $ifcfgflag = 'up', $reload = false)
             $routes_to_skip[$ipproto][] = $alias;
         }
 
-        foreach ((new OPNsense\Wireguard\Client())->clients->client->iterateItems() as $key => $client) {
+        foreach ((new Bentara\Wireguard\Client())->clients->client->iterateItems() as $key => $client) {
             if (empty((string)$client->enabled) || !in_array($key, $peers)) {
                 continue;
             }
@@ -217,9 +217,9 @@ if (isset($opts['h']) || empty($args) || !in_array($args[0], ['start', 'stop', '
     $action = $args[0];
 
     $server_devs = [];
-    if (!(new OPNsense\Wireguard\General())->enabled->isEmpty()) {
+    if (!(new Bentara\Wireguard\General())->enabled->isEmpty()) {
         $vhids = get_vhid_status();
-        foreach ((new OPNsense\Wireguard\Server())->servers->server->iterateItems() as $key => $node) {
+        foreach ((new Bentara\Wireguard\Server())->servers->server->iterateItems() as $key => $node) {
             $carp_depend_on = (string)$node->carp_depend_on;
             if (empty((string)$node->enabled)) {
                 continue;

@@ -28,12 +28,12 @@
  *
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class HaltController extends IndexController
 {

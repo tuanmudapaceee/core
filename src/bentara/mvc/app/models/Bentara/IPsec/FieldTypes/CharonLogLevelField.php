@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\FieldTypes;
+namespace Bentara\IPsec\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
+use Bentara\Base\FieldTypes\BaseListField;
 
 /**
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class CharonLogLevelField extends BaseListField
 {

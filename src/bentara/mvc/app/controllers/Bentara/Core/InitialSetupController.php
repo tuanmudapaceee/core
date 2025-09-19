@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
-class InitialSetupController extends \OPNsense\Base\IndexController
+class InitialSetupController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

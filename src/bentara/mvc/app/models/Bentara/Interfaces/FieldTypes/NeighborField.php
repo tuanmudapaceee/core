@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\FieldTypes;
+namespace Bentara\Interfaces\FieldTypes;
 
 use ReflectionClass;
 use ReflectionException;
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
 
 class NeighborField extends ArrayField
 {
@@ -46,7 +46,7 @@ class NeighborField extends ArrayField
         $result = [];
         foreach (glob(__DIR__ . "/../Neighbor/*.php") as $filename) {
             $origin = explode('.', basename($filename))[0];
-            $classname = 'OPNsense\\Interfaces\\Neighbor\\' . $origin;
+            $classname = 'Bentara\\Interfaces\\Neighbor\\' . $origin;
             try {
                 $class = new ReflectionClass($classname);
                 $obj = $class->newInstance();

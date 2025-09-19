@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\AutoNumberField;
-use OPNsense\Base\FieldTypes\ContainerField;
-use OPNsense\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\AutoNumberField;
+use Bentara\Base\FieldTypes\ContainerField;
+use Bentara\Base\FieldTypes\ArrayField;
 
 class AutoNumberFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class AutoNumberFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\AutoNumberField', new AutoNumberField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\AutoNumberField', new AutoNumberField());
     }
 
     /**

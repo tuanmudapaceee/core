@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
-use OPNsense\Core\ACL;
-use OPNsense\Core\Config;
-use OPNsense\Core\Syslog;
-use OPNsense\Mvc\Controller;
+use Bentara\Core\ACL;
+use Bentara\Core\Config;
+use Bentara\Core\Syslog;
+use Bentara\Mvc\Controller;
 use Phalcon\Translate\InterpolatorFactory;
 
 /**
  * Class ControllerRoot wrap shared OPNsense controller features (auth, logging)
- * @package OPNsense\Base
+ * @package Bentara\Base
  */
 class ControllerRoot extends Controller
 {

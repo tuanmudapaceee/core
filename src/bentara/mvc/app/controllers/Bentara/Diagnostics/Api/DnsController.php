@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
 
 /**
  * Class DnsController
- * @package OPNsense\Diagnostics
+ * @package Bentara\Diagnostics
  */
 class DnsController extends ApiControllerBase
 {

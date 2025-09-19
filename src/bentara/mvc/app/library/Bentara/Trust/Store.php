@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 /**
  * Wrapper around [legacy] trust store
- * @package OPNsense\Trust
+ * @package Bentara\Trust
  */
 class Store
 {
@@ -143,7 +143,7 @@ class Store
     /**
      * Sign a certificate, when signed by a CA, make sure to serialize the config after doing so,
      * it's the callers responsibility to update the serial number administration of the supplied CA.
-     * A call to \OPNsense\Core\Config::getInstance()->save(); would persist the new serial.
+     * A call to \Bentara\Core\Config::getInstance()->save(); would persist the new serial.
      *
      * @param OpenSSLCertificateSigningRequest|string $csr CSR to sign
      * @param string|OpenSSLAsymmetricKey $caref key to certificate authority, OpenSSLAsymmetricKey for self signed
@@ -199,7 +199,7 @@ class Store
         // define temp filename to use for openssl.cnf and add extensions values to it
         $configFilename = tempnam((new AppConfig())->application->tempDir, 'ssl');
 
-        $template = file_get_contents('/usr/local/etc/ssl/opnsense.cnf');
+        $template = file_get_contents('/usr/local/etc/ssl/bentara.cnf');
         foreach (array_keys($extns) as $extnTag) {
             $template_extn = $extnTag . ' = ' . str_replace(array("\r", "\n"), '', $extns[$extnTag]);
             // Overwrite the placeholders for this property
@@ -250,7 +250,7 @@ class Store
     /**
      * Sign a certificate, when signed by a CA, make sure to serialize the config after doing so,
      * it's the callers responsibility to update the serial number administration of the supplied CA.
-     * A call to \OPNsense\Core\Config::getInstance()->save(); would persist the new serial.
+     * A call to \Bentara\Core\Config::getInstance()->save(); would persist the new serial.
      *
      * @param string $keylen_curve rsa key length or elliptic curve name to use
      * @param int $lifetime in number of days
@@ -286,7 +286,7 @@ class Store
     /**
      * re-issue a certificate, when signed by a CA, make sure to serialize the config after doing so,
      * it's the callers responsibility to update the serial number administration of the supplied CA.
-     * A call to \OPNsense\Core\Config::getInstance()->save(); would persist the new serial.
+     * A call to \Bentara\Core\Config::getInstance()->save(); would persist the new serial.
      *
      * @param string $keylen_curve rsa key length or elliptic curve name to use
      * @param int $lifetime in number of days
@@ -328,7 +328,7 @@ class Store
     /**
      * Create a new certificate, when signed by a CA, make sure to serialize the config after doing so,
      * it's the callers responsibility to update the serial number administration of the supplied CA.
-     * A call to \OPNsense\Core\Config::getInstance()->save(); would persist the new serial.
+     * A call to \Bentara\Core\Config::getInstance()->save(); would persist the new serial.
      *
      * @param string $keylen_curve rsa key length or elliptic curve name to use
      * @param int $lifetime in number of days

@@ -28,14 +28,14 @@
  *
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Auth\AuthenticationFactory;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Auth\AuthenticationFactory;
 
 /**
  * Class VoucherController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 class VoucherController extends ApiControllerBase
 {

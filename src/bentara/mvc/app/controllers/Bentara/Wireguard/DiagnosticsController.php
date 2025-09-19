@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard;
+namespace Bentara\Wireguard;
 
-class DiagnosticsController extends \OPNsense\Base\IndexController
+class DiagnosticsController extends \Bentara\Base\IndexController
 {
     protected function templateJSIncludes()
     {

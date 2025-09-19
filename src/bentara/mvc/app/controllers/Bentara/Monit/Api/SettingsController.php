@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\Monit\Api;
+namespace Bentara\Monit\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Base\UIModelGrid;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Config;
+use Bentara\Base\UIModelGrid;
 
 /**
  * Class SettingsController
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'monit';
-    protected static $internalModelClass = 'OPNsense\Monit\Monit';
+    protected static $internalModelClass = 'Bentara\Monit\Monit';
 
     /**
      * Retrieve alert settings or return defaults
@@ -58,7 +58,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update alert with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setAlertAction($uuid)
@@ -69,7 +69,7 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add alert with given properties
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addAlertAction()
@@ -81,7 +81,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete alert by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delAlertAction($uuid)
@@ -108,7 +108,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid alert internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleAlertAction($uuid, $enabled = null)
@@ -131,7 +131,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update service with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setServiceAction($uuid)
@@ -142,7 +142,7 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add service with given properties
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addServiceAction()
@@ -154,7 +154,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete service by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delServiceAction($uuid)
@@ -177,7 +177,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * @param $uuid service internal id
      * @param $enabled desired state enabled(1)/disabled(1), leave empty for toggle
      * @return array save result
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function toggleServiceAction($uuid, $enabled = null)
@@ -200,7 +200,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Update test with given properties
      * @param string $uuid internal id
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function setTestAction($uuid)
@@ -211,7 +211,7 @@ class SettingsController extends ApiMutableModelControllerBase
     /**
      * Add test with given properties
      * @return array save result + validation output
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function addTestAction()
@@ -223,7 +223,7 @@ class SettingsController extends ApiMutableModelControllerBase
      * Delete test by uuid
      * @param string $uuid internal id
      * @return array save status
-     * @throws \OPNsense\Base\ValidationException when field validations fail
+     * @throws \Bentara\Base\ValidationException when field validations fail
      * @throws \ReflectionException when not bound to model
      */
     public function delTestAction($uuid)

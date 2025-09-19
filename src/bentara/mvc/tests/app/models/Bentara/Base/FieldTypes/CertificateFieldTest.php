@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\CertificateField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\CertificateField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class CertificateFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class CertificateFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\CertificateField', new CertificateField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\CertificateField', new CertificateField());
         // switch config to test set for this type
         (new AppConfig())->update('application.configDir', __DIR__ . '/CertificateFieldTest');
         Config::getInstance()->forceReload();
@@ -83,7 +83,7 @@ class CertificateFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetWithUnknownValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new CertificateField();
@@ -112,7 +112,7 @@ class CertificateFieldTest extends Field_Framework_TestCase
      */
     public function testSelectSetOnSingleValue()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("CallbackValidator");
         // init field
         $field = new CertificateField();

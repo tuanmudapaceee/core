@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
 /**
  * Class FilterRule
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class FilterRule extends Rule
 {
@@ -275,7 +275,7 @@ class FilterRule extends Rule
             if (!empty($rule['shaper1']) && empty($rule['disabled'])) {
                 if (static::$dntargets === null) {
                     /* init cache pipe/queue list */
-                    static::$dntargets = (new \OPNsense\TrafficShaper\TrafficShaper())->fetchAllTargets();
+                    static::$dntargets = (new \Bentara\TrafficShaper\TrafficShaper())->fetchAllTargets();
                 }
                 $shaper1 = static::$dntargets[$rule['shaper1']] ?? ['type' => ''];
                 $shaper2 = static::$dntargets[$rule['shaper2'] ?? '-'] ?? ['type' => ''];

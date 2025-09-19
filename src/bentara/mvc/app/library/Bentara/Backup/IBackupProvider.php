@@ -28,11 +28,11 @@
  *
  */
 
-namespace OPNsense\Backup;
+namespace Bentara\Backup;
 
 /**
  * Interface for backup connectors
- * @package OPNsense\Backup
+ * @package Bentara\Backup
  */
 interface IBackupProvider
 {

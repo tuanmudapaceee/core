@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 /**
  * Class Swanctl
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
 class Swanctl extends BaseModel
 {
@@ -232,11 +232,11 @@ class Swanctl extends BaseModel
                             $pool_names[$node_uuid] = (string)$attr;
                         }
                         continue;
-                    } elseif (is_a($attr, 'OPNsense\Base\FieldTypes\AuthGroupField')) {
+                    } elseif (is_a($attr, 'Bentara\Base\FieldTypes\AuthGroupField')) {
                         $thisnode[$attr_name] = $this->gidToNames((string)$attr);
-                    } elseif (is_a($attr, 'OPNsense\Base\FieldTypes\BooleanField')) {
+                    } elseif (is_a($attr, 'Bentara\Base\FieldTypes\BooleanField')) {
                         $thisnode[$attr_name] = (string)$attr == '1' ? 'yes' : 'no';
-                    } elseif (is_a($attr, 'OPNsense\Base\FieldTypes\CertificateField')) {
+                    } elseif (is_a($attr, 'Bentara\Base\FieldTypes\CertificateField')) {
                         $tmp = [];
                         foreach (explode(',', (string)$attr) as $item) {
                             $tmp[] = $item . '.crt';
@@ -266,7 +266,7 @@ class Swanctl extends BaseModel
                         if (!isset($data['connections'][$parent]['children'])) {
                             $data['connections'][$parent]['children'] = [];
                         }
-                        $thisnode['updown'] = '/usr/local/opnsense/scripts/ipsec/updown_event.py --connection_child ';
+                        $thisnode['updown'] = '/usr/local/bentara/scripts/ipsec/updown_event.py --connection_child ';
                         $thisnode['updown'] .= $node_uuid;
 
                         $data['connections'][$parent]['children'][$node_uuid] = $thisnode;

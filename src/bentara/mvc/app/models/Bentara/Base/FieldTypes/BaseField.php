@@ -26,19 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
 use Exception;
 use Generator;
 use InvalidArgumentException;
-use OPNsense\Base\Validators\PresenceOf;
+use Bentara\Base\Validators\PresenceOf;
 use ReflectionClass;
 use ReflectionException;
 use SimpleXMLElement;
 
 /**
  * Class BaseField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  * @property-read string $__reference this tag absolute reference (node.subnode.subnode)
  * @property-read string $__type this tag's class Name ( example TextField )
  * @property-read string $__Ixx get tag by index/name even if the name is a number
@@ -151,8 +151,8 @@ abstract class BaseField
      */
     public function isArrayType()
     {
-        return is_a($this, "OPNsense\\Base\\FieldTypes\\ArrayField") ||
-            is_subclass_of($this, "OPNsense\\Base\\FieldTypes\\ArrayField");
+        return is_a($this, "Bentara\\Base\\FieldTypes\\ArrayField") ||
+            is_subclass_of($this, "Bentara\\Base\\FieldTypes\\ArrayField");
     }
 
     /**
@@ -573,8 +573,8 @@ abstract class BaseField
             $constraint = $this->internalConstraints[$name];
             if (!empty($constraint['type'])) {
                 try {
-                    $constr_class = new ReflectionClass('OPNsense\\Base\\Constraints\\' . $constraint['type']);
-                    if ($constr_class->getParentClass()->name == 'OPNsense\Base\Constraints\BaseConstraint') {
+                    $constr_class = new ReflectionClass('Bentara\\Base\\Constraints\\' . $constraint['type']);
+                    if ($constr_class->getParentClass()->name == 'Bentara\Base\Constraints\BaseConstraint') {
                         $constraint['name'] = $name;
                         $constraint['node'] = $this;
                         return $constr_class->newInstance($constraint);

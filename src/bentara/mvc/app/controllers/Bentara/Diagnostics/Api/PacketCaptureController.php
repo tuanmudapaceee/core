@@ -28,16 +28,16 @@
  *
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class PacketCaptureController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'packetcapture';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\PacketCapture';
+    protected static $internalModelClass = 'Bentara\Diagnostics\PacketCapture';
     private static $capture_dir = '/tmp/captures';
 
     /**

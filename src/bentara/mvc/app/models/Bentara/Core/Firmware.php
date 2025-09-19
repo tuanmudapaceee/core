@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
 
 /**
  * Class Firmware
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class Firmware extends BaseModel
 {

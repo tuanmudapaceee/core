@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq\Api;
+namespace Bentara\Dnsmasq\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
+use Bentara\Base\ApiMutableServiceControllerBase;
 
 /**
  * Class ServiceController
- * @package OPNsense\Dnsmasq
+ * @package Bentara\Dnsmasq
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Dnsmasq\Dnsmasq';
+    protected static $internalServiceClass = '\Bentara\Dnsmasq\Dnsmasq';
     protected static $internalServiceTemplate = 'OPNsense/Dnsmasq';
     protected static $internalServiceEnabled = 'enable';
     protected static $internalServiceName = 'dnsmasq';

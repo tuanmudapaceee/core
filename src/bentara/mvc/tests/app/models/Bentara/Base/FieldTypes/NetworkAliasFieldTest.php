@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\NetworkAliasField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\NetworkAliasField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class NetworkAliasFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class NetworkAliasFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\NetworkAliasField', new NetworkAliasField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\NetworkAliasField', new NetworkAliasField());
         // switch config to test set for this type
         (new AppConfig())->update('application.configDir', __DIR__ . '/NetworkAliasFieldTest');
         Config::getInstance()->forceReload();

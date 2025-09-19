@@ -28,13 +28,13 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\TextField;
 
 class TextFieldTest extends Field_Framework_TestCase
 {
@@ -43,7 +43,7 @@ class TextFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\TextField', new TextField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\TextField', new TextField());
     }
 
     /**
@@ -130,7 +130,7 @@ class TextFieldTest extends Field_Framework_TestCase
      */
     public function testRequiredEmpty()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("PresenceOf");
         $field = new TextField();
         $field->setRequired("Y");

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics;
+namespace Bentara\Diagnostics;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Netflow
- * @package OPNsense\Netflow
+ * @package Bentara\Netflow
  */
 class Netflow extends BaseModel
 {

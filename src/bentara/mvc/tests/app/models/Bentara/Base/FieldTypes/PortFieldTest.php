@@ -28,13 +28,13 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\PortField;
+use Bentara\Base\FieldTypes\PortField;
 
 class PortFieldTest extends Field_Framework_TestCase
 {
@@ -43,14 +43,14 @@ class PortFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\PortField', new PortField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\PortField', new PortField());
     }
 
     /**
      */
     public function testRequiredEmpty()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("PresenceOf");
         $field = new PortField();
         $field->setRequired("Y");

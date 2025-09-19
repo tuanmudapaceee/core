@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Base\Validators\MinMaxValidator;
-use OPNsense\Base\Validators\IntegerValidator;
+use Bentara\Base\Validators\MinMaxValidator;
+use Bentara\Base\Validators\IntegerValidator;
 
 /**
  * Class IntegerField
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class IntegerField extends BaseField
 {

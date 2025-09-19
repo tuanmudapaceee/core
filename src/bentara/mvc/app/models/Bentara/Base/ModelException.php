@@ -28,7 +28,7 @@
  *
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 /**
  * Class BaseModelException for Model initialization

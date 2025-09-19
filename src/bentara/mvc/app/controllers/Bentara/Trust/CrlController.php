@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust;
+namespace Bentara\Trust;
 
-class CrlController extends \OPNsense\Base\IndexController
+class CrlController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

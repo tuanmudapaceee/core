@@ -28,16 +28,16 @@
  *
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Diagnostics\Netflow;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Diagnostics\Netflow;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
 
 /**
  * Class NetflowController
- * @package OPNsense\Netflow
+ * @package Bentara\Netflow
  */
 class NetflowController extends ApiControllerBase
 {
@@ -74,7 +74,7 @@ class NetflowController extends ApiControllerBase
     /**
      * update netflow configuration fields
      * @return array
-     * @throws \OPNsense\Base\ValidationException
+     * @throws \Bentara\Base\ValidationException
      */
     public function setconfigAction()
     {

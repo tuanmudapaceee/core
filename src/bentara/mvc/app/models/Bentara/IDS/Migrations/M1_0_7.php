@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IDS\Migrations;
+namespace Bentara\IDS\Migrations;
 
-use OPNsense\Base\FieldTypes\BaseField;
-use OPNsense\Core\Config;
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Base\FieldTypes\BaseField;
+use Bentara\Core\Config;
+use Bentara\Base\BaseModelMigration;
 use OPNSense\IDS\IDS;
 
 class M1_0_7 extends BaseModelMigration

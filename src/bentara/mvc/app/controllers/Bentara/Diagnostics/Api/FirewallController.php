@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Core\SanitizeFilter;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Core\SanitizeFilter;
+use Bentara\Firewall\Util;
 
 /**
  * Class FirewallController
- * @package OPNsense\Diagnostics\Api
+ * @package Bentara\Diagnostics\Api
  */
 class FirewallController extends ApiControllerBase
 {

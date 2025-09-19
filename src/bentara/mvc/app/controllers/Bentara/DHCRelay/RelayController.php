@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCRelay;
+namespace Bentara\DHCRelay;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 class RelayController extends IndexController
 {

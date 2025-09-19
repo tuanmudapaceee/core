@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq\Api;
+namespace Bentara\Dnsmasq\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Config;
 
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'dnsmasq';
-    protected static $internalModelClass = '\OPNsense\Dnsmasq\Dnsmasq';
+    protected static $internalModelClass = '\Bentara\Dnsmasq\Dnsmasq';
     protected static $internalModelUseSafeDelete = true;
 
     /**

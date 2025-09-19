@@ -26,23 +26,23 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\Api;
+namespace Bentara\Trust\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Trust\Store as CertStore;
-use OPNsense\Trust\Cert;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Trust\Store as CertStore;
+use Bentara\Trust\Cert;
 
 /**
  * Class CaController
- * @package OPNsense\Trust\Api
+ * @package Bentara\Trust\Api
  */
 class CaController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ca';
-    protected static $internalModelClass = 'OPNsense\Trust\Ca';
+    protected static $internalModelClass = 'Bentara\Trust\Ca';
 
     private function compare_issuer($subject, $issuer)
     {

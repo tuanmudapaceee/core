@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class Local user database connector (using legacy xml structure).
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class Local extends Base implements IAuthConnector
 {

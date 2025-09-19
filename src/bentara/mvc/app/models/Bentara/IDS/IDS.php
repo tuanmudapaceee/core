@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IDS;
+namespace Bentara\IDS;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class IDS
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
 class IDS extends BaseModel
 {

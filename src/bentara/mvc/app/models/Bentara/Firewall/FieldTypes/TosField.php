@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\FieldTypes;
+namespace Bentara\Firewall\FieldTypes;
 
-use OPNsense\Base\FieldTypes\BaseListField;
+use Bentara\Base\FieldTypes\BaseListField;
 
 class TosField extends BaseListField
 {

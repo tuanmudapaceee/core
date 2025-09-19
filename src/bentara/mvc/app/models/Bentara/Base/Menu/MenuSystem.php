@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2015-2020 Franco Fichtner <franco@opnsense.org>
+ * Copyright (C) 2015-2020 Franco Fichtner <franco@bentara.org>
  * Copyright (C) 2015 Deciso B.V.
  * All rights reserved.
  *
@@ -27,14 +27,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Menu;
+namespace Bentara\Base\Menu;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 /**
  * Class MenuSystem
- * @package OPNsense\Base\Menu
+ * @package Bentara\Base\Menu
  */
 class MenuSystem
 {
@@ -199,7 +199,7 @@ class MenuSystem
     public function __construct()
     {
         // set cache location
-        $this->menuCacheFilename = (new AppConfig())->application->tempDir . '/opnsense_menu_cache.xml';
+        $this->menuCacheFilename = (new AppConfig())->application->tempDir . '/bentara_menu_cache.xml';
 
         // load menu xml's
         $menuxml = null;

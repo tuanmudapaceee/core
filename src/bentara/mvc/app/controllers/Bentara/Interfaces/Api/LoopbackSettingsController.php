@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces\Api;
+namespace Bentara\Interfaces\Api;
 
-use OPNsense\Core\Backend;
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 class LoopbackSettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'loopback';
-    protected static $internalModelClass = 'OPNsense\Interfaces\Loopback';
+    protected static $internalModelClass = 'Bentara\Interfaces\Loopback';
 
     public function searchItemAction()
     {

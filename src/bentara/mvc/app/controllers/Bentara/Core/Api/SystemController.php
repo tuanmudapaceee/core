@@ -28,18 +28,18 @@
  *
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\System\SystemStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\ACL;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\System\SystemStatus;
+use Bentara\System\SystemStatusCode;
 
 /**
  * Class SystemController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class SystemController extends ApiControllerBase
 {

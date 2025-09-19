@@ -28,15 +28,15 @@
  *
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
 
 /**
  * Class Category
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class Category extends BaseModel
 {

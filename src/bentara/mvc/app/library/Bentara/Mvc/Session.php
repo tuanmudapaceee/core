@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Mvc;
+namespace Bentara\Mvc;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Session wrapper, when initiated it clones the current session data and closes the session to prevent

@@ -2,7 +2,7 @@
 
 /*
  * Copyright (C) 2018 Deciso B.V.
- * Copyright (C) 2018-2021 Franco Fichtner <franco@opnsense.org>
+ * Copyright (C) 2018-2021 Franco Fichtner <franco@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,13 +27,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Backup;
+namespace Bentara\Backup;
 
-use OPNsense\Core\AppConfig;
+use Bentara\Core\AppConfig;
 
 /**
  * Backup stub file, contains shared logic for all backup strategies
- * @package OPNsense\Backup
+ * @package Bentara\Backup
  */
 abstract class Base
 {
@@ -82,7 +82,7 @@ abstract class Base
         @unlink($file);
 
         if (file_exists("{$file}.enc") && !$retval) {
-            $version = trim(shell_exec('opnsense-version -Nv') ?? '');
+            $version = trim(shell_exec('bentara-version -Nv') ?? '');
             $result = "---- BEGIN {$tag} ----\n";
             $result .= "Version: {$version}\n";
             $result .= "Cipher: " . strtoupper($cipher) . "\n";
@@ -177,7 +177,7 @@ abstract class Base
 
     /**
      * set model properties
-     * @param OPNsense\Base\BaseModel $mdl model to set properties to
+     * @param Bentara\Base\BaseModel $mdl model to set properties to
      * @param array $properties named
      */
     protected function setModelProperties($mdl, $properties)
@@ -185,7 +185,7 @@ abstract class Base
         foreach ($properties as $key => $value) {
             $node = $mdl->getNodeByReference($key);
             $node_class = get_class($node);
-            if ($node_class == "OPNsense\Base\FieldTypes\BooleanField") {
+            if ($node_class == "Bentara\Base\FieldTypes\BooleanField") {
                 $node->setValue(empty($value) ? "0" : "1");
             } else {
                 $node->setValue($value);
@@ -195,7 +195,7 @@ abstract class Base
 
     /**
      * validate model and return simple array with validation messages
-     * @param OPNsense\Base\BaseModel $mdl model to set properties to
+     * @param Bentara\Base\BaseModel $mdl model to set properties to
      * @return array
      */
     protected function validateModel($mdl)

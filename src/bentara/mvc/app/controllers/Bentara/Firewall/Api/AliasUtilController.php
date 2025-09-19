@@ -26,15 +26,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall\Api;
+namespace Bentara\Firewall\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Firewall\Alias;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Firewall\Alias;
+use Bentara\Core\Config;
 
 /**
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class AliasUtilController extends ApiControllerBase
 {

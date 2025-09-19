@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interfaces;
+namespace Bentara\Interfaces;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Base\Messages\Message;
 
 /**
  * Class Lagg
- * @package OPNsense\Interfaces
+ * @package Bentara\Interfaces
  */
 class Lagg extends BaseModel
 {

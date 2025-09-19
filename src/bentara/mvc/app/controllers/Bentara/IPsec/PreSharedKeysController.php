@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
 /**
  * Class PreSharedKeysController
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
-class PreSharedKeysController extends \OPNsense\Base\IndexController
+class PreSharedKeysController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

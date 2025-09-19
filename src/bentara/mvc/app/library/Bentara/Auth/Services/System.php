@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\Services;
+namespace Bentara\Auth\Services;
 
-use OPNsense\Core\Config;
-use OPNsense\Auth\IService;
+use Bentara\Core\Config;
+use Bentara\Auth\IService;
 
 /**
  * System / console service
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class System implements IService
 {
@@ -49,7 +49,7 @@ class System implements IService
     {
         return [
             'login',
-            'opnsenselogin',
+            'bentaralogin',
             'sshd',
             'su',
             'sudo',

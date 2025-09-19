@@ -25,17 +25,17 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Base\UserException;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Base\UserException;
 
 class TunablesController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'sysctl';
-    protected static $internalModelClass = 'OPNsense\Core\Tunables';
+    protected static $internalModelClass = 'Bentara\Core\Tunables';
 
     public function searchItemAction()
     {

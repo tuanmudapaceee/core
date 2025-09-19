@@ -26,21 +26,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN\Api;
+namespace Bentara\OpenVPN\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Base\UserException;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
-use OPNsense\Trust\Store;
-use OPNsense\OpenVPN\OpenVPN;
-use OPNsense\OpenVPN\Export;
-use OPNsense\OpenVPN\ExportFactory;
-use OPNsense\Trust\Cert;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Base\UserException;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
+use Bentara\Trust\Store;
+use Bentara\OpenVPN\OpenVPN;
+use Bentara\OpenVPN\Export;
+use Bentara\OpenVPN\ExportFactory;
+use Bentara\Trust\Cert;
 
 /**
  * Class ExportController handles client export functions
- * @package OPNsense\OpenVPN
+ * @package Bentara\OpenVPN
  */
 class ExportController extends ApiControllerBase
 {
@@ -57,7 +57,7 @@ class ExportController extends ApiControllerBase
     /**
      * Get (or create) model object
      * @return Export
-     * @throws \OPNsense\Base\ModelException when unable to create model
+     * @throws \Bentara\Base\ModelException when unable to create model
      */
     private function getModel()
     {
@@ -129,7 +129,7 @@ class ExportController extends ApiControllerBase
      * Determine configured settings for selected server
      * @param string $vpnid server handle
      * @return array
-     * @throws \OPNsense\Base\ModelException when unable to create model
+     * @throws \Bentara\Base\ModelException when unable to create model
      */
     private function configuredSettings($vpnid)
     {
@@ -236,7 +236,7 @@ class ExportController extends ApiControllerBase
      * validate user/model input for configurable options
      * @param $vpnid server handle
      * @return array status and validation output
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     public function validatePresetsAction($vpnid)
     {
@@ -268,7 +268,7 @@ class ExportController extends ApiControllerBase
      * store presets when valid and changed
      * @param $vpnid server handle
      * @return array status and validation output
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     public function storePresetsAction($vpnid)
     {
@@ -288,7 +288,7 @@ class ExportController extends ApiControllerBase
      * @param string $vpnid server handle
      * @param string $certref certificate to export if applicable
      * @return array
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      * @throws UserException when invalid user input
      */
     public function downloadAction($vpnid, $certref = null)

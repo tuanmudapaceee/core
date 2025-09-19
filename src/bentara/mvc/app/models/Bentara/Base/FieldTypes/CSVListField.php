@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Base\Validators\CallbackValidator;
+use Bentara\Base\Validators\CallbackValidator;
 
 /**
  * Class CSVListField
  * Physical stored as a single entry, stores multiple selections.
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class CSVListField extends BaseSetField
 {

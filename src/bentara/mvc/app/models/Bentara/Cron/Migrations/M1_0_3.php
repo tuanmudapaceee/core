@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Cron\Migrations;
+namespace Bentara\Cron\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Base\BaseModelMigration;
 
 /**
  * migrate firmware jobs to a random delay action

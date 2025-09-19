@@ -28,9 +28,9 @@
  *
  */
 
-namespace tests\OPNsense\Base\BaseModel;
+namespace tests\Bentara\Base\BaseModel;
 
-use OPNsense\Base\BaseModel;
+use Bentara\Base\BaseModel;
 
 /**
  * Class TestModel

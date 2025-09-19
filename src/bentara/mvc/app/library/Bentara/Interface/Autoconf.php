@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Interface;
+namespace Bentara\Interface;
 
 class Autoconf
 {

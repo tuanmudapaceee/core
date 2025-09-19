@@ -27,14 +27,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routes;
+namespace Bentara\Routes;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
 
 /**
  * Class Route
- * @package OPNsense\Routes
+ * @package Bentara\Routes
  */
 class Route extends BaseModel
 {

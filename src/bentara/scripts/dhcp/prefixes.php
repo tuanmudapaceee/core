@@ -2,7 +2,7 @@
 <?php
 
 /*
- * Copyright (C) 2022-2024 Franco Fichtner <franco@opnsense.org>
+ * Copyright (C) 2022-2024 Franco Fichtner <franco@bentara.org>
  * Copyright (C) 2012 Seth Mos <seth.mos@dds.nl>
  * All rights reserved.
  *
@@ -105,7 +105,7 @@ foreach (plugins_run('static_mapping:dhcpd') as $map) {
 $routes = [];
 
 /* collect expired leases */
-$dhcpd_log = shell_safe('opnsense-log -n dhcpd');
+$dhcpd_log = shell_safe('bentara-log -n dhcpd');
 if (!empty($dhcpd_log)) {
     foreach (new SplFileObject($dhcpd_log) as $line) {
         if (preg_match('/releases prefix ([0-9a-f:]+\/[0-9]+)/i', $line, $expire)) {

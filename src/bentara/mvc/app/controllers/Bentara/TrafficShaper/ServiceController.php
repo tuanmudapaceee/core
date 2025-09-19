@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\TrafficShaper;
+namespace Bentara\TrafficShaper;
 
 /**
  * {@inheritdoc}
  */
-class ServiceController extends \OPNsense\Base\IndexController
+class ServiceController extends \Bentara\Base\IndexController
 {
     /**
      * traffic shaper statistics

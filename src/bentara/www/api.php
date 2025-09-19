@@ -32,7 +32,7 @@ try {
         throw new ErrorException($errmsg, 0, $errno, $errfile, $errline);
     });
 
-    $router = new OPNsense\Mvc\Router('/api/', 'Api');
+    $router = new Bentara\Mvc\Router('/api/', 'Api');
     $response = $router->routeRequest($_SERVER['REQUEST_URI'], [
             'action' => 'indexAction',
     ]);
@@ -40,9 +40,9 @@ try {
     if (!$response->isSent()) {
         $response->send();
     }
-} catch (\OPNsense\Base\UserException $e) {
+} catch (\Bentara\Base\UserException $e) {
     error_output(500, $e, $e->getMessage());
-} catch (\OPNsense\Mvc\Exceptions\DispatchException $e) {
+} catch (\Bentara\Mvc\Exceptions\DispatchException $e) {
     error_output(404, $e, gettext('Endpoint not found'));
 } catch (\Error | \Exception $e) {
     error_output(500, $e, gettext('Unexpected error, check log for details'));

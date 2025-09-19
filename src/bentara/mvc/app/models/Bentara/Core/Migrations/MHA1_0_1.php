@@ -26,12 +26,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Migrations;
+namespace Bentara\Core\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Hasync;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Hasync;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class MHA1_0_1 extends BaseModelMigration
 {

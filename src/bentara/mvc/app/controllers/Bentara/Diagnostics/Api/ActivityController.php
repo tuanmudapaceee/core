@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class ActivityController
- * @package OPNsense\Diagnostics\Api
+ * @package Bentara\Diagnostics\Api
  */
 class ActivityController extends ApiControllerBase
 {

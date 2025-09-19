@@ -26,20 +26,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Config;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Config;
+use Bentara\Core\Backend;
 
 /**
  * Class ConnectionsController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class ConnectionsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'swanctl';
-    protected static $internalModelClass = 'OPNsense\IPsec\Swanctl';
+    protected static $internalModelClass = 'Bentara\IPsec\Swanctl';
 
     /**
      * @return null|function lambda to filter on provided connection uuid in GET['connection']

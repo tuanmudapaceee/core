@@ -2,7 +2,7 @@
 <?php
 
 /*
- * Copyright (c) 2021-2024 Franco Fichtner <franco@opnsense.org>
+ * Copyright (c) 2021-2024 Franco Fichtner <franco@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -46,7 +46,7 @@ if (count($argv) > 2) {
 
 require_once('script/load_phalcon.php');
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 $config = Config::getInstance()->object();
 
@@ -91,7 +91,7 @@ function plugins_disk_get()
 
     $found = [];
 
-    foreach (glob('/usr/local/opnsense/version/*') as $name) {
+    foreach (glob('/usr/local/bentara/version/*') as $name) {
         $filename = basename($name);
         $prefix = explode('.', $filename)[0];
 

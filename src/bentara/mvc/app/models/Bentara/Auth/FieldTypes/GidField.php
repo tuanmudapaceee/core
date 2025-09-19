@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\FieldTypes;
+namespace Bentara\Auth\FieldTypes;
 
-use OPNsense\Base\FieldTypes\IntegerField;
-use OPNsense\Base\Validators\MinMaxValidator;
-use OPNsense\Base\Validators\IntegerValidator;
+use Bentara\Base\FieldTypes\IntegerField;
+use Bentara\Base\Validators\MinMaxValidator;
+use Bentara\Base\Validators\IntegerValidator;
 
 class GidField extends IntegerField
 {

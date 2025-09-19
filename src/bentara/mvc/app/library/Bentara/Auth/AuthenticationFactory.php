@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class AuthenticationFactory
- * @package OPNsense\Auth
+ * @package Bentara\Auth
  */
 class AuthenticationFactory
 {
@@ -48,9 +48,9 @@ class AuthenticationFactory
     private function listConnectors()
     {
         $connectors = [];
-        $interface = 'OPNsense\\Auth\\IAuthConnector';
+        $interface = 'Bentara\\Auth\\IAuthConnector';
         foreach (glob(__DIR__ . "/*.php") as $filename) {
-            $classname = 'OPNsense\\Auth\\' . explode('.php', basename($filename))[0];
+            $classname = 'Bentara\\Auth\\' . explode('.php', basename($filename))[0];
             $reflClass = new \ReflectionClass($classname);
             if (!$reflClass->isInterface() && $reflClass->implementsInterface($interface)) {
                 $connectorType = $reflClass->getMethod('getType')->invoke(null);
@@ -71,9 +71,9 @@ class AuthenticationFactory
     public function listSSOproviders(string $service = ''): array
     {
         $result = [];
-        $interface = 'OPNsense\Auth\SSOProviders\\ISSOContainer';
+        $interface = 'Bentara\Auth\SSOProviders\\ISSOContainer';
         foreach (glob(__DIR__ . "/SSOProviders/*.php") as $filename) {
-            $classname = 'OPNsense\\Auth\\SSOProviders\\' . explode('.php', basename($filename))[0];
+            $classname = 'Bentara\\Auth\\SSOProviders\\' . explode('.php', basename($filename))[0];
             $reflClass = new \ReflectionClass($classname);
             if (!$reflClass->isInterface() && $reflClass->implementsInterface($interface)) {
                 foreach (($reflClass->newInstance())->listProviders() as $provider) {
@@ -157,8 +157,8 @@ class AuthenticationFactory
         $srv_name = strtolower(str_replace(array('-', '_'), '', $service_name));
         foreach (glob(__DIR__ . "/Services/*.php") as $filename) {
             $srv_found = basename($filename, '.php');
-            $reflClass = new \ReflectionClass("OPNsense\\Auth\\Services\\{$srv_found}");
-            if ($reflClass->implementsInterface('OPNsense\\Auth\\IService')) {
+            $reflClass = new \ReflectionClass("Bentara\\Auth\\Services\\{$srv_found}");
+            if ($reflClass->implementsInterface('Bentara\\Auth\\IService')) {
                 // stash aliases
                 foreach ($reflClass->getMethod('aliases')->invoke(null) as $alias) {
                     $aliases[$alias] = $reflClass;

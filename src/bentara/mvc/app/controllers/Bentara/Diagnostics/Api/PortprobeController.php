@@ -26,15 +26,15 @@
  *    POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class PortprobeController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'portprobe';
-    protected static $internalModelClass = 'OPNsense\Diagnostics\Portprobe';
+    protected static $internalModelClass = 'Bentara\Diagnostics\Portprobe';
 
     public function setAction()
     {

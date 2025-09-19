@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Config;
 
 /**
  * Class TunnelController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class TunnelController extends ApiControllerBase
 {

@@ -28,7 +28,7 @@
 
 require_once(__DIR__ . '/../../app/library/OPNsense/Autoload/Loader.php');
 
-use OPNsense\Autoload\Loader;
+use Bentara\Autoload\Loader;
 
 (new Loader([
     $config->application->controllersDir,

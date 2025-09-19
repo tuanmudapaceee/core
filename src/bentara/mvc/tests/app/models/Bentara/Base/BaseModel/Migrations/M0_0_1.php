@@ -28,9 +28,9 @@
  *
  */
 
-namespace tests\OPNsense\Base\BaseModel\Migrations;
+namespace tests\Bentara\Base\BaseModel\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Base\BaseModelMigration;
 
 class M0_0_1 extends BaseModelMigration
 {

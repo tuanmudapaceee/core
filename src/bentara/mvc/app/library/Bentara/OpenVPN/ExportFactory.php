@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
 /**
 * Class ExportFactory
-* @package OPNsense\OpenVPN
+* @package Bentara\OpenVPN
 */
 class ExportFactory
 {
@@ -49,7 +49,7 @@ class ExportFactory
             try {
                 $reflClass = new \ReflectionClass("{$vendor}\\{$module}\\{$classname}");
                 if (
-                    $reflClass->implementsInterface('OPNsense\\OpenVPN\\IExportProvider')
+                    $reflClass->implementsInterface('Bentara\\OpenVPN\\IExportProvider')
                         && !$reflClass->isInterface()
                 ) {
                     $providers[$classname] = array(

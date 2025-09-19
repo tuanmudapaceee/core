@@ -27,18 +27,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Monit\Api;
+namespace Bentara\Monit\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
 
 /**
  * Class ServiceController
- * @package OPNsense\Monit
+ * @package Bentara\Monit
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Monit\Monit';
+    protected static $internalServiceClass = '\Bentara\Monit\Monit';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceTemplate = 'OPNsense/Monit';
     protected static $internalServiceName = 'monit';

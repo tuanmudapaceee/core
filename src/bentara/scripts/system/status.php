@@ -29,7 +29,7 @@
 
 require_once('script/load_phalcon.php');
 
-$status = new \OPNsense\System\SystemStatus();
+$status = new \Bentara\System\SystemStatus();
 
 if (isset($argv[1]) && $argv[1] == 'dismiss' && isset($argv[2])) {
     $status->dismissStatus($argv[2]);

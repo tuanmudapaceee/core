@@ -28,12 +28,12 @@
  *
  */
 
-namespace OPNsense\IPsec\FieldTypes;
+namespace Bentara\IPsec\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 class SPDField extends ArrayField
 {

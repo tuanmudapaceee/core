@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\Constraints;
+namespace Bentara\Base\Constraints;
 
 /**
  * limit the value range depending on the setting of another field
  * containing a specific value
  * Class ComparedToFieldConstraint
- * @package OPNsense\Base\Constraints
+ * @package Bentara\Base\Constraints
  */
 class ComparedToFieldConstraint extends BaseConstraint
 {

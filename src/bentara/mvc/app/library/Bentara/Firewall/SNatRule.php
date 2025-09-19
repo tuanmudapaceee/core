@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
 /**
  * Class SNatRule, outbound / source nat rules
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class SNatRule extends Rule
 {

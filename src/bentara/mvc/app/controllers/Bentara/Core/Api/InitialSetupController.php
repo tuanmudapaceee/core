@@ -26,20 +26,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class InitialSetupController
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class InitialSetupController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'wizard';
-    protected static $internalModelClass = 'OPNsense\Core\InitialSetup';
+    protected static $internalModelClass = 'Bentara\Core\InitialSetup';
 
     public function configureAction()
     {

@@ -28,7 +28,7 @@
  *
  */
 
-namespace OPNsense\Base;
+namespace Bentara\Base;
 
 class UserException extends \Exception
 {

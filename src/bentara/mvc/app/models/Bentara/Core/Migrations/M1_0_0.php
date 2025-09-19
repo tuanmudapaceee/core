@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Migrations;
+namespace Bentara\Core\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Firmware;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Firmware;
 
 class M1_0_0 extends BaseModelMigration
 {
@@ -43,7 +43,7 @@ class M1_0_0 extends BaseModelMigration
             return;
         }
         if ((empty((string)$model->type) || (string)$model->type == 'devel') && !empty((string)$model->mirror)) {
-            $is_business = strpos((string)$model->mirror, 'opnsense-update.deciso.com') !== false;
+            $is_business = strpos((string)$model->mirror, 'bentara-update.deciso.com') !== false;
             if ($is_business) {
                 $model->type = 'business';
                 $model->flavour = 'latest';

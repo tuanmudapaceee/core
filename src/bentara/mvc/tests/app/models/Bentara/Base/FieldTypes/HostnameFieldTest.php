@@ -28,19 +28,19 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\HostnameField;
+use Bentara\Base\FieldTypes\HostnameField;
 
 class HostnameFieldTest extends Field_Framework_TestCase
 {
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\HostnameField', new HostnameField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\HostnameField', new HostnameField());
     }
 
     /**
@@ -56,7 +56,7 @@ class HostnameFieldTest extends Field_Framework_TestCase
 
     public function testRequiredEmpty()
     {
-        $this->expectException(\OPNsense\Base\ValidationException::class);
+        $this->expectException(\Bentara\Base\ValidationException::class);
         $this->expectExceptionMessage("PresenceOf");
         $field = new HostnameField();
         $field->setRequired("Y");
@@ -69,7 +69,7 @@ class HostnameFieldTest extends Field_Framework_TestCase
     {
         $field = new HostnameField();
         $field->setRequired("Y");
-        $field->setValue("test.opnsense.org");
+        $field->setValue("test.bentara.org");
         $field->eventPostLoading();
         $this->assertEmpty($this->validate($field));
     }
@@ -79,7 +79,7 @@ class HostnameFieldTest extends Field_Framework_TestCase
         $field = new HostnameField();
         $field->eventPostLoading();
         $field->setIsDNSName("Y");
-        foreach (["test", "test.opnsense.org", "_test.opnsense.org"] as $value) {
+        foreach (["test", "test.bentara.org", "_test.bentara.org"] as $value) {
             $field->setValue($value);
             $this->assertEmpty($this->validate($field));
         }
@@ -105,13 +105,13 @@ class HostnameFieldTest extends Field_Framework_TestCase
     {
         $field = new HostnameField();
         $field->eventPostLoading();
-        foreach (["*", "*.opnsense.org"] as $value) {
+        foreach (["*", "*.bentara.org"] as $value) {
             $field->setValue($value);
             $this->assertNotEmpty($this->validate($field));
         }
         $field->setHostWildcardAllowed("Y");
         $field->setFqdnWildcardAllowed("Y");
-        foreach (["*", "*.opnsense.org"] as $value) {
+        foreach (["*", "*.bentara.org"] as $value) {
             $field->setValue($value);
             $this->assertEmpty($this->validate($field));
         }
@@ -121,12 +121,12 @@ class HostnameFieldTest extends Field_Framework_TestCase
     {
         $field = new HostnameField();
         $field->eventPostLoading();
-        $field->setValue("test|test.opnsense.org");
+        $field->setValue("test|test.bentara.org");
         $this->assertNotEmpty($this->validate($field));
         $this->assertIsString($field->getNodeData());
         $field->setAsList("Y");
         $field->setFieldSeparator("|");
-        $field->setValue("test|test.opnsense.org");
+        $field->setValue("test|test.bentara.org");
         $this->assertEmpty($this->validate($field));
         $this->assertIsArray($field->getNodeData());
     }

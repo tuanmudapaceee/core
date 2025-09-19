@@ -28,15 +28,15 @@
  *
  */
 
-namespace tests\OPNsense\Base\FieldTypes;
+namespace tests\Bentara\Base\FieldTypes;
 
 // @CodingStandardsIgnoreStart
 require_once 'Field_Framework_TestCase.php';
 // @CodingStandardsIgnoreEnd
 
-use OPNsense\Base\FieldTypes\VirtualIPField;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
+use Bentara\Base\FieldTypes\VirtualIPField;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
 
 class VirtualIPFieldTest extends Field_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class VirtualIPFieldTest extends Field_Framework_TestCase
      */
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\OPNsense\Base\FieldTypes\VirtualIPField', new VirtualIPField());
+        $this->assertInstanceOf('\Bentara\Base\FieldTypes\VirtualIPField', new VirtualIPField());
         // switch config to test set for this type
         (new AppConfig())->update('application.configDir', __DIR__ . '/VirtualIPFieldTest');
         Config::getInstance()->forceReload();

@@ -26,17 +26,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Trust\FieldTypes;
+namespace Bentara\Trust\FieldTypes;
 
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\ContainerField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\ContainerField;
+use Bentara\Base\FieldTypes\TextField;
 
 /**
  * Class CertificateContainerField
- * @package OPNsense\Trust\FieldTypes
+ * @package Bentara\Trust\FieldTypes
  */
 class CertificateContainerField extends ContainerField
 {
@@ -91,7 +91,7 @@ class CertificateContainerField extends ContainerField
 
 /**
  * Class CertificatesField
- * @package OPNsense\Trust\FieldTypes
+ * @package Bentara\Trust\FieldTypes
  */
 class CertificatesField extends ArrayField
 {
@@ -120,7 +120,7 @@ class CertificatesField extends ArrayField
         $ext_data = json_decode((new Backend())->configdRun('system trust ext_sources') ?? '', true);
         if (is_array($ext_data)) {
             foreach ($ext_data as $data) {
-                $payload = \OPNsense\Trust\Store::parseX509($data['cert'] ?? '');
+                $payload = \Bentara\Trust\Store::parseX509($data['cert'] ?? '');
                 if ($payload !== false && !empty($data['id'])) {
                     $payload['crt_payload'] = $data['cert'];
                     $payload['descr'] = $data['descr'] ?? '';
@@ -145,9 +145,9 @@ class CertificatesField extends ArrayField
             $node->csr_payload = !empty((string)$node->csr) ? (string)base64_decode($node->csr) : '';
             $payload = false;
             if (!empty((string)$node->crt)) {
-                $payload = \OPNsense\Trust\Store::parseX509($node->crt_payload);
+                $payload = \Bentara\Trust\Store::parseX509($node->crt_payload);
             } elseif (!empty((string)$node->csr)) {
-                $payload = \OPNsense\Trust\Store::parseCSR($node->csr_payload);
+                $payload = \Bentara\Trust\Store::parseCSR($node->csr_payload);
             }
             if ($payload !== false) {
                 foreach ($payload as $key => $value) {

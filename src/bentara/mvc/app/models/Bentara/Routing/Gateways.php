@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routing;
+namespace Bentara\Routing;
 
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Util;
-use OPNsense\Interface\Autoconf;
-use OPNsense\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
+use Bentara\Firewall\Util;
+use Bentara\Interface\Autoconf;
+use Bentara\Base\Messages\Message;
 
 class Gateways extends BaseModel
 {

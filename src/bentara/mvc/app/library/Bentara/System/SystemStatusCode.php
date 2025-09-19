@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System;
+namespace Bentara\System;
 
 enum SystemStatusCode: int
 {

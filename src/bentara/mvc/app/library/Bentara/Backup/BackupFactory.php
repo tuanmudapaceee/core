@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Backup;
+namespace Bentara\Backup;
 
 /**
 * Class BackupFactory
-* @package OPNsense\Backup
+* @package Bentara\Backup
 */
 class BackupFactory
 {
@@ -49,7 +49,7 @@ class BackupFactory
             try {
                 $reflClass = new \ReflectionClass("{$vendor}\\{$module}\\{$classname}");
                 if (
-                    $reflClass->implementsInterface('OPNsense\\Backup\\IBackupProvider')
+                    $reflClass->implementsInterface('Bentara\\Backup\\IBackupProvider')
                         && !$reflClass->isInterface()
                 ) {
                     $providers[$classname] = array(

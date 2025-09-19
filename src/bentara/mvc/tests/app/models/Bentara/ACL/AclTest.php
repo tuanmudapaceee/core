@@ -26,11 +26,11 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace tests\OPNsense\Base;
+namespace tests\Bentara\Base;
 
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Config;
-use OPNsense\Core\ACL;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Config;
+use Bentara\Core\ACL;
 
 class AclTest extends \PHPUnit\Framework\TestCase
 {
@@ -46,7 +46,7 @@ class AclTest extends \PHPUnit\Framework\TestCase
         Config::getInstance()->forceReload();
         /* init after config reload */
         AclTest::$acl = new ACL();
-        $this->assertInstanceOf('\OPNsense\Core\ACL', AclTest::$acl);
+        $this->assertInstanceOf('\Bentara\Core\ACL', AclTest::$acl);
     }
 
     /**

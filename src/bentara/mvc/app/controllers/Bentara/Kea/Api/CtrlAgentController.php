@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Kea\Api;
+namespace Bentara\Kea\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 class CtrlAgentController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ctrlagent';
-    protected static $internalModelClass = 'OPNsense\Kea\KeaCtrlAgent';
+    protected static $internalModelClass = 'Bentara\Kea\KeaCtrlAgent';
 
     /**
      * @inheritdoc

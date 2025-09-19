@@ -27,21 +27,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Wireguard\Api;
+namespace Bentara\Wireguard\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Wireguard\General;
-use OPNsense\Wireguard\Client;
-use OPNsense\Wireguard\Server;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Wireguard\General;
+use Bentara\Wireguard\Client;
+use Bentara\Wireguard\Server;
 
 /**
  * Class ServiceController
- * @package OPNsense\Wireguard
+ * @package Bentara\Wireguard
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\Wireguard\General';
+    protected static $internalServiceClass = '\Bentara\Wireguard\General';
     protected static $internalServiceTemplate = 'OPNsense/Wireguard';
     protected static $internalServiceEnabled = 'enabled';
     protected static $internalServiceName = 'wireguard';

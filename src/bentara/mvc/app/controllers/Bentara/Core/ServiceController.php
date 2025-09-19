@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
 /**
  * Class ServiceController controller for service core actions
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
-class ServiceController extends \OPNsense\Base\IndexController
+class ServiceController extends \Bentara\Base\IndexController
 {
     /**
      * return to / for non existent actions

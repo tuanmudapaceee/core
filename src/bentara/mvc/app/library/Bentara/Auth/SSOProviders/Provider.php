@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth\SSOProviders;
+namespace Bentara\Auth\SSOProviders;
 
 class Provider
 {

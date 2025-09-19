@@ -27,15 +27,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec;
+namespace Bentara\IPsec;
 
-use OPNsense\Base\Messages\Message;
-use OPNsense\Base\BaseModel;
-use OPNsense\Core\Config;
+use Bentara\Base\Messages\Message;
+use Bentara\Base\BaseModel;
+use Bentara\Core\Config;
 
 /**
  * Class IPsec
- * @package OPNsense\IPsec
+ * @package Bentara\IPsec
  */
 class IPsec extends BaseModel
 {
@@ -196,9 +196,9 @@ class IPsec extends BaseModel
 
             if ($item->isContainer()) {
                 $result[$target_key] = $this->traverseItems($item);
-            } elseif (is_a($item, "OPNsense\\Base\\FieldTypes\\BooleanField") && !$is_numeric) {
+            } elseif (is_a($item, "Bentara\\Base\\FieldTypes\\BooleanField") && !$is_numeric) {
                 $result[$target_key] = !empty((string)$item) ? 'yes' : 'no';
-            } elseif (is_a($item, "OPNsense\\Base\\FieldTypes\\AuthenticationServerField")) {
+            } elseif (is_a($item, "Bentara\\Base\\FieldTypes\\AuthenticationServerField")) {
                 $servers = [];
                 foreach (explode(',', (string)$item) as $item) {
                     $idx = 'server' . (string)(count($servers) + 1);

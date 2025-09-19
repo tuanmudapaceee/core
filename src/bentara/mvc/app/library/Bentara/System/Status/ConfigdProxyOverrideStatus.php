@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\System\Status;
+namespace Bentara\System\Status;
 
-use OPNsense\System\AbstractStatus;
-use OPNsense\System\SystemStatusCode;
+use Bentara\System\AbstractStatus;
+use Bentara\System\SystemStatusCode;
 
 class ConfigdProxyOverrideStatus extends AbstractStatus
 {
@@ -49,8 +49,8 @@ class ConfigdProxyOverrideStatus extends AbstractStatus
 
     public function collectStatus()
     {
-        // https://docs.opnsense.org/development/backend/configd.html
-        foreach (glob('/usr/local/opnsense/service/conf/configd.conf.d/*') as $file) {
+        // https://docs.bentara.org/development/backend/configd.html
+        foreach (glob('/usr/local/bentara/service/conf/configd.conf.d/*') as $file) {
             $contents = @file_get_contents($file);
             if ($contents !== false && stripos($contents, '_PROXY=') !== false) {
                 $this->internalMessage = gettext(

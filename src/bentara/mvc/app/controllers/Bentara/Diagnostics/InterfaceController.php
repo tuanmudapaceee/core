@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics;
+namespace Bentara\Diagnostics;
 
-use OPNsense\Base\IndexController;
+use Bentara\Base\IndexController;
 
 /**
  * Class InterfaceController
- * @package OPNsense\Diagnostics
+ * @package Bentara\Diagnostics
  */
 class InterfaceController extends IndexController
 {
@@ -43,7 +43,7 @@ class InterfaceController extends IndexController
     {
         return array_merge(parent::templateJSIncludes(), [
             '/ui/js/tree.jquery.min.js',
-            '/ui/js/opnsense-treeview.js'
+            '/ui/js/bentara-treeview.js'
         ]);
     }
 

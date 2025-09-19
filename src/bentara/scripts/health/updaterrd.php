@@ -28,10 +28,10 @@
  */
 
 /* loader : add library path in this directory to our normal path */
-require_once('/usr/local/opnsense/mvc/app/library/OPNsense/Autoload/Loader.php');
-$phalcon_config = include('/usr/local/opnsense/mvc/app/config/config.php');
+require_once('/usr/local/bentara/mvc/app/library/OPNsense/Autoload/Loader.php');
+$phalcon_config = include('/usr/local/bentara/mvc/app/config/config.php');
 
-(new OPNsense\Autoload\Loader([
+(new Bentara\Autoload\Loader([
     $phalcon_config->application->modelsDir,
     $phalcon_config->application->libraryDir,
     __DIR__ . '/library/'])
@@ -47,7 +47,7 @@ if (isset($opts['h'])) {
     exit(0);
 }
 
-$rrdcnf = OPNsense\Core\Config::getInstance()->object()->rrd;
+$rrdcnf = Bentara\Core\Config::getInstance()->object()->rrd;
 if ($rrdcnf === null || !isset($rrdcnf->enable)) {
     echo "RRD statistics disabled... exit\n";
     exit(0);
@@ -60,7 +60,7 @@ if (!is_dir('/var/db/rrd')) {
     @chown('/var/db/rrd', 'nobody');
 }
 
-$rrd_factory = new \OPNsense\RRD\Factory();
+$rrd_factory = new \Bentara\RRD\Factory();
 $rrd_factory->collect()->updateAll(isset($opts['d']));
 
 if (isset($opts['d'])) {

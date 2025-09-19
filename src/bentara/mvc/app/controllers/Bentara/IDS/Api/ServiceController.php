@@ -26,22 +26,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IDS\Api;
+namespace Bentara\IDS\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Core\SanitizeFilter;
-use OPNsense\Cron\Cron;
-use OPNsense\IDS\IDS;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Core\SanitizeFilter;
+use Bentara\Cron\Cron;
+use Bentara\IDS\IDS;
 
 /**
  * Class ServiceController
- * @package OPNsense\IDS
+ * @package Bentara\IDS
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\IDS\IDS';
+    protected static $internalServiceClass = '\Bentara\IDS\IDS';
     protected static $internalServiceEnabled = 'general.enabled';
     protected static $internalServiceTemplate = 'OPNsense/IDS';
     protected static $internalServiceName = 'ids';
@@ -50,8 +50,8 @@ class ServiceController extends ApiMutableServiceControllerBase
      * Reconfigure IDS
      * @return array result status
      * @throws \Exception when configd action fails
-     * @throws \OPNsense\Base\ModelException when unable to construct model
-     * @throws \OPNsense\Base\ValidationException when one or more model validations fail
+     * @throws \Bentara\Base\ModelException when unable to construct model
+     * @throws \Bentara\Base\ValidationException when one or more model validations fail
      */
     public function reconfigureAction()
     {

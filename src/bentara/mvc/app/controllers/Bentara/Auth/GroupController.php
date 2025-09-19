@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Auth;
+namespace Bentara\Auth;
 
-class GroupController extends \OPNsense\Base\IndexController
+class GroupController extends \Bentara\Base\IndexController
 {
     public function indexAction()
     {

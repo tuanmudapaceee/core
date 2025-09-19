@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Routing\FieldTypes;
+namespace Bentara\Routing\FieldTypes;
 
-use OPNsense\Base\FieldTypes\ArrayField;
-use OPNsense\Base\FieldTypes\TextField;
+use Bentara\Base\FieldTypes\ArrayField;
+use Bentara\Base\FieldTypes\TextField;
 
 class GatewayField extends ArrayField
 {
@@ -54,7 +54,7 @@ class GatewayField extends ArrayField
     public function calculateCurrent($node)
     {
         foreach ($this->getDpingerDefaults() as $property => $default) {
-            if (!is_a($node->getParentNode(), 'OPNsense\Routing\FieldTypes\GatewayField')) {
+            if (!is_a($node->getParentNode(), 'Bentara\Routing\FieldTypes\GatewayField')) {
                 continue;
             }
             /* hidden, only visible when called direct (e.g. $node->current_XXX) */

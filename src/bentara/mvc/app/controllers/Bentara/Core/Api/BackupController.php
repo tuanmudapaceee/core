@@ -26,16 +26,16 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core\Api;
+namespace Bentara\Core\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\ACL;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\ACL;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class BackupController
- * @package OPNsense\Core\Api
+ * @package Bentara\Core\Api
  */
 class BackupController extends ApiControllerBase
 {

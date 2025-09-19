@@ -26,19 +26,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\CaptivePortal\Api;
+namespace Bentara\CaptivePortal\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Base\UIModelGrid;
-use OPNsense\CaptivePortal\CaptivePortal;
-use OPNsense\Core\AppConfig;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Core\SanitizeFilter;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Base\UIModelGrid;
+use Bentara\CaptivePortal\CaptivePortal;
+use Bentara\Core\AppConfig;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Core\SanitizeFilter;
 
 /**
  * Class ServiceController
- * @package OPNsense\CaptivePortal
+ * @package Bentara\CaptivePortal
  */
 class ServiceController extends ApiControllerBase
 {

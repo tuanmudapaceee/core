@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Base\FieldTypes;
+namespace Bentara\Base\FieldTypes;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Class VirtualIPField field type to select virtual ip's (such as carp)
- * @package OPNsense\Base\FieldTypes
+ * @package Bentara\Base\FieldTypes
  */
 class VirtualIPField extends BaseListField
 {

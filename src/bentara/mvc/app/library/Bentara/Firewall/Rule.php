@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Firewall\Alias;
+use Bentara\Firewall\Alias;
 
 /**
  * Class Rule basic rule parsing logic
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 abstract class Rule
 {

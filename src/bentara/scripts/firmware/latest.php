@@ -2,7 +2,7 @@
 <?php
 
 /*
- * Copyright (c) 2021-2025 Franco Fichtner <franco@opnsense.org>
+ * Copyright (c) 2021-2025 Franco Fichtner <franco@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,9 +29,9 @@
 
 require_once 'util.inc';
 
-$changelogfile = '/usr/local/opnsense/changelog/index.json';
+$changelogfile = '/usr/local/bentara/changelog/index.json';
 
-list ($series, $version) = explode(' ', shell_safe('opnsense-version -Vv'));
+list ($series, $version) = explode(' ', shell_safe('bentara-version -Vv'));
 $version = explode('_', $version)[0];
 
 if (empty($argv[1]) && ($ret = json_decode(@file_get_contents($changelogfile), true)) != null) {

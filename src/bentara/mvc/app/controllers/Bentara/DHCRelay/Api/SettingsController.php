@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCRelay\Api;
+namespace Bentara\DHCRelay\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
-use OPNsense\Core\Backend;
+use Bentara\Base\ApiMutableModelControllerBase;
+use Bentara\Core\Backend;
 
 class SettingsController extends ApiMutableModelControllerBase
 {
-    protected static $internalModelClass = '\OPNsense\DHCRelay\DHCRelay';
+    protected static $internalModelClass = '\Bentara\DHCRelay\DHCRelay';
     protected static $internalModelUseSafeDelete = true;
     protected static $internalModelName = 'dhcrelay';
 

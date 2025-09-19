@@ -26,10 +26,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\DHCPv4\Api;
+namespace Bentara\DHCPv4\Api;
 
-use OPNsense\Base\ApiMutableServiceControllerBase;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiMutableServiceControllerBase;
+use Bentara\Core\Config;
 
 class ServiceController extends ApiMutableServiceControllerBase
 {

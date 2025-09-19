@@ -2,7 +2,7 @@
 
 /*
  * Copyright (C) 2023 Deciso B.V.
- * Copyright (C) 2015 Jos Schellevis <jos@opnsense.org>
+ * Copyright (C) 2015 Jos Schellevis <jos@bentara.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,15 +27,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Diagnostics\Api;
+namespace Bentara\Diagnostics\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
 
 /**
  * Class SystemhealthController
- * @package OPNsense\SystemHealth
+ * @package Bentara\SystemHealth
  */
 class SystemhealthController extends ApiControllerBase
 {

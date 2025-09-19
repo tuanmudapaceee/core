@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\RRD\Stats;
+namespace Bentara\RRD\Stats;
 
-use OPNsense\Core\Config;
+use Bentara\Core\Config;
 
 /**
  * Stats collection
@@ -80,7 +80,7 @@ abstract class Base
                     ];
                 }
             }
-            foreach ((new \OPNsense\OpenVPN\OpenVPN())->serverDevices() as $ifname => $data) {
+            foreach ((new \Bentara\OpenVPN\OpenVPN())->serverDevices() as $ifname => $data) {
                 self::$metadata['interfaces'][$ifname] = [
                     'name' => $data['descr'],
                     'if' => $ifname,

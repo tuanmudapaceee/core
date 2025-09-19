@@ -26,11 +26,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Migrations;
+namespace Bentara\IPsec\Migrations;
 
-use OPNsense\Base\BaseModelMigration;
-use OPNsense\Core\Config;
-use OPNsense\IPsec\IPsec;
+use Bentara\Base\BaseModelMigration;
+use Bentara\Core\Config;
+use Bentara\IPsec\IPsec;
 
 class M1_0_1 extends BaseModelMigration
 {

@@ -26,9 +26,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\OpenVPN;
+namespace Bentara\OpenVPN;
 
-use OPNsense\Core\AppConfig;
+use Bentara\Core\AppConfig;
 
 class ArchiveOpenVPN extends PlainOpenVPN
 {

@@ -26,14 +26,14 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Firewall;
+namespace Bentara\Firewall;
 
-use OPNsense\Core\Config;
-use OPNsense\Firewall\Alias;
+use Bentara\Core\Config;
+use Bentara\Firewall\Alias;
 
 /**
  * Class Util, common static firewall support functions
- * @package OPNsense\Firewall
+ * @package Bentara\Firewall
  */
 class Util
 {
@@ -200,7 +200,7 @@ class Util
      * @param string $name name
      * @param boolean $valid check if the alias can safely be used
      * @return boolean
-     * @throws \OPNsense\Base\ModelException
+     * @throws \Bentara\Base\ModelException
      */
     public static function isAlias($name, $valid = false)
     {
@@ -274,7 +274,7 @@ class Util
      * @param string $name name
      * @param array $aliases aliases already parsed (prevent deadlock)
      * @return array containing all ports or addresses
-     * @throws \OPNsense\Base\ModelException when unable to create alias model
+     * @throws \Bentara\Base\ModelException when unable to create alias model
      */
     public static function getPortAlias($name, $aliases = array())
     {

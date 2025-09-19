@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Core;
+namespace Bentara\Core;
 
-use OPNsense\Core\AppConfig;
+use Bentara\Core\AppConfig;
 
 /**
  * Class Shell shell/command handling routines
- * @package OPNsense\Core
+ * @package Bentara\Core
  */
 class Shell
 {

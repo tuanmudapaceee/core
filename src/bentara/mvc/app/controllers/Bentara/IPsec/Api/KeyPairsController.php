@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 /**
  * Class KeyPairsController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class KeyPairsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ipsec';
-    protected static $internalModelClass = 'OPNsense\IPsec\IPsec';
+    protected static $internalModelClass = 'Bentara\IPsec\IPsec';
 
     /**
      * Search key pairs
@@ -53,7 +53,7 @@ class KeyPairsController extends ApiMutableModelControllerBase
      * Update key pair with given properties
      * @param $uuid
      * @return array
-     * @throws \OPNsense\Base\UserException
+     * @throws \Bentara\Base\UserException
      * @throws \ReflectionException
      */
     public function setItemAction($uuid = null)
@@ -69,7 +69,7 @@ class KeyPairsController extends ApiMutableModelControllerBase
     /**
      * Add new key pair with given properties
      * @return array
-     * @throws \OPNsense\Base\UserException
+     * @throws \Bentara\Base\UserException
      * @throws \ReflectionException
      */
     public function addItemAction()
@@ -97,7 +97,7 @@ class KeyPairsController extends ApiMutableModelControllerBase
      * Delete key pair by UUID
      * @param $uuid
      * @return array
-     * @throws \OPNsense\Base\UserException
+     * @throws \Bentara\Base\UserException
      * @throws \ReflectionException
      */
     public function delItemAction($uuid)

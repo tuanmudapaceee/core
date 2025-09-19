@@ -26,18 +26,18 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\IPsec\Api;
+namespace Bentara\IPsec\Api;
 
-use OPNsense\Base\ApiMutableModelControllerBase;
+use Bentara\Base\ApiMutableModelControllerBase;
 
 /**
  * Class SetttingsController
- * @package OPNsense\IPsec\Api
+ * @package Bentara\IPsec\Api
  */
 class SettingsController extends ApiMutableModelControllerBase
 {
     protected static $internalModelName = 'ipsec';
-    protected static $internalModelClass = 'OPNsense\IPsec\IPsec';
+    protected static $internalModelClass = 'Bentara\IPsec\IPsec';
 
     /**
      * @inheritdoc

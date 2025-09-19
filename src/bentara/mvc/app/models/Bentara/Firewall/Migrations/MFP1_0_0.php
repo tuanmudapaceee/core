@@ -28,10 +28,10 @@
  *
  */
 
-namespace OPNsense\Firewall\Migrations;
+namespace Bentara\Firewall\Migrations;
 
-use OPNsense\Core\Config;
-use OPNsense\Base\BaseModelMigration;
+use Bentara\Core\Config;
+use Bentara\Base\BaseModelMigration;
 
 class MFP1_0_0 extends BaseModelMigration
 {

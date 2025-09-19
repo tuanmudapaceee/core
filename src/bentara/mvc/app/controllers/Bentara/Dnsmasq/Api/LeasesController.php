@@ -26,13 +26,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace OPNsense\Dnsmasq\Api;
+namespace Bentara\Dnsmasq\Api;
 
-use OPNsense\Base\ApiControllerBase;
-use OPNsense\Core\Backend;
-use OPNsense\Core\Config;
-use OPNsense\Dnsmasq\Dnsmasq;
-use OPNsense\Firewall\Util;
+use Bentara\Base\ApiControllerBase;
+use Bentara\Core\Backend;
+use Bentara\Core\Config;
+use Bentara\Dnsmasq\Dnsmasq;
+use Bentara\Firewall\Util;
 
 class LeasesController extends ApiControllerBase
 {
